@@ -5,7 +5,9 @@ module.exports = {
     themeConfig: {
         // 添加导航栏
         nav: [
-            { text: 'vue', link: '/' }
+            { text: 'vue', link: '/' },
+            { text: 'wx', link: '/wx/' }
+        ]
     }
   }
   
