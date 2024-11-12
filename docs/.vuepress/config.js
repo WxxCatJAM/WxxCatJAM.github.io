@@ -13,18 +13,18 @@ module.exports = {
         nav: [{text: "主页", link: "/"},
             { text: "目录",
                 items: [
-                    { text: "常用公式", link: "/General/General_Formula.md" },
-                    { text: "高等数学基础", link: "/Advanced/Advanced_Mathematics.md" },
+                    { text: "常用公式", link: "pages/General/General_Formula.md" },
+                    { text: "高等数学基础", link: "pages/Advanced/Advanced_Mathematics.md" },
                     { text: "线性代数", 
-                      items: [ 
-                        { text: "行列式", link:"./Linear/"},
-                        { text: "矩阵", link:"./Linear/Matrix.md"},
-                        { text: "向量", link:"./Linear/Vector.md"},
-                        { text: "线性方程数组", link:"/web/css/"},
-                        { text: "二次型", link:"/web/css/"},
-                        ]
+                    //   items: [ 
+                    //     { text: "行列式", link:"./Linear/"},
+                    //     { text: "矩阵", link:"./Linear/Matrix.md"},
+                    //     { text: "向量", link:"./Linear/Vector.md"},
+                    //     { text: "线性方程数组", link:"/web/css/"},
+                    //     { text: "二次型", link:"/web/css/"},
+                    //    ]
                     },
-                    { text: "概率论与数理统计", link: "/PS/"}
+                    { text: "概率论与数理统计", link: "pages/PS/PS.md"}
                 ]
             }, 
           ],

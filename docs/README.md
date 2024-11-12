@@ -2,7 +2,7 @@
 home: true
 heroText: 公式总结
 actionText: 马上进入 →
-actionLink: docs\pages\General\General_Formula.md
+actionLink: /pages/General/General_Formula.md
 features:
 - title: 常用公式
   details: 如：对数、指数运算、三角函数等基础公式
