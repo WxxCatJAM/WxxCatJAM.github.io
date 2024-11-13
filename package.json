@@ -4,10 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-mathjax": "^1.2.8"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "katex": "^0.16.11"
   }
 }
