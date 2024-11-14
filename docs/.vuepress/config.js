@@ -12,7 +12,7 @@ module.exports = {
     //     ]
     // }
     plugins: [
-        [
+        [   //yarn add -D vuepress-plugin-mathjax
             'vuepress-plugin-mathjax',
             {
                 target: 'katex',
