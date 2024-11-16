@@ -1,4 +1,5 @@
 module.exports = {
+
     title: 'wx的数学公式总结',
     description: '主要为数学1的公式',
     // host: "127.0.0.1",
@@ -12,15 +13,7 @@ module.exports = {
     //     ]
     // }
     plugins: [
-        [   //yarn add -D vuepress-plugin-mathjax
-            'vuepress-plugin-mathjax',
-            {
-                target: 'katex',
-                macros: {
-                "\\RR": "\\mathbb{R}"
-                }
-            }
-        ]
+         'vuepress-plugin-katex'
     ],
     themeConfig:{
         nav: [
@@ -41,7 +34,7 @@ module.exports = {
                     { text: "概率论与数理统计", link: "pages/PS/PS.md"}
                 ]
             }, 
-          ],
+        ],
         sidebar: [
             '/',
             '/pages/General/General_Formula.md',
@@ -50,5 +43,5 @@ module.exports = {
             '/pages/PS/PS.md'
         ],
         sidebarDepth:2, //使H3也能在侧边栏显示出来
-  }
+    },
 }

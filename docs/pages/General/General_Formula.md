@@ -91,13 +91,13 @@ a为常数，$a > 0$ 且 a $\neq$ 1时，有:
 
 ## 三角函数的积化和差(和差化积)公式
 - $\sin\alpha \cdot \cos\beta = \frac{1}{2}(\sin(\alpha+\beta)+\sin(\alpha-\beta)$
-- $\cos\alpha \cdot \sin\beta = \frac{1}{2}(\sin(\alpha+\beta)-\sin(\alpha-\beta)$)
-- $\sin\alpha \cdot \sin\beta = \frac{1}{2}(\cos(\alpha-\beta)-\cos(\alpha+\beta)$)
+- $\cos\alpha \cdot \sin\beta = \frac{1}{2}(\sin(\alpha+\beta)-\sin(\alpha-\beta))$
+- $\sin\alpha \cdot \sin\beta = \frac{1}{2}(\cos(\alpha-\beta)-\cos(\alpha+\beta))$
 - $\cos\alpha \cdot \cos\beta = \frac{1}{2}(\cos(\alpha+\beta)+\cos(\alpha-\beta)$
-- $\sin\alpha + \sin\beta = 2\sin \frac{\alpha+1}{2} \cdot \cos\frac{\alpha+\beta}{2} $
-- $\sin\alpha - \sin\beta = 2\cos\frac{\alpha+\beta}{2} \cdot \sin \frac{\alpha-\beta}{2} $
-- $\cos\alpha + \cos\beta = 2\cos \frac{\alpha+\beta}{2} \cdot \cos\frac{\alpha-\beta}{2} $
-- $\cos\alpha - \cos\beta = 2\sin \frac{\alpha+\beta}{2} \cdot \sin \frac{\alpha-\beta}{2} $
+- $\sin\alpha + \sin\beta = 2\sin \frac{\alpha+1}{2} \cdot \cos\frac{\alpha+\beta}{2}$
+- $\sin\alpha - \sin\beta = 2\cos\frac{\alpha+\beta}{2} \cdot \sin \frac{\alpha-\beta}{2}$
+- $\cos\alpha + \cos\beta = 2\cos \frac{\alpha+\beta}{2} \cdot \cos\frac{\alpha-\beta}{2}$
+- $\cos\alpha - \cos\beta = 2\sin \frac{\alpha+\beta}{2} \cdot \sin \frac{\alpha-\beta}{2}$
 
 
 ## 三角函数的辅助角公式
@@ -138,4 +138,4 @@ a为常数，$a > 0$ 且 a $\neq$ 1时，有:
      3. 左开口:$y^2=-2ax$
      4. 下开口:$x^2=-2ax$
      5. 其中a>0
-  8. 圆的标准方程:圆心为$A(x_0,y_0)$, 半径为$r$的圆的标准方程$(x-x_0)^2+(y-y_0)^2=r^2$. 设$r$是半径,则面积 $S=\pi r^2 $, 周长 $C=2\pi r$
+  8. 圆的标准方程:圆心为$A(x_0,y_0)$, 半径为$r$的圆的标准方程$(x-x_0)^2+(y-y_0)^2=r^2$. 设$r$是半径,则面积 $S=\pi r^2$, 周长 $C=2\pi r$
