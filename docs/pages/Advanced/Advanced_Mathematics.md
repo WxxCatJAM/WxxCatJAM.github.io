@@ -120,8 +120,7 @@
    2. 当x充分大时, $x^{低}+x^{高} \sim x^{高}$
    3. 当x充分大时, $(\ln x)^\beta < x^\alpha <e^{\gamma\alpha}$    
 $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0}= \left\{ \begin{array}{l} \infty, m>n \\ \frac{a_m}{a_n}, m=n, 其中a_mb_n \ne \\ a_3x + b_3y + c_3z = d_3\end{array}\right.$$
-
-1. 常用等价无穷小替换
+3. 常用等价无穷小替换
    - 当$x \to 0$时:
      - 等价于x的情况($\sim x$)：
        - $\sin x \sim \arcsin x \sim \tan x \sim \arctan x \sim e^x-1 \sim \ln(1+x) \sim  x$
@@ -135,14 +134,42 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
        - $\tan x - x \sim x-\arctan x \sim \frac{1}{3}x^3$
      - 等价于$\frac{1}{2}x^3$的情况($\sim \frac{1}{4}x^3$):
        - $\tan x - \sin x \sim \frac{1}{2}x^3$
-2. 洛必达法则
+4. 洛必达法则
    - 设：
       1. 当$x \to a$时, 函数$f(x)及g(x)$都趋于0
       2. 在点$a$的某去领域内, $f'(x), g'(x)$都存在, 且$g'(x) \ne 0$
       3. $\lim \limits_{x \to a}\frac{f'(x)}{g'(x)}$存在(或无穷大),则：
          1. $\lim \limits_{x \to a}\frac{f(x)}{g(x)} = \lim \limits_{x \to a}\frac{f'(x)}{g'(x)}$
-
-
+   - 注：
+     1. 当$x \to \infty$时, 相应条件下洛必达法仍成立
+     2. $\frac{\infty}{\infty}$型:
+        1. $\lim\limits_{x \to a} f(x) = \infty, \lim\limits_{x \to a} g(x) = \infty $
+        2. 在点a的某去心领域内$f(x), g(x)$都可导
+        3. $\lim \limits_{x \to a}\frac{f(x)}{g(x)}$ 存在(或无穷大), 则:
+           1. $\lim \limits_{x \to a}\frac{f(x)}{g(x)} = \lim \limits_{x \to a}\frac{f'(x)}{g'(x)}$
+        4. **注**: 数列不能使用洛必达法则(因为离散变量无法求导)
+        5. $\frac{*}{\infty}$型"广义" 仍可以使用洛必达法则
+5. 两个重要极限:
+   1. $\lim\limits_{x \to 0} \frac{\sin x}{x}=1$
+   2. $\lim\limits_{n \to \infty} (1+\frac{1}{n})^n = e$
+   3. $\lim\limits_{x \to \infty} (1+\frac{1}{x})^\frac{1}{x} = e$
+6. 常用泰勒公式(麦克劳林公式):
+   - 当$x \to 0$时:
+      - $e^x = 1 + x + \frac{x^2}{2!} + \cdots +\frac{x^n}{n!} + o(x^n)$
+      - $\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + (-1)^n \frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+1})$
+      - $\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + (-1)^n \frac{x^{2n}}{(2n)!}+o(x^{2n})$
+      - $\tan x = x + \frac{x^3}{3} + \frac{2x^5}{15} + \cdots + (-1)^{n-1} \frac{2^{2n}(2^{2n}-1)B_{2n}x^{2n-1}}{(2n)!} + o(x^{2n-1}), B_n$为第n个伯努利数
+      - $\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots + (-1)^{n-1} \frac{x^{n}}{n} + o(x^{n})$
+      - $\arctan x = x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots + (-1)^{n} \frac{x^{2n+1}}{(2n+1)} + o(x^{2n+1})$
+      - $\arcsin x = x + \frac{x^3}{6} + \frac{3x^5}{40} + \frac{5x^7}{112} + \frac{35x^9}{1152} + o(x^9) $
+      - $\frac{1}{1-x} = 1 + x + x^2 + \cdots + x^n + o(x^n)$
+      - $\frac{1}{1+x} = 1-x+x^2-\cdots +(-1)^nx^n + o(x^n)$
+      - $(1+x)^\alpha=1+nx+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+o(x^n)$
+7. 两个**重要准则**
+   1. 夹逼定理
+      1. 若数列${x_n},{y_n},{z_n}$满足条件:
+         1. $\
+   2. 单调有界准则
 
 
 ### 连续与间断
