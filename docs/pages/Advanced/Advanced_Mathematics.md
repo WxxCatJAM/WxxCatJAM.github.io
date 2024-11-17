@@ -116,13 +116,12 @@
       2. $\lim\limits_{x \to \square}[f(x) \cdot g(x)]=\lim\limits_{x \to \square}f(x) \cdot \lim\limits_{x \to \square}g(x)=A\cdot B$
       3. $\lim\limits_{x \to \square}\frac{f(x)}{g(x)}=\frac{\lim\limits_{x \to \square}f(x)}{\lim\limits_{x \to \square}g(x)}=\frac{A}{B}$
 2. "抓大头"思想
-   1. $x \to 0$时, $x^低+x^高 \sim x^低$
-   2. 当x充分大时, $x^低+x^高 \sim x^高$
+   1. $x \to 0$时, $x^{低}+x^{高} \sim x^{低}$
+   2. 当x充分大时, $x^{低}+x^{高} \sim x^{高}$
    3. 当x充分大时, $(\ln x)^\beta < x^\alpha <e^{\gamma\alpha}$    
-   4. ----   
-      $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0}= \begin{aligned} \infty, m>n, \\ \frac{a_m}{b_n}, m=n,其中a_mb_n \ne 0, \\ 0, m<n \end{aligned}$$
+$$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n+b_{n-1}x^{n-1}+\cdots+b_1x+b_0}= \left\{ \begin{array}{l} \infty, m>n \\ \frac{a_m}{a_n}, m=n, 其中a_mb_n \ne \\ a_3x + b_3y + c_3z = d_3\end{array}\right.$$
 
-3. 常用等价无穷小替换
+1. 常用等价无穷小替换
    - 当$x \to 0$时:
      - 等价于x的情况($\sim x$)：
        - $\sin x \sim \arcsin x \sim \tan x \sim \arctan x \sim e^x-1 \sim \ln(1+x) \sim  x$
@@ -136,14 +135,12 @@
        - $\tan x - x \sim x-\arctan x \sim \frac{1}{3}x^3$
      - 等价于$\frac{1}{2}x^3$的情况($\sim \frac{1}{4}x^3$):
        - $\tan x - \sin x \sim \frac{1}{2}x^3$
-4. 洛必达法则
-   1.  111 $$
-      f(n) = 
-      \begin{cases} 
-      n/2, & \text{if } n \text{ is even} \\\\ 
-      3n+1, & \text{if } n \text{ is odd} 
-      \end{cases}
-      $$
+2. 洛必达法则
+   - 设：
+      1. 当$x \to a$时, 函数$f(x)及g(x)$都趋于0
+      2. 在点$a$的某去领域内, $f'(x), g'(x)$都存在, 且$g'(x) \ne 0$
+      3. $\lim \limits_{x \to a}\frac{f'(x)}{g'(x)}$存在(或无穷大),则：
+         1. $\lim \limits_{x \to a}\frac{f(x)}{g(x)} = \lim \limits_{x \to a}\frac{f'(x)}{g'(x)}$
 
 
 

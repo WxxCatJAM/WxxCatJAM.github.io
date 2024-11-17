@@ -11,7 +11,10 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "mathjax-full": "^3.2.2",
-    "vuepress-plugin-katex": "^0.3.0"
+    "katex": "^0.16.11",
+    "markdown-it-katex": "^2.0.3"
+  },
+  "resolutions": {
+  "katex": "^0.16.11"
   }
 }

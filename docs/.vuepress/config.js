@@ -12,9 +12,14 @@ module.exports = {
     //         { text: 'wx', link: '/wx/' }
     //     ]
     // }
-    plugins: [
-         'vuepress-plugin-katex'
-    ],
+    markdown: {
+        extendMarkdown: md => {
+            //md.set({ breaks: true }); // 支持换行
+            md.use(require('markdown-it-katex'),{
+                strict: false // 关闭严格模式，避免警告
+            }); // 或 '@swedish-li/markdown-it-katex'，根据实际需要选择
+        },
+    },
     themeConfig:{
         nav: [
             {text: "主页", link: "/"},
@@ -44,4 +49,4 @@ module.exports = {
         ],
         sidebarDepth:2, //使H3也能在侧边栏显示出来
     },
-}
+};
