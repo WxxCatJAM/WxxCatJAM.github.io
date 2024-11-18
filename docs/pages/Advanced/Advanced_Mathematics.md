@@ -294,7 +294,8 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
    4. 柯西中值定理:
       1. $\frac{f(b)-f(a)}{F(b)-F(a)}=\frac{f'(\xi)}{F'(\xi)}$
    5. 泰勒中值定理
-2. 导数的几何应用
+---
+### . 导数的几何应用
    1. 单调性的判定
       1.在(a,b)区间可导, 如果恒有$f'(x) > 0(<0)$, 则有$f(x),在(a,b)$内单调增加(减少);如果恒有$f'(x) \ge 0(\le0), 则在(a,b)内单调不减(增)$
    2. 极值
@@ -315,13 +316,13 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
          1. 一阶导数,用第一充分条件判断极值
          2. 二阶导数,用第二充分条件判断极值
          3. 以上条件均失效, 考虑用高阶导数判断
-3. 最值
+1. 最值
    1. f(x)在$I$上有定义(值域), $f(x)\le f(x_0) 或 f(x)\ge f(x_0)$, 则称$f(x_0)是函数$f(x)$在区间上的最大值或(最小值)
-4. 凹凸性判断
+2. 凹凸性判断
    1. 设[a,b]连续,在(a,b)内二阶可导
       1. $f''(x)<0$, 则曲线在$[a,b]$是凸的
       2. $f''(x)>0$, 则曲线在$[a,b]$是凹的
-5. 拐点
+3. 拐点
    1. 定义:曲线上凹弧和凸弧的分界点,就是拐点
    2. 必要条件,$f''(x_0)$存在, $f"(x_0)=0$
    3. 第一充分条件
@@ -330,31 +331,59 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
       1. $f"(x_0)=0, f"(x_0) \neq 0$, 则$(x_0,f(x_0))$为拐点
    5. 第三充分条件
       1. $f'(x_0)=f"(x_0)=f"'(x_0)=\cdots=f^{n-1}(x_0)=0, f^{n}(x_0) \not ={0}(n \ge 3)$, 则$(x_0,f(x_0))$为拐点
-6. 渐近线
+4. 渐近线
    1. 铅直渐近线 $x=a; \lim\limits_{x\to a+}f(x)=\infty 或\lim\limits_{x\to a-}f(x)=\infty$
    2. 水平渐近线 $y=c; \lim\limits_{x\to +\infty}f(x)=c 或\lim\limits_{x\to -\infty}f(x)=c$
    3. 斜渐近线 $y=kx+b; \lim\limits_{x\to \infty}\frac{f(x)}{x}=k \neq 0, \lim\limits_{x\to \infty}[f(x)-kx]=b$
    4. 斜渐近线和水平渐近线不能同时存在
-7. 弧微分、曲率、曲率半径
+5. 弧微分、曲率、曲率半径
    1. 弧微分: 设$y=f(x)$是平面内的光滑曲线, 则弧微分$ds=\sqrt{1+[f'(x)]^2}dx$
       - 若曲线方程为$\left\{\begin{array}{l} x=x(t), \\ y=y(t) \end{array}\right.$, 弧微分$ds=\sqrt{[x'(t)]^2+[y'(t)]^2}dt$
       - 若曲线方程: $r=r(\theta)$,弧微分$ds=\sqrt{[r'(\theta)]^2+[r'(\theta)]^2}d\theta$
    2. 曲率公式: $$k=\frac{|y"|}{[1+(y')^{2}]^{\frac{3}{2}}}$$
       1. 曲线$\left\{\begin{array}{l} x=x(t), \\ y=y(t) \end{array}\right.$上任意一点处的曲率为$K=\frac{|x"(t)y'(t)-x'(t)y"(t)|}{([x'(t)]^2+[y'(t)]^2)^{\frac{3}{2}}}$
    3. 曲率半径$R=\frac{1}{k}(k \neq 0)$
-
-      
-### 微分中值定理
-
-### 导数的几何应用
+---
 
 ## 不定积分
-
 ### 原函数与不定积分
-
+1. 原函数和不定积分的概念
+  - 函数f(x)， 存在可导函数F(x)， 在x定义I上都能满足$F'(x)=f(x)$, 则称$F(x)$为$f(x)$的原函数
+  - f(x)在区间$I$上的所有原函数集合称为,其在$I$区间上的不定积分, 记为$\int f(x)dx$, 则:
+      $$ \int f(x)dx=F(x)+C$$ 
+2. 连续函数一定有原函数,反之未必
+---    
 
 ### 不定积分的性质与不缠功的不定积分公式
-
+1. 不定积分性质
+   1. $ \int F'(x)dx=F(x)+C$
+   2. $[\int (f(x)dx)]'= (F(x)+C)'=f(x)$
+   3. $[\int k_1f(x) \pm k_2g(x)]dx= k_1\int f(x)dx \pm k_2\int g(x)dx$ (就和乘法分配律一样)
+2. 常用的不定积分
+   1. $\int kdx = kx +C$
+   2. $\int x^n dx=\frac{x^{n+1}}{n+1}+C, (n \neq -1)$
+   3. $\int (ax+b)^n dx = \frac{(ax+b)^{n+1}}{a(n+1)}$
+   4. $\int \frac{1}{x^2} = -\frac{1}{x}+C$
+   5. $\int \frac{x}{1+x^2}dx=\frac{1}{2}\ln (1+x^2)+C$
+   6. $\int \frac{1}{x}dx=\ln |x|+C$
+   7. $\int \frac{x}{ax+b}dx=\frac{1}{a^2}(ax+b-b\ln|ax+b|)+C$
+   8. $\int \frac{1}{x(ax+b)}dx=-\frac{1}{b}\ln|\frac{ax+b}{x}|+C$
+   9. $\int \sin xdx=-\cos x+C$
+   10. $\int \cos xdx=\sin x+C$
+   11. $\int \sec^2xdx=\int \frac{1}{\cos^2 x}dx=tanx+C$
+   12. $\int \csc^2xdx=-\cot x+C$
+   13. $\int \tan x\sec xdx=\sec x+C$
+   14. $\int \cot x\csc xdx=-\csc x+C$
+   15. $\int \tan x dx= -\ln(|\cos x|) +C$
+   16. $\int \cot xdx = \ln(|\sin x|)+C$
+   17. $\int \sec xdx =\ln(\tan x + \sin x)+C$
+   18. $\int \csc xdx=-\ln(|\csc x| - \cot x)+C$
+   19. $\int \sin^2 xdx=\frac{x}{2}-\frac{\sin2x}{4}+C$
+   20. $\int \cos^2 xdx=\frac{x}{2}+\frac{\sin2x}{4}+C$
+   21. $\int \tan^2 xdx=\tan x -x+C$
+   22. $\int \cot^2 xdx =-\cot x -x +C$
+   23. $\int a^xdx=\frac{a^x}{ln a}+C$
+   24. $\int e^x dx=e^x+C$
 
 ### 不定积分的计算
 
