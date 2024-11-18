@@ -1,24 +1,26 @@
 @import '~katex/dist/katex.min.css'
-
+/* 调整公式字体 */
 .katex {
   display: inline-block;
   white-space: nowrap;
   text-align: left;
-  font-family: "STIX Two Math", "Cambria Math", "MathJax_Main", serif;  // 使用数学字体
+  font-family: 'Computer Modern', 'Times New Roman', serif;  // 使用数学字体
   font-size: 16px;  // 调整字体大小
   font-weight: 400;
 }
 
+/* 调整块公式对齐方式 */
 .katex-display {
   margin: 1em 0;
-  text-align: center;
+  text-align: left;
   font-size: 1.1em;  // 增大显示公式的字体
   font-weight: 400;
   color: #2c3e50;  // 更深的颜色，便于区分
+  line-height: 1.5;
 }
 
 .katex * {
-  font-family: "STIX Two Math", "Cambria Math", "MathJax_Main", serif;
+  font-family: 'Computer Modern', 'Times New Roman', serif;
   font-weight: 550;
 }
 
