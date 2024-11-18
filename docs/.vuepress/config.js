@@ -12,6 +12,9 @@ module.exports = {
     //         { text: 'wx', link: '/wx/' }
     //     ]
     // }
+    head: [
+        ['link', { rel: 'stylesheet', href: '/style/style.css' }]
+    ],
     markdown: {
         extendMarkdown: md => {
             //md.set({ breaks: true }); // 支持换行
@@ -36,7 +39,8 @@ module.exports = {
                     //     { text: "二次型", link:"/web/css/"},
                     //    ]
                     },
-                    { text: "概率论与数理统计", link: "pages/PS/PS.md"}
+                    { text: "概率论与数理统计", link: "pages/PS/PS.md"},
+                    { text: "参考文献", link: "pages/Refernce/Reference.md"}
                 ]
             }, 
         ],
@@ -45,7 +49,8 @@ module.exports = {
             '/pages/General/General_Formula.md',
             '/pages/Advanced/Advanced_Mathematics.md',
             '/pages/Linear/Matrix.md',
-            '/pages/PS/PS.md'
+            '/pages/PS/PS.md',
+            '/pages/Reference/Reference.md'
         ],
         sidebarDepth:2, //使H3也能在侧边栏显示出来
     },

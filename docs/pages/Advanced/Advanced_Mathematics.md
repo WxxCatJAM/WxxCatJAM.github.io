@@ -167,7 +167,7 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 7. 两个**重要准则**
    1. 夹逼定理
       1. 若**数列**${x_n},{y_n},{z_n}$满足条件:
-         1. $\exists N \in \mathbb{{N_+}}时, 有x_n \leq y_n \leq z_n$
+         1. $\exists N \in \mathbb{N_+}时, 有x_n \leq y_n \leq z_n$
          2. $\lim\limits_{n \to \infty}x_n=\lim\limits_{n \to \infty}z_n=a$,则数列${y_n}的极限,\exist\lim\limits_{n \to \infty}y_n=a$
       2. 若**函数**$f(x),g(x),h(x)$满足条件:
          1. $\exists \delta >0, 当 0<|x-x_0|<\delta, 有g(x) \leq f(x) \leq h(x)$
@@ -199,13 +199,151 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 
 ## 导数与微分
 ### 导数的定义几何意义
+1. 导数的定义$$f'(x)=\lim\limits_{\Delta x \to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} = \lim\limits_{x \to x_0}\frac{f(x) -f(x_0)}{x-x_0}$$
+2. 切线方程与法线方程
+   1. 切线方程: $y-f(x_0)=f'(x_0)(x-x_0)$
+   2. 法线方程: $y-f(x_0)=\frac-{1}{f'(x_0)}(x-x_0)(f'(x_0)\ne 0)$
+3. 参考网站: <https://kb.kmath.cn/kbase/detail.aspx?id=285>
+---
 
 ### 函数的求导法则和常见函数的导数
+1. 导数的四则运算: 设$u(x), v(x)$可导,则:
+   1. $[k_1u(x) \pm k_2v(x)]'=k_1u'(x)\pm k_2v'(x)$
+   2. $[u(x)v(x)]'=u'(x)v(x)+u(x)v'(x)$
+      1. 推导: $[u_1(x)u_2(x)\cdots u_n(x)]'=u_1'(x)u_2(x)\cdots u_n(x)+u_1(x)u_2'(x)\cdots u_n(x) + \cdots + u_1(x)u_2(x)\cdots u_n'(x)$
+   3. $[\frac{u(x)}{v(x)}]'= \frac{u'(x)v(x)-u(x)v'(x)}{v^2(x)}(v(x)\ne 0)$
 
-### 微分
 
-## 微分中值定理与导数的应用
+2. 常用导数公式
+   1. $c'=0$
+   2. $x^n{'}=ax^{a-1}$(a为常数)
+   3. $\sin x'=\cos x$
+   4. $\cos x'=-\sin x$
+   5. $\tan x'=\sec ^2 x$
+   6. $\cot x'=-\csc^2 x$
+   7. $\sec x'=\sec x \tan x$
+   8. $\csc x'=-\csc x \cot x$
+   9. $\log_ax'=\frac{1}{x\ln a}'(a>0, a\ne 1)$
+   10. $\ln x'=\frac{1}{x}$
+   11. $a^x{'}=a^x \ln a(a>0, a\ne 1)$
+   12. $e^x{'}=e^x$
+   13. $\arcsin x'=\frac{1}{\sqrt{1-x^2}}$
+   14. $\arccos x'=-\frac{1}{\sqrt{1-x^2}}$
+   15. $\arctan x'=\frac{1}{1+x^2}$
+   16. $\arcctg x'=-\frac{1}{1+x^2}$(也就是arccot)
+   17. $[\ln(x+\sqrt{x^2\pm a^2})]'= \frac{1}{\sqrt{x^2\pm a^2}}$
 
+
+3. 幂指函数求导:
+   1. $[u(x)^{v(x)}]'=[e^{v(x)\ln u(x)}]'=e^{v(x)\ln u(x)} \cdot [v(x)\ln u(x)]'= u(x)^{v(x)} [v'(x)\ln u(x)+\frac{v(x)u'(x)}{u(x)}] (u(x)>0),且u(x) \ne 1$  
+因式
+
+
+4. 对数求导法(用于多个相乘的函数导数)
+   1. 如$y=(x-x_1)^{m_1}(x-x_2)^{m_2}\cdots(x-x_n)^{m_n}$有:
+      - $\ln|y|=m_1\ln|x-x_1|+\cdots+m_n\ln|x-x_n|$
+      - 得: $\frac{y'}{y}=\frac{m_1}{x-x_1}+\cdots+\frac{m_n}{x-x_n}$
+      - 有: $y'=\frac{m_1}{x-x_1}+\cdots+\frac{m_n}{x-x_n}y$
+
+
+5. 复合函数求导
+   - 设$y=f(u), u=g(x)$ ==> $y=f[g(x)]$, x处可导, 且有$\frac{dx}{dy}=\frac{dy}{du} \cdot \frac{du}{dx}=f'[g(x)]g'(x)$
+
+   
+6. 反函数求导
+   - 设$y=f(x), x=g(y)$, $f'(x)=\frac{1}{g'(y)}, f''(x)=\frac{g''(y)}{[g'(y)]^3}$
+
+  
+7. 参数方程确定的函数求导
+   - 若$y=y(x)$ 由 $\left\{\begin{array}{l} x= \varphi(t), \\ y = \psi (t) \end{array}\right.$确定，且$\varphi(t), \psi (t)$均二阶可导, 则:
+     $$ \frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{\psi'(t)}{\varphi'(t)},$$
+     $$ \frac{d^2y}{dx^2}=\frac{d(\frac{dy}{dx})/dt}{dx/dt}=\frac{[\frac{\psi'(t)}{\varphi'(t)}]'}{\varphi'(t)}=\frac{\psi''(t)\varphi'(t)-\psi'(t)\varphi''(t)}{[\varphi'(t)]^3}$$
+
+8. 隐函数求导
+9. 高阶导数
+   1.  $(x^{\mu})^n=\mu(\mu-1)\cdots(\mu-n+1)x^{\mu-n}$, 特例:$(x^{\mu})^n=n!, (x^{n})^l=0 (l>n)$
+   2.  $(a^x)^n = a^x(\ln a)^n$, 特例:$(e^x)^n=e^x$
+   3.  $[\sin(kx+b)]^n = k^n \sin(kx +\frac{n \pi}{2}+b)$
+   4.  $[\cos(kx+b)]^n = k^n \cos(kx +\frac{n \pi}{2}+b)$
+   5.  $[\ln(ax+b)]^n = \frac{(-1)^{n-1}a^n(n-1)!}{(ax+b)^n}(n \geq 1)$
+   6.  $(\frac{1}{ax+b})^n=\frac{(-1)^{n}a^nn!}{(ax+b)^{n+1}}$
+   7.  莱布尼茨公式$(uv)^n= \sum\limits_{k=1}^{n} C_n^k u^{(n-k)}v^k$
+---
+
+## 微分(Differential)
+1. 微分的定义
+   1. 有定义域$x_0及x_0+\Delta x$, 若函数$y=f(x)$的增量$\Delta y=f(x_0+\Delta x)-f(x_0)
+2. 微分的几何意义,如图:
+   1. ![微分的几何画图](../../images/Advanced/Differential01.png)
+3. 微分的运算公式
+   $$ dy =y'dx$$
+4. 一元函数可微与可导(其实就是一个意思)
+5. 可导与连续的关系
+   1. 若$x_0$为可导点, 则$f(x_0)在x_0$上连续
+   2. 若$x_0$左右导数存在, 则$f(x_0)在x_0$上连续
+   3. 若$x_0$处连续, 则$f(x_0)在x_0$上不一定可导
+   4. 若$x_0$处不连续, 则$f(x_0)在x_0$上一定不可导
+--- 
+
+### 微分中值定理与导数的应用
+1. 中值定理
+   1. 费马引理
+   2. 罗尔定理
+   3. 拉格朗日中值定理:
+      1. $\frac{f(b)-f(a)}{b-a}=f'(\xi)$, 记$\xi=a+\theta(b-a)$, 则$\frac{f(b)-f(a)}{b-a}=f'(a+\theta(b-a))$, 其中$0<\theta<1$
+   4. 柯西中值定理:
+      1. $\frac{f(b)-f(a)}{F(b)-F(a)}=\frac{f'(\xi)}{F'(\xi)}$
+   5. 泰勒中值定理
+2. 导数的几何应用
+   1. 单调性的判定
+      1.在(a,b)区间可导, 如果恒有$f'(x) > 0(<0)$, 则有$f(x),在(a,b)$内单调增加(减少);如果恒有$f'(x) \ge 0(\le0), 则在(a,b)内单调不减(增)$
+   2. 极值
+      1. $x_0$在某邻域有定义, 有$f(x)<f(x_0) 或者f(x)>f(x_0) $, 则存在极大值(或极小值)
+      2. 必要条件(可导情形):$x_0$为极值且f(x)可导,则$f'(x)=0$
+      3. 充分条件
+         1. $(x_0-\Delta,x_0),f'(x)>0$,而$(x_0,x_0+\Delta),f'(x)<0$，则f(x)在x0处有极大值
+         2. $(x_0-\Delta,x_0),f'(x)<0$,而$(x_0,x_0+\Delta),f'(x)>0$，则f(x)在x0处有极小值
+         3. 若$f'(x)$不变号,则没有极值
+      4. 第二充分条件,$f'(x_0)=0, f''(x_0)\ne0'$
+         1. 当$f''(x_0)<0$, 则有极大值
+         2. 当$f''(x_0)>0$, 则有极小值
+      5. 第三充要条件
+         1. 若n阶可导, 则$x=x_0$是极值点
+            1. 当$f''(x_0)>0$, $x=x_0$则有极小值
+            2. 当$f''(x_0)<0$, $x=x_0$则有极大值
+      6. 注:
+         1. 一阶导数,用第一充分条件判断极值
+         2. 二阶导数,用第二充分条件判断极值
+         3. 以上条件均失效, 考虑用高阶导数判断
+3. 最值
+   1. f(x)在$I$上有定义(值域), $f(x)\le f(x_0) 或 f(x)\ge f(x_0)$, 则称$f(x_0)是函数$f(x)$在区间上的最大值或(最小值)
+4. 凹凸性判断
+   1. 设[a,b]连续,在(a,b)内二阶可导
+      1. $f''(x)<0$, 则曲线在$[a,b]$是凸的
+      2. $f''(x)>0$, 则曲线在$[a,b]$是凹的
+5. 拐点
+   1. 定义:曲线上凹弧和凸弧的分界点,就是拐点
+   2. 必要条件,$f''(x_0)$存在, $f"(x_0)=0$
+   3. 第一充分条件
+      1. 连续,二阶可导,$f"(x_0)在x=x_0$处两侧异号,则$(x_0,f(x_0))$为拐点
+   4. 第二充分条件
+      1. $f"(x_0)=0, f"(x_0) \neq 0$, 则$(x_0,f(x_0))$为拐点
+   5. 第三充分条件
+      1. $f'(x_0)=f"(x_0)=f"'(x_0)=\cdots=f^{n-1}(x_0)=0, f^{n}(x_0) \not ={0}(n \ge 3)$, 则$(x_0,f(x_0))$为拐点
+6. 渐近线
+   1. 铅直渐近线 $x=a; \lim\limits_{x\to a+}f(x)=\infty 或\lim\limits_{x\to a-}f(x)=\infty$
+   2. 水平渐近线 $y=c; \lim\limits_{x\to +\infty}f(x)=c 或\lim\limits_{x\to -\infty}f(x)=c$
+   3. 斜渐近线 $y=kx+b; \lim\limits_{x\to \infty}\frac{f(x)}{x}=k \neq 0, \lim\limits_{x\to \infty}[f(x)-kx]=b$
+   4. 斜渐近线和水平渐近线不能同时存在
+7. 弧微分、曲率、曲率半径
+   1. 弧微分: 设$y=f(x)$是平面内的光滑曲线, 则弧微分$ds=\sqrt{1+[f'(x)]^2}dx$
+      - 若曲线方程为$\left\{\begin{array}{l} x=x(t), \\ y=y(t) \end{array}\right.$, 弧微分$ds=\sqrt{[x'(t)]^2+[y'(t)]^2}dt$
+      - 若曲线方程: $r=r(\theta)$,弧微分$ds=\sqrt{[r'(\theta)]^2+[r'(\theta)]^2}d\theta$
+   2. 曲率公式: $$k=\frac{|y"|}{[1+(y')^{2}]^{\frac{3}{2}}}$$
+      1. 曲线$\left\{\begin{array}{l} x=x(t), \\ y=y(t) \end{array}\right.$上任意一点处的曲率为$K=\frac{|x"(t)y'(t)-x'(t)y"(t)|}{([x'(t)]^2+[y'(t)]^2)^{\frac{3}{2}}}$
+   3. 曲率半径$R=\frac{1}{k}(k \neq 0)$
+
+      
 ### 微分中值定理
 
 ### 导数的几何应用
