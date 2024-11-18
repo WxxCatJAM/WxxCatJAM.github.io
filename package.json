@@ -15,6 +15,6 @@
     "markdown-it-katex": "^2.0.3"
   },
   "resolutions": {
-  "katex": "^0.16.11"
+    "katex": "^0.16.11"
   }
 }
