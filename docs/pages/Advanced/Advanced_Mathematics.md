@@ -484,7 +484,19 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 --- 
 
 ### 反常积分
+1. **无穷区间**上的反常积分
+   1. 若$\int_a^{+\infty}f(x)dx=F(x)|_a^{+\infty}=\lim\limits_{x \to +\infty}F(x)-F(a)$存在,则称放长积分$\int_a^{+\infty}f(x)dx$收敛, 否则称之为发散
+   2. 常用结论与公式: 
+      - $\int_a^{+\infty}\frac{1}{x^{\rho}}dx \left\{\begin{array}{l} 收敛 ,  \rho >1 \\ 发散, \rho \le 1 \end{array}\right. (a>1);$ 
+      - $\int_a^{+\infty}\frac{1}{x\ln^{\rho}x}dx \left\{\begin{array}{l} 收敛 ,  \rho >1 \\ 发散, \rho \le 1 \end{array}\right.  (a>1);$
+      - $\int_0^{+\infty}x^ne^{-x}dx=n!;$
+      - $\int_0^{+\infty}e^{x^2}dx=\frac{\sqrt{x}}{\pi};$
+--- 
+2. **无界函数**的反常积分
 
+3. 反常积分的比较判别法
+
+4. $\Gamma$函数
 
 ## 定积分应用
 
@@ -507,7 +519,10 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 
 ## 微分方程
 ### 一阶微分方程
-
+1. 变量可分离方程
+2. 齐次型微分方程
+3. 一阶线性微分方程
+4. 伯努利方程
 ### 可降阶的微分方程及其解法
 
 
@@ -515,7 +530,9 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 
 
 ### 常系数线性微分方程
-
+1. 二阶常系数齐次线性微分方程
+2. n阶常系数齐次线性微分方程
+3. 二阶常系数非齐次线性微分方程
 
 ### 欧拉方程
 
