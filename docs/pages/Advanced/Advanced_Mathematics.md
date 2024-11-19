@@ -468,12 +468,20 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
 4. 定积分几何意义
    1. 在区间上非负,则定积分表示由曲线y=f(x),x轴,直线x=a,x=b所围图形的面积
    2. 在区间上变号,则定积分表示由曲线y=f(x),x轴,直线x=a,x=b所围x轴上方图形减去x轴下方图形面积所得之差.
-      1. 例: $$\int_{-R}^R \sqrt{R^2-x^2}dx=\frac{\piR^2}{2}$
-5. 对称区间上的定积分$$ \int_{-a}^a f(x)dx=\int_0^a[f(x)+f(-x)]dx=\left\{\begin{array}
-   2\int_0^a f(x)dx & f(x)=f(-x)\\
-   0, f(x)=-f(-x) 
-\end{array}
-\right.$$
+      1. 例: $$\int_{-R}^R \sqrt{R^2-x^2}dx=\frac{\pi R^2}{2}$
+5. 对称区间上的定积分$$ \int_{-a}^a f(x)dx=\int_0^a[f(x)+f(-x)]dx= \left\{\begin{array}{l}2\int_0^a f(x)dx ,  f(x)=f(-x)\\ 0, f(x)=-f(-x) \end{array}\right.$$
+6. 三角函数的积分性质:
+   1. $\int_0^{\frac{\pi}{2}} \sin xdx=\int_0^{\frac{\pi}{2}} \cos x dx=\left\{\begin{array}{l} \frac{n-1}{n}\cdot \frac{n-3}{n-2}\cdots \frac{2}{3} \cdot 1, n>1,且为奇数\\ \frac{n-1}{n}\cdot \frac{n-3}{n-2}\cdots \frac{1}{2} \cdot \frac{\pi}{2}, n为正偶数 \end{array}\right.$ 
+   2. $\int_0^{\frac{\pi}{2}}\frac{\sin^{\alpha}x}{\sin^{\alpha}x+\cos^{\alpha}x}dx=\int_0^{\frac{\pi}{2}}\frac{\cos^{\alpha}x}{\sin^{\alpha}x+\cos^{\alpha}x}dx=\frac{\pi}{4}$
+   3. $\int_0^{\frac{\pi}{2}}\frac{\tan^{\alpha}x}{\tan^{\alpha}x+1}dx=\int_0^{\frac{\pi}{2}}\frac{1}{\tan^{\alpha}x+1}=\frac{\pi}{4}$
+   4. $\int_0^{\pi}f(\sin x)dx=2\int_0^{\frac{\pi}{2}}f(\sin x)dx$; $\int_0^{\pi}f(|\cos x|)dx=2\int_0^{\frac{\pi}{2}}f(\cos x)dx$
+   5. $\int_0^{\pi}xf(\sin x)dx=\frac{\pi}{2}\int_0^{\pi}f(\sin x)dx=\pi\int_0^{\frac{\pi}{2}}f(\sin x)$
+7. 周期函数的积分性质
+   -  T为周期
+   1. a 为常数, 则$\int_a^{a+T}f(x)dx=\int_0^{T}f(x)dx=\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)dx$
+   2. 对任意数, 则$\int_a^{a+nT}f(x)dx=n\int_0^{T}f(x)dx=n\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)dx$
+   3.$\int_a^{a+nT}\sin \omega x dx= \int_a^{a+nT}\cos \omega x dx=0(T=\frac{2\pi}{\omega}0$
+--- 
 
 ### 反常积分
 
