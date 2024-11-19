@@ -384,20 +384,96 @@ $$\lim\limits_{x \to \infty}\frac{a_m+x^m+a_{m-1}x^{m-1}+\cdots+a_1x+a_0}{b_nx^n
    22. $\int \cot^2 xdx =-\cot x -x +C$
    23. $\int a^xdx=\frac{a^x}{ln a}+C$
    24. $\int e^x dx=e^x+C$
+   25. $\int \frac{dx}{\sqrt{a^2-x^2}}=\arcsin \frac{x}{a}+C$
+   26. $\int \frac{dx}{a^2+x^2}=\frac{1}{a}\arctan\frac{x}{a}+C$
+   27. $\int \frac{dx}{a^2-x^2}=\frac{1}{2a}\ln \frac{|x+a|}{|x-a|}+C$
+   28. $\int \frac{dx}{\sqrt{x^2+a^2}} = \ln|x+\sqrt{x^2+a^2}|+C$
+   29. $\int \frac{dx}{\sqrt{x^2-a^2}} = \ln|x+\sqrt{x^2-a^2}|+C, (|x|>|a|)$
+   30. $\int \sqrt{a^2-x^2}dx=\frac{a^2}{2}\arcsin\frac{x}{a}+\frac{x}{a}\sqrt{a^2-x^2}+C$
+   31. $\int \frac{x^2}{\sqrt{ax+b}}dx = \frac{2}{15a^3}(3a^2x^2-4abx+8b^2)\sqrt{ax+b}+C$
+--- 
 
 ### 不定积分的计算
-
+1. 第一换元法（凑微分）
+   - 设$\int f(u)du=F(u)+C, \varphi(x)$可导,则: $$ \int f[\varphi(x)]\varphi'(x)dx=\int f[\varphi(x)]d[\varphi(x)]=F[\varphi(x)]+C$$
+2. 第二换元法
+   - 设$x=\varphi$可导, 且$\varphi'(t) \neq 0, 若\int f[\varphi(t)] \varphi'(t)dt = G(t)+C$,则 $$ \int f(x)dx \underleftrightarrow{x=\varphi(t)} \int f[\varphi(t)]\varphi'(t)dt=G(t)+C=G[\varphi^{-1}(x)]+C$$
+     
+     |--|--|--|
+     | :--------- | :-------: | ----------: |
+     |$\sqrt{a^2-x^2}$|令$x=a\sin t$| ![积分的几何画图](../../images/Advanced/Integral01.png) |  
+     |$\sqrt{a^2+x^2}$|令$x=a\tan t$| ![积分的几何画图](../../images/Advanced/Integral02.png) |    
+     |$\sqrt{x^2-a^2}$|令$x=a\sec t$| ![积分的几何画图](../../images/Advanced/Integral03.png) |
+     |$\sqrt[n]{ax+b}$|令$\sqrt[n]{ax+b}=t$| $x=\frac{t^n-b}{a}$} |  
+   **注**:
+     - 若分母幂比分子幂高2次以上,可以代换$\frac{1}{x}=t$
+     - 积分结果要将t换回原来的积分变量
+3. 分部积分法
+   1. 设$u(x),v(x)$均有连续的导数, 则$\int u(x)d[v(x)]=u(x)v(x)-\int v(x)d[u(x)]$
+4. 有理函数积分
+   1. 有多项式$P_n(x),Q_m(x), 则\int \frac{P_n(x)}{Q_m(x)}dx$为有理函数积分,有n和m为**真分式**, 否则为**假分式**
+--- 
 
 ## 定积分
-
 ### 定积分的概念和性质
-
-
-### 微积分基本共识
-
+1. 定积分的概念
+   1. 定积分是把函数$f(x)$在区间$[a,b]$上积分, 得到的值,记为$\int_a^b f(x)dx$
+   2. $\int_a^bf(x)dx = \lim\limits_{n\to \infty}\sum\limits_{i=1}^n f[a+\frac{(b-a)i}{n}]\frac{b-a}{n}$
+   3. $\int_0^1f(x)dx= \lim\limits_{n\to \infty}\sum\limits_{i=1^n}f(\frac{i}{n})=\lim\limits_{n \to \infty}\sum \limits{i=0}^{n-1} f(\frac{2i+1}{2n})$
+2. 可积的充要条件:
+   1. 充分条件:
+      1. f(x)在[a,b]上连续
+      2. f(x)在[a,b]上有界,且有有限个间断点
+   2. 必要条件
+      1. 在[a,b]上有界(有界函数不一定可积)
+3. 定积分几何意义
+   1. 表示曲线f(x)和直线x=a,x=b以及x轴所围成图形面积的代数和. 
+      1. x轴上方取正值
+      2. x轴下方取负值
+4. 定积分性质
+   1. $\int_a^b[k_1f(x) \pm k_2g(x)]dx=k_1\int_a^bf(x)dx \pm k_2\int_a^bg(x)dx$k1k2为常数
+   2. $\int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx$
+   3. $\int_a^b 1dx=b-a$
+   4. (定积分的保号性)若区间[a,b]有$f(x) \geq 0, 则\int_b^af(x)\geq 0$ 
+      1. 推论1: 若$f(x) \geq g(x)$, 则$\int_a^b f(x)dx \geq \int_a^b {g(x)}dx$
+      2. 推论2: $f(x) \geq 0$,其中等号只在有限个点上,则$\int_a^bf(x)dx\geq 0$
+      3. 推论3: f(x),g(x)在区间上连续,$f(x) \geq g(x)$,则:$$\int_a^bf(x)dx > \int g(x)dx$$
+      4. 推论4: $|\int_a^b f(x)dx| \leq \int_a^b |f(x)|dx, a<b$
+      5. 设M和m分别是函数f(x)在区间[a,b]上的最大值和最小值,则:$$ m(a-b)\leq \int_a^b f(x)dx \leq M(b-a)$$
+      6. (积分第一中值定理)设f(x)g(x)在[a,b]上连续, g(x)在此区间不变号,则至少存在一点$\xi \in [a,b], 有\int_a^b f(x)g(x)dx=f(\xi)\int_a^bg(x)dx$
+         1. 若g(x)=1, 则$\int_a^b f(x)dx=f(\xi)(b-a)$
+         2. $f(\xi)=\frac{\int_a^b f(x)dx}{b-a}$的平均值
+---  
+### 微积分基本公式
+1. 牛顿-莱布尼茨公式
+   1. 设f(x)在区间上可积,F(x)为原函数,则有:$$\int_a^b f(x)dx=F(x) |_a^b=F(b)-F(a)$$
+   2. 变限积分函数
+      1. 定义: f(x)在区间上可积, 则$F(x)=\int_a^x f(t)dt, x\in[a,b],$称为变上限积分函数
+      2. 性质:
+         1. f(x)可积, 则$F(x)=\int_a^x f(t)dt$在[a,b]上连续
+         2. 若f(x)连续,则$F(x)=\int_a^x f(t)dt$在[a,b]上可导, $F'(x)=f(x)$
+         3. $F(x)=\int_{\varphi_1^{(x)}}^{\varphi_2^{(x)}}f(t)dt,\varphi_1(x)和\varphi_2(x)可导,f(x)连续$,则: $$ F'(x)=f[\varphi_2(x)]\varphi_2'(x)-f[\varphi_1(x)]\varphi_1'(x)$
+            1. 注:若区间为$[a,x_0)\cup(x_0,b]$, 也就是在x=x0出间断
+               1. 若点$x=x_0$为可去间断点, 则$F'(x_0)=\lim\limits_{x \to x_0}f(x)$
+               2. 若为条约间断点, 则$F'(x_0)$不存在
+--- 
 
 ### 定积分计算
-
+1. 换元法
+   1. 函数在区间连续, 函数$x=\varphi(t)$满足以下两个条件:
+      1. $\varphi(\alpha)=a, \varphi(\beta)=b, 且当t \in [\alpha,\beta]或[\beta,\alpha]$时, 有a\leq\varphi(t)\leq b$
+      2. $x=\varphi(t)$且在区间上连续, 则: $$\int_a^b f(x)dx\underleftrightarrow{x=\varphi(t)}\int_{\alpha}^{\beta} f(\varphi(t))\varphi'(t)dt=$$
+2. 分部积分法 $$\int_a^b udv=uv |_a^b - \int_a^b vdu$$
+3. 区间再现公式 $$\int_a^bf(x)dx=\int_a^b f(a+b-x)dx$$
+4. 定积分几何意义
+   1. 在区间上非负,则定积分表示由曲线y=f(x),x轴,直线x=a,x=b所围图形的面积
+   2. 在区间上变号,则定积分表示由曲线y=f(x),x轴,直线x=a,x=b所围x轴上方图形减去x轴下方图形面积所得之差.
+      1. 例: $$\int_{-R}^R \sqrt{R^2-x^2}dx=\frac{\piR^2}{2}$
+5. 对称区间上的定积分$$ \int_{-a}^a f(x)dx=\int_0^a[f(x)+f(-x)]dx=\left\{\begin{array}
+   2\int_0^a f(x)dx & f(x)=f(-x)\\
+   0, f(x)=-f(-x) 
+\end{array}
+\right.$$
 
 ### 反常积分
 
