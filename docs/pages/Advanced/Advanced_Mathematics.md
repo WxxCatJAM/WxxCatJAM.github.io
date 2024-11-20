@@ -890,9 +890,12 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
 1. 二阶常系数齐次线性微分方程
    1. 形如$y"+py'+qy=0$(p,q为常数), 特征方程$\lambda^2+p\lambda+q=0$
       1. 根据特征根可以得到以下表格:
+       
       |判别式|特征根|齐次方程的通解形式|
-      |-----|-----|-----|
+      | :------ | :------------------: | -------------------: |
       |$p^2-4q>0$|两个不相等的实根$\lambda_1,\lambda_2$|$C_1e^{\lambda_1x}+C_2e^{\lambda_2x}$|
+      |$p^2-4q=0$|两个相等的实根$\lambda_1=\lambda_2=\lambda$|$(C_1e+C_2)e^{\lambda x}$|
+      |$p^2-4q<0$|一对共轭复根$\lambda_{1,2}=\alpha \pm \betai$|$e^{\alpha x}(C_1\cos \beta x+C_2 \sin \beta x)$|
 2. n阶常系数齐次线性微分方程
 3. 二阶常系数非齐次线性微分方程
 
