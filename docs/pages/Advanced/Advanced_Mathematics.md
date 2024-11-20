@@ -895,10 +895,28 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
       | :------ | :------------------: | -------------------: |
       |$p^2-4q>0$|两个不相等的实根$\lambda_1,\lambda_2$|$C_1e^{\lambda_1x}+C_2e^{\lambda_2x}$|
       |$p^2-4q=0$|两个相等的实根$\lambda_1=\lambda_2=\lambda$|$(C_1e+C_2)e^{\lambda x}$|
-      |$p^2-4q<0$|一对共轭复根$\lambda_{1,2}=\alpha \pm \betai$|$e^{\alpha x}(C_1\cos \beta x+C_2 \sin \beta x)$|
+      |$p^2-4q<0$|一对共轭复根$\lambda_{1,2}=\alpha \pm \beta i$|$e^{\alpha x}(C_1\cos \beta x+C_2 \sin \beta x)$|
 2. n阶常系数齐次线性微分方程
+   1. 由2阶可以推广到n阶
+      - 一般形式：$y^n+p_1y^{n-1}+p_2y^{n-2}+\cdots+p_{n-1}y'+p_ny=0$
+      - 对应的特征方程: $\lambda^n+p_1\lambda^{n-1}+\cdots+p_{n-1}\lambda+p_n=0$$
+   2. 根据上述特征方程, 可得以下表格:
+      
+      |特征根|齐次方程的通解型式|
+      | :------ | :------------------: |
+      |单实根$\lambda$|$y=Ce^{\lambda x}$|
+      |k重实根$\lambda$|$(C_1+C_2x+\cdots+C_kx^{k-1})e^{\lambda x}$|
+      |一对单复根$\lambda_{1,2}=\alpha \pm \beta i(\beta > 0)$|$e^{\alpha x}(C_1\cos \beta x+C_2 \sin \beta x)$|
+      |一对k复根$\lambda_{1,2}=\alpha \pm \beta i(\beta > 0)$|$e^{\alpha x}(C_1+C_2x+\cdots+C_kx^{k-1})\cos \beta x+(C_1+C_2x+\cdots+C_kx^{k-1}) \sin \beta x)$|
 3. 二阶常系数非齐次线性微分方程
-
+   - 方程$y"+py'+qy=0$(p,q为常数), 方程通解$y=y^*+\bar {y}$
+     - $ \bar{y}$ 为齐次方程的通解, 
+     - $y^*$为非齐次方程的特解, 特解$y^*$通过以下方法确定:
+         1.  若$f(x)=e^{\lambda x}P_n(x),(P_n(x) ----> 为x的n次多项式, \lambda 为实数)$
+         2.  则$y^*$为$f(x)$关于$x$的导数
+             1.  若$\lambda$不是特征根, 则令$y^*=e^{\lambda x}R_n(x)$
+             2.  若$\lambda$是特征方程的单根, 则令$y^*=xe^{\lambda x}R_n(x)$
+             3.  若$\lambda$是特征方程的二重根, 则令$y^*=y^*=x^2e^{\lambda x}R_n(x)$
 ### 欧拉方程
 
 ### 全微分方程
