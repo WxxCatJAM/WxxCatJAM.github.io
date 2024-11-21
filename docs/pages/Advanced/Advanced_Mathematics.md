@@ -928,7 +928,7 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
 ### 全微分方程
    - 若$P(x,y)dx+Q(x,y)dy$为某函数u(x,y)的全微分,即: $$ du(x,y)=P(x,y)dx+Q(x,y)dy,$$
    - 则方程$P(x,y)dx+Q(x,y)dy=0$c称为全微分方程:
-     - 由$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$, 可得其通解为: $$u(x,y) =\int_{x_0,y_0)^{x,y}P(x,y)dx+Q(x,y)dy=C$$
+     - 由$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$, 可得其通解为: $$u(x,y) =\int_{x_0,y_0}^{x,y}P(x,y)dx+Q(x,y)dy=C$$
 ## 向量代数与空间解析几何
 
 ### 向量代数
@@ -940,7 +940,7 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
 ### 空间曲线
 
 ## 多元函数微分学
-### 多元函数的基本概念
+### 1. 多元函数的基本概念
 1. 多元函数的极限
 $$\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)=A \iff \forall \epsilon>0, \exists \delta>0, 当0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta $$,有
 $$|f(x,y)-A|<\epsilon $$
@@ -948,14 +948,50 @@ $$|f(x,y)-A|<\epsilon $$
 3. 多元函数再有界闭区域上的性质
    1. 如有界,则有大小值
 4. 一阶偏导数
-   1. 设函数
-### (偏)导数的计算
+   1. 设函数$z=f(x,y),在点(x_0,y_0)$上的某领域有定义,若极限: 
+   $$ \lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}$$
+   存在, 则称此极限为z=f(x,y)在点(x_0,y_0)处对x的偏导数,记作:
+   $$ f_x'(x_0,y_0)=\lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}$$
+   类似有$f_x'(x_0,y_0)=\lim\limits_{\Delta y \to 0}\frac{f(x_0,y_0+\Delta y)-f(x_0,y_0)}{\Delta y}$
+5. 多元函数连续、一阶偏导数存在、可微与一阶偏导数连续的关系
 
-### 极值
+![alt text](../../images/Advanced/advanced01.png)
 
-### 多元函数微分学的几何应用
+1. 二阶偏导数
+   - 若 z=f(x,y) 有连续的二阶偏导数，则$f"_{xy}(x,y)=f"_{yx}(x,y)$
 
-### 方向导数与梯度
+--- 
+### 2. (偏)导数的计算
+1. 多元复合一元
+   1. 设函数z=f(x,y),并在此点处的偏导数连续，其中x=x(t),y=y(t)可微， 此时z是t的一元函数$z=f(x(t),y(t))$ 则:
+   $$\frac{dz}{dt}=z'(t)=\frac{\partial f}{\partial x}\cdot \frac{\partial x}{\partial t}+\frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t}= f'_1x'(t)+f'_2y'(t)$$
+   特别地, 若y是x的可导函数y=y(x), 则z=f[x,y(x)]:
+   $$\frac{dz}{dx}=z'(x)=\frac{\partial f}{\partial x}\cdot \frac{\partial x}{\partial x}+\frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial x}= f'_1+f'_2y'(x)$$
+   2. 多元复合多元
+      1. z为x,y的二元函数z=f[u(x,y),v(x,y)],故:
+      $$\frac{dz}{dx}=\frac{\partial f}{\partial u}\cdot \frac{\partial u}{\partial x}+\frac{\partial f}{\partial v} \cdot \frac{\partial v}{\partial y}= f'_1u'_x+f'_2v'_x$$
+      $$\frac{dz}{dy}=\frac{\partial f}{\partial u}\cdot \frac{\partial u}{\partial y}+\frac{\partial f}{\partial v} \cdot \frac{\partial v}{\partial y}= f'_1u'_x+f'_2v'_y$$
+      - 若u是x的可导函数,则:
+      $$\frac{dz}{dx}=\frac{\partial f}{\partial u}\cdot \frac{\partial u}{\partial x}+\frac{\partial f}{\partial v} \cdot \frac{\partial v}{\partial y}= f'_1u'+f'_2v'_x$$
+      $$\frac{dz}{dy}=\frac{\partial f}{\partial v}\cdot \frac{\partial v}{\partial y}=f'_2v'_y$$
+   3. 一元复合多元
+      1. 设函数z=f(u),z是x,y的二运函数f[u(x,y)],有:
+      $$ \frac{dz}{dx}=\frac{\partial f}{\partial u}\cdot \frac{\partial u}{\partial x}=f'(u)u'_x, \frac{dz}{dy}=\frac{\partial f}{\partial u}\cdot \frac{\partial u}{\partial y}=f'(u)u'_y$$
+2. 隐函数
+   1. 一元隐函数
+      1. 若$F(x,y)在(x_0,y_0)$的某邻域内有一阶段连续偏导数, 且$F(x_0,y_0)=0, F'_y(x_0,y_0) \neq 0$，则方程$F(x,y)=0$在点(x_0,y_0)的该领域内可唯一确定一个具有连续导数的函数y=y(x), 满足$y_0=y(x_0), 有\frac{dy}{dx}=-\frac{F'_x}{F'_y}$
+         1. $F'_x,F'_y$是二元函数$F(x,y)$对x,y的偏导数
+
+   2. 二元隐函数
+      1. 若$F(x,y,z)在(x_0,y_0,z_0)$的某邻域内有一阶段连续偏导数,且$F(x_0,y_0,z_0)=0, F'_y(x_0,y_0,z_0) \neq 0$则方程$F(x,y,z)=0$在点(x_0,y_0,z_0), 是唯一确定一个具有连续偏导数的二元函数$z=f(x,y), 满足z_0=f(x_0,y_0), 有\frac{\partial z}{\partial x}=-\frac{F'_x}{F'_z},\frac{\partial z}{\partial y}=-\frac{F'_y}{F'_z}$
+   3. 已知由方程组$\left\{\begin{array}{l} F(x,y,u,v)=0 \\ G(x,y,u,v)=0 \end{array}\right.$, 确定隐函数$\left\{\begin{array}{l} u=u(x,y) \\ v=v(x,y) \end{array}\right.$对方程组关于x求偏导,有:
+   $$\left\{\begin{array}{l} F'_x+F'uu'_x+F'_vv'_x=0, \\ G'_x+G'uu'_x+G'_vv'_x=0 \end{array}\right.$$
+      
+### 3. 极值
+
+### 4. 多元函数微分学的几何应用
+
+### 5. 方向导数与梯度
 
 ## 二重积分
 
