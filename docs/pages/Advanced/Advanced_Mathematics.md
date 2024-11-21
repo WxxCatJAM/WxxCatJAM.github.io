@@ -917,10 +917,18 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
              1.  若$\lambda$不是特征根, 则令$y^*=e^{\lambda x}R_n(x)$
              2.  若$\lambda$是特征方程的单根, 则令$y^*=xe^{\lambda x}R_n(x)$
              3.  若$\lambda$是特征方程的二重根, 则令$y^*=y^*=x^2e^{\lambda x}R_n(x)$
+         3.  若$f(x)==e^{\lambda x}[P_l(x)\cos \beta x+Q_m(x)\sin x \beta x], 其中x的l,m多项式$
+             1.  若$\alpha \pm \beta i$不是特征根, 则令$y^*=e^{\lambda x}[P_l(x)\cos \beta x+Q_m(x)\sin x \beta x]$
+             2.  若$\alpha \pm \beta i$是特征根, 则令$y^*=xe^{\lambda x}[P_l(x)\cos \beta x+Q_m(x)\sin x \beta x]$
+
 ### 欧拉方程
-
+   - 形如$x^2y"+axy'+by=f(x)$的方程为欧拉方程, 其中a,b为常数, f(x)为已知函数
+   - 当x>0时, 令$x=e'$,则: $$ y'=\frac{dy}{dx}=\frac{1}{x}\frac{dy}{dt}, y"=\frac{d^2y}{dx^2}=-\frac{1}{x^2}\frac{dy}{dt}+\frac{1}{x^2}\frac{d^2y}{dt^2} $$
+代入方程变为y关于t的微分方程,即求解第二阶常系数微分方程: $$y"(t)+(a-1)y'(t)+by(t)=f(e^t)$$
 ### 全微分方程
-
+   - 若$P(x,y)dx+Q(x,y)dy$为某函数u(x,y)的全微分,即: $$ du(x,y)=P(x,y)dx+Q(x,y)dy,$$
+   - 则方程$P(x,y)dx+Q(x,y)dy=0$c称为全微分方程:
+     - 由$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$, 可得其通解为: $$u(x,y) =\int_{x_0,y_0)^{x,y}P(x,y)dx+Q(x,y)dy=C$$
 ## 向量代数与空间解析几何
 
 ### 向量代数
@@ -932,9 +940,15 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
 ### 空间曲线
 
 ## 多元函数微分学
-
 ### 多元函数的基本概念
-
+1. 多元函数的极限
+$$\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)=A \iff \forall \epsilon>0, \exists \delta>0, 当0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta $$,有
+$$|f(x,y)-A|<\epsilon $$
+2. 多元函数的连续性
+3. 多元函数再有界闭区域上的性质
+   1. 如有界,则有大小值
+4. 一阶偏导数
+   1. 设函数
 ### (偏)导数的计算
 
 ### 极值
