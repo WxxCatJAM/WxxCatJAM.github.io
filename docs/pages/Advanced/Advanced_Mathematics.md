@@ -1,3 +1,5 @@
+<!-- Disable mathjax, use katex -->
+<!-- { "math": "katex" } -->
 # 高等数学
 
 ## 函数、极限和连续
@@ -1028,15 +1030,62 @@ $$|f(x,y)-A|<\epsilon $$
       法线方程:$\frac{x-x_0}{F'_x(x_0,y_0,z_0)}+\frac{y-y_0}{F'_y(x_0,y_0,z_0)}+\frac{z-z_0}{F'_z(x_0,y_0,z_0)} =0$
    2. 若曲面方程为z=f(x,y), 则切平面方程为$F_x(x,y,z)=f(x,y)-z, 有F'_x=f'_x, F'_y=f'_y, F'_z=-1$, 将$F'_x,F'_y,F'_z$代入切平面方程,即可得切平面方程
 ### 5. 方向导数与梯度
-
+1. 方向导数
+   1.定义,有函数和点其沿方向$l=(\cos \alpha,\cos \beta) 的方向导数为:
+   $$\frac{\partial f}{\partial l_1}|_{(x_0,y_0)}=\lim\limits_{t \to 0+} \frac{f(x_0+t\cos \alpha,y_0+t\cos \beta)-f(x_0,y_0)}{t}$
+      - 其中$\alpha, \beta$为射线l与x轴,y轴正半轴的夹角
+   2. 计算
+      1. 若函数在某点出可微,则函数在该店沿任意方向$l$的方向导数均存在,且有:
+      $$ \frac{\partial f}{\partial l_1}|_{(x_0,y_0)}=f'_x(x_0,y_0)\cos \alpha,f'_y(x_0,y_0)\cos \beta)$$
+   - 其中$\cos \alpha, \cos \beta$为$l$的方向余弦
+   - 同理可得,三元可微函数u=(x,y,z)在点$P(x_0,y_0,z_0)$
+2. 梯度
+   1. 若函数z=f(x,y)有一阶连续偏导数, 称向量$(f'_x(x_0,y_0),f'_y(x_0,y_0))$为此函数在点$(x_0,y_0)处的梯度, 记为$grad f(x_0,y_0)=(f'_x(x_0,y_0),f'_y(x_0,y_0))$
+   2. 同理三元函数u=(x,y,z)在点$(x_0,y_0,z_0)$处为$grad u(x_0,y_0,z_0)=(u'_x(x_0,y_0,z_0),u'_y(x_0,y_0,z_0),u'_z(x_0,y_0,z_0))$
 ## 二重积分
+### 1. 二重积分的概念和性质
+1. 定义
+   $$ \iint\limits_D f(x,y) d\sigma = \lim\limits_{\lambda \to 0}\sum_{i=1}^n f(\xi_i, \eta_i)$$
+   其可用于求数列极限
+2. 几何意义
+   - 若$(x,y)\in D, z=f(x,y)$，则$\iint_D f(x,y) d\sigma$, 表示以区域D为底, 高为z=f(x,y)的曲顶柱体的体积
+3. 性质
+   1. $\iint\limits_D[k_1f(x,y)+k_2g(x,y)]dxdy=k_1\iint\limits_D f(x,y)dxdy+k_2\iint\limits_D g(x,y)dxdy,(k_1,k_2\in\mathbb{C})$
+   2. $\int\limits_D f(x,y)dxdy=\iint\limits_{D_1} f(x,y)dxdy+\iint\limits_{D_2} f(x,y)dxdy (D=D_1+D_2, D_1\cap D_2=\emptyset)$
+   3. 若$(x,y)\in D$, 有f(x,y)=1, 则$\iint\limits_D f(x,y)dxdy=\iint\limits_D 1dxdy=S_D(S_D为有界闭区域D的面积)$
+   4. 若f(x,y),g(x,y)在D上连续,且$f(x,y)\geq g(x,y)$,则:
+   $$ \iint\limits_D f(x,y)dxdy\geq \iint\limits_D g(x,y)dxdy $$
+   - 若等号仅在有限条线上成立,则称$\iint\limits_D f(x,y)dxdy > \iint\limits_D g(x,y)dxdy.$
+   $$ \iint\limits_D |f(x,y)|dxdy\geq |\iint\limits_D g(x,y)dxdy|$$
+   5. 若函数在有界闭区域D上连续,有$m \leq f(x,y) \leq M, S_D为区域D的面积$,则:
+   $$ mS_D=\iint\limits_D mdxdy \leq \iint\limits_D f(x,y)dxdy \leq \iint\limits_D MS_D $$
+   6. **(二重积分的中心定理)**若函数在 有界区域D上连续,S_D为区域D的面积,则$\exist(\xi,\eta)\in D$ 有:
+   $$ \iint\limits_D f(x,y)dxdy=f (\xi,\eta)S_D$$
 
-### 二重积分的概念和性质
+### 2. 二重积分的计算
+1. 直角坐标系下计算二重积分
+   1. X型区域
+      1. 设积分区域$D=\{(x,y)|\varphi(x)\leq x\leq b,c\leq y\leq d\}$ 
+   2. Y型区域
+   3. 二重积分的就行与轮换对称性
+   4. 形心公式
+2. 极坐标系下计算二重积分
+   1. 极坐标的三种常见区域
+      1. 极点(坐标原点)在积分区域外
+      2. 极点在积分区域边界上
+      3. 极点在积分区域内部
+   2. 平移变换
+   3. 直角坐标系下和极坐标系下计算二重积分的过程
+### 3. 二重积分的应用
+   | 几何/物理量 | 表达式                                                                                                                                                               |
+   | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   |    面积     | $S=\iint\limits_D 1d\sigma$                                                                                                                                          |
+   |    体积     | $V=\iint\limits_D|f(x,y)|d\sigma$   |
+   |    质量     | $m=\iint\limits_D \rho(x,y)d\sigma$                                                                                                                                  |
+   |    质心     | $\bar{x}=\frac{\iint\limits_D x\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}, \bar{y}=\frac{\iint\limits_D y\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}$ |
+   |  转动质量   | 对x轴: $\iint\limits_D y^2\rho(x,y)d\sigma$ 对 y轴: $\iint\limits_D x^2\rho(x,y)d\sigma$ 对原点: $\iint\limits_D (x^2+y^2)\rho(x,y)d\sigma$                                                                                                                                                             |
 
-### 二重积分的计算
-
-### 二重积分的应用
-
+ **** 
 ## 无穷级数
 
 ### 常数项级数的概念与性质
