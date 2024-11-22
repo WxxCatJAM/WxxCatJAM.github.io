@@ -1065,9 +1065,21 @@ $$|f(x,y)-A|<\epsilon $$
 ### 2. 二重积分的计算
 1. 直角坐标系下计算二重积分
    1. X型区域
-      1. 设积分区域$D=\{(x,y)|\varphi(x)\leq x\leq b,c\leq y\leq d\}$ 
+      1. 设积分区域$D=\{(x,y)|\varphi_1(x)\leq y\leq \varphi_2(x),a\leq x\leq b\}$ 
+   ![alert](../../images/Advanced/Integral07.png)
+      - 则: $\iint\limits_D f(x,y)dxdy=\int_a^b\int_{\varphi_1(x)}^{\varphi_2(x)}f(x,y)dy$
    2. Y型区域
+      1. 设积分区域$D=\{(x,y)|\psi_1(y)\leq x\leq \psi_2(y),c\leq y\leq d\}$
+   ![alert](../../images/Advanced/Integral08.png)
+      - 则: $\iint\limits_D f(x,y)dxdy=\int_c^d\int_{\psi_1(y)}^{\psi_2(y)}f(x,y)dx$
    3. 二重积分的就行与轮换对称性
+      1. 积分区域D关于x轴对称,记x轴上方部分为$D_1$,则:
+      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{aligend} 0, f(x,y)=-f(x,-y), \\ 2\iint_{D_1}f(x,y)dxdy, f(x,y)=f(x,-y)\end{aligned}\right.$$
+      2. 积分区域D关于x轴对称,记x轴上方部分为$D_2$,则:
+      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{aligend} 0, f(x,y)=-f(-x,y), \\ 2\iint_{D_2}f(x,y)dxdy, f(x,y)=f(-x,y)\end{aligned}\right.$$
+      3. 关于直线y=x对称,有
+      $$\iint\limits_D f(x,y)dxdy=\iint\limits_Df(y,x)dxdy=\frac{1}{2}\iint\limits_D[f(x,y)+f(y,x)]dxdy$$
+$$}
    4. 形心公式
 2. 极坐标系下计算二重积分
    1. 极坐标的三种常见区域
@@ -1080,7 +1092,7 @@ $$|f(x,y)-A|<\epsilon $$
    | 几何/物理量 | 表达式                                                                                                                                                               |
    | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    |    面积     | $S=\iint\limits_D 1d\sigma$                                                                                                                                          |
-   |    体积     | $V=\iint\limits_D|f(x,y)|d\sigma$   |
+   |    体积     | $V=\iint\limits_D \lvert f(x,y)\rvert d\sigma$   |
    |    质量     | $m=\iint\limits_D \rho(x,y)d\sigma$                                                                                                                                  |
    |    质心     | $\bar{x}=\frac{\iint\limits_D x\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}, \bar{y}=\frac{\iint\limits_D y\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}$ |
    |  转动质量   | 对x轴: $\iint\limits_D y^2\rho(x,y)d\sigma$ 对 y轴: $\iint\limits_D x^2\rho(x,y)d\sigma$ 对原点: $\iint\limits_D (x^2+y^2)\rho(x,y)d\sigma$                                                                                                                                                             |
