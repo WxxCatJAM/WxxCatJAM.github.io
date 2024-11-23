@@ -1022,19 +1022,21 @@ $$|f(x,y)-A|<\epsilon $$
    2. 若$\left\{\begin{array}{l} x=x, \\ y=y(x), \\ z=z(x) \end{array}\right.$, 均可导,切线方程$\frac{x-x_0}{1}+\frac{y-y_0}{y'(x_0)}+\frac{z-z_0}{z'(x_0)} =0$
       1. 法平面方程:$x-x_0+y'(x_0)(y-y_0)+z'(x_0)(z-z_0)=0$
    3. 若曲线方程由隐函数$\left\{\begin{array}{l} F(x,y,z)=0, \\ G(x,y,z)=0 \end{array}\right.$, 可求出$y'(x_0),z'(x_0)$. 代入上述方程与法平面方程即可
----
+
 2. 空间曲面的切平面与法线
    1. 曲面方程为$F(x,y,z)=0$, 曲面上任意点$P(x_0,y_0,z_0)$, 则切平面方程:
       $$F'_x(x_0,y_0,z_0)(x-x_0)+F'_y(x_0,y_0,z_0)(y-y_0)+F'_z(x_0,y_0,z_0)(z-z_0)=0$$
       切平面的法向量:$n=(F'_x(x_0,y_0,z_0),F'_y(x_0,y_0,z_0),F'_z(x_0,y_0,z_0))$
       法线方程:$\frac{x-x_0}{F'_x(x_0,y_0,z_0)}+\frac{y-y_0}{F'_y(x_0,y_0,z_0)}+\frac{z-z_0}{F'_z(x_0,y_0,z_0)} =0$
    2. 若曲面方程为z=f(x,y), 则切平面方程为$F_x(x,y,z)=f(x,y)-z, 有F'_x=f'_x, F'_y=f'_y, F'_z=-1$, 将$F'_x,F'_y,F'_z$代入切平面方程,即可得切平面方程
+--- 
+
 ### 5. 方向导数与梯度
 1. 方向导数
    1.定义,有函数和点其沿方向$l=(\cos \alpha,\cos \beta) 的方向导数为:
    $$\frac{\partial f}{\partial l_1}|_{(x_0,y_0)}=\lim\limits_{t \to 0+} \frac{f(x_0+t\cos \alpha,y_0+t\cos \beta)-f(x_0,y_0)}{t}$
       - 其中$\alpha, \beta$为射线l与x轴,y轴正半轴的夹角
-   2. 计算
+   1. 计算
       1. 若函数在某点出可微,则函数在该店沿任意方向$l$的方向导数均存在,且有:
       $$ \frac{\partial f}{\partial l_1}|_{(x_0,y_0)}=f'_x(x_0,y_0)\cos \alpha,f'_y(x_0,y_0)\cos \beta)$$
    - 其中$\cos \alpha, \cos \beta$为$l$的方向余弦
@@ -1042,6 +1044,9 @@ $$|f(x,y)-A|<\epsilon $$
 2. 梯度
    1. 若函数z=f(x,y)有一阶连续偏导数, 称向量$(f'_x(x_0,y_0),f'_y(x_0,y_0))$为此函数在点$(x_0,y_0)处的梯度, 记为$grad f(x_0,y_0)=(f'_x(x_0,y_0),f'_y(x_0,y_0))$
    2. 同理三元函数u=(x,y,z)在点$(x_0,y_0,z_0)$处为$grad u(x_0,y_0,z_0)=(u'_x(x_0,y_0,z_0),u'_y(x_0,y_0,z_0),u'_z(x_0,y_0,z_0))$
+---
+
+
 ## 二重积分
 ### 1. 二重积分的概念和性质
 1. 定义
@@ -1057,10 +1062,11 @@ $$|f(x,y)-A|<\epsilon $$
    $$ \iint\limits_D f(x,y)dxdy\geq \iint\limits_D g(x,y)dxdy $$
    - 若等号仅在有限条线上成立,则称$\iint\limits_D f(x,y)dxdy > \iint\limits_D g(x,y)dxdy.$
    $$ \iint\limits_D |f(x,y)|dxdy\geq |\iint\limits_D g(x,y)dxdy|$$
-   5. 若函数在有界闭区域D上连续,有$m \leq f(x,y) \leq M, S_D为区域D的面积$,则:
+   1. 若函数在有界闭区域D上连续,有$m \leq f(x,y) \leq M, S_D为区域D的面积$,则:
    $$ mS_D=\iint\limits_D mdxdy \leq \iint\limits_D f(x,y)dxdy \leq \iint\limits_D MS_D $$
-   6. **(二重积分的中心定理)**若函数在 有界区域D上连续,S_D为区域D的面积,则$\exist(\xi,\eta)\in D$ 有:
+   2. **(二重积分的中心定理)**若函数在 有界区域D上连续,S_D为区域D的面积,则$\exist(\xi,\eta)\in D$ 有:
    $$ \iint\limits_D f(x,y)dxdy=f (\xi,\eta)S_D$$
+---
 
 ### 2. 二重积分的计算
 1. 直角坐标系下计算二重积分
@@ -1082,14 +1088,41 @@ $$|f(x,y)-A|<\epsilon $$
 
    4. 形心公式
       1. 若$(\bar{x}, \bar{y})$为平面区域D的形心坐标,区域D的面积为$S_D$, 则:
-      $$ $\iint\limits_D f(x,y)dxdy=S_D\int_{-\infty}^{\infty}f(\bar{x},\bar{y}-t)dt$$
+      $$ \iint\limits_D x dxdy=\bar{x}S_D,\int_{-\infty}^{\infty}y dt=\bar{y}S_D$$
+      - 注: 常见图形的形心:
+        1. 圆的形心为圆心
+        2. 矩形的形心为对角线交点
+        3. 三角形的形心为三个顶点的算术平均值
+        4. 对称图形的形心在对称轴上
+---
+
 2. 极坐标系下计算二重积分
+   直角坐标系与极坐标系之间的转换公式:$\iint\limits_D f(x,y)dxdy=\left\{\begin{array}{l} x=r\cos \theta, \\ y=r\sin \theta, \\ dxdy=rdrd\theta=d\sigma f(x,y)=f(-x,y)\end{array}\right.$
+   $$ \iint\limits_D f(x,y)dxdy=\iint\limits_D f(r\cos \theta,r\sin \theta)rdrd\theta$$
+   - $极角\theta \in [0,2\pi]或[-\pi,\pi]$
+   - 极径$r$:$r 平面任意(x,y)一点到极点的举例 $r\sqrt{x^2+y^2}$
    1. 极坐标的三种常见区域
       1. 极点(坐标原点)在积分区域外
+         1. ![alert](../../images/Advanced/Integral09.png)
+         2. 其中$D={(r,\theta)|\alpha \leq \theta \leq \beta, r_1(\theta) \leq r \leq r_2(\theta)}$
+         $$ \iint\limits_D f(r\cos \theta,r\sin \theta)rdrd\theta =\int_{\alpha}^{\beta}d\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r\cos \theta,r\sin \theta)rdr$$
       2. 极点在积分区域边界上
+         1. ![alert](../../images/Advanced/Integral10.png)
+         2. 其中$D={(r,\theta)|\alpha \leq r \leq \beta,0 \leq r \leq r(\theta)}$, 有:
+         $$ \iint\limits_D f(r\cos \theta,r\sin \theta)rdrd\theta =\int_{\alpha}^{\beta}d\theta\int_{0}^{r(\theta)}f(r\cos \theta,r\sin \theta)rdr$$
       3. 极点在积分区域内部
+         1. ![alert](../../images/Advanced/Integral11.png)
+         2. 其中$D={(r,\theta)|\alpha \leq \theta \leq 2\pi,0 \leq r \leq r(\theta)}$, 有:
+         $$ \iint\limits_D f(r\cos \theta,r\sin \theta)rdrd\theta =\int_{0}^{2\pi}d\theta\int_{0}^{r(\theta)}f(r\cos \theta,r\sin \theta)rdr$$
    2. 平移变换
-   3. 直角坐标系下和极坐标系下计算二重积分的过程
+      1. 对二重积分$\iint\limits_D f(x,y)dxdy$进行平移变换, 即$x\rightarrow u-a, y\rightarrow v-b, 将xOy$坐标系的二重积分,变为$uOv$坐标系的二重积分, 即$\iint\limits_{D'} f(u-a,v-b)dudv$ (其中区域D'为$D$的平移变换后得到的区域)
+   3. 直角坐标系下和极坐标系下**计算二重积分的过程**:
+      1. 确定积分区域;
+      2. 化简积分表达式(奇偶性+轮换对称性)
+      3. 由积分区域与被积函数确定直角坐标或
+      4. **对于直角坐标系**,确定积分次序,(分块)计算二重积分;**对于极坐标系**,分别确定*极角*与*极径*
+---
+
 ### 3. 二重积分的应用
    | 几何/物理量 | 表达式                                                                                                                                                               |
    | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1098,13 +1131,42 @@ $$|f(x,y)-A|<\epsilon $$
    |    质量     | $m=\iint\limits_D \rho(x,y)d\sigma$                                                                                                                                  |
    |    质心     | $\bar{x}=\frac{\iint\limits_D x\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}, \bar{y}=\frac{\iint\limits_D y\rho(x,y)d\sigma}{\iint\limits_D \rho(x,y)d\sigma}$ |
    |  转动质量   | 对x轴: $\iint\limits_D y^2\rho(x,y)d\sigma$ 对 y轴: $\iint\limits_D x^2\rho(x,y)d\sigma$ 对原点: $\iint\limits_D (x^2+y^2)\rho(x,y)d\sigma$                                                                                                                                                             |
+ ----
 
- **** 
+
 ## 无穷级数
-
 ### 常数项级数的概念与性质
-
+1. 定义
+   1. 数列${u_n} \rightarrow u_1+u_2+\cdots + u_n \iff \sum_{n=1}^{\infty}u_n$, $u_n$被称为此sum的通项
+2. 发散与收敛
+   1. 级数$\sum_{n=1}^{\infty}u_n的部分 和 S_n=u_1+u_2+\cdots + u_n$, 若部分和数列{$S_n$}收敛, 即极限$\sum_{n=1}^{\infty}S_n$**存在**, 则称$\sum_{n=1}^{\infty}u_n$收敛; 若$\sum_{n=1}^{\infty}S_n$**不存在**否则级数发散
+3. 性质
+   1. 若$k \neq 0$,则$\sum_{n=1}^{\infty}u_n$和$\sum_{n=1}^{\infty}ku_n$同时收敛或发散
+   2. 级数$\sum_{n=1}^{\infty}u_n, \sum_{n=1}^{\infty}v_n$都收敛, 则$\sum_{n=1}^{\infty}(u_n \pm v_n)$收敛
+      1. 推: u_n级数收敛,v_n级数发散,则他俩的和或差级数也发散
+      2. 推: 这俩记住发散,则敛散性未知
+   3. 有限项k不能改变敛散性
+   4. 级数收敛的必要条件 ---> 若级数$\sum_{n=1}^{\infty}u_n$收敛,则$\lim_{n \to \infty}u_n=0$
 ### 正项级数
+1. 定义
+   1. 通向$u_n \ge 0, n=1,2,...$, 则级数U_n为正项级数
+2. 判断敛散性
+   1. 定理1: 充要条件: $\sum_{n=1}^{\infty}u_n$收敛的充要条件为部分和数列{S_n}有上界
+   2. 定理2: (比较判别法): 有正项级数$\sum_{n=1}^{\infty}u_n, sum_{n=1}^{\infty}v_n$, 若$\exist N, 当n \geq N时, 有u_n \geq v_n$, 若$\sum_{n=1}^{\infty}u_n$收敛,则$\sum_{n=1}^{\infty}v_n$收敛; 若$\sum_{n=1}^{\infty}v_n$发散,则$\sum_{n=1}^{\infty}u_n$发散
+   -  **口诀**: 大收则小收,大发则小发
+      1. 推论: 条件与上述类似
+         1. 若$\lim\limits_{n\to\infty}\frac{u_n}{v_n}=l(0<l<+\infty),$则$\sum_{n=1}^{\infty}u_n$与$\sum_{n=1}^{\infty}v_n$为正项级数
+         2. 若$\lim\$imits_{n\to\infty}\frac{u_n}{v_n}=\infty,$则$\sum_{n=1}^{\infty}v_n$发散,得到$\sum_{n=1}^{\infty}u_n$发散
+         3. 若$\lim\$imits_{n\to\infty}\frac{u_n}{v_n}=0,$则$\sum_{n=1}^{\infty}v_n$收敛,得到$\sum_{n=1}^{\infty}u_n$收敛
+   3. 定理3:(比值判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\frac{u_{n+1}}{u_n}=\rho$
+      1. 若$\rho>1,$则$\sum_{n=1}^{\infty}u_n$发散;
+      2. 若$0 \leq \rho <1,$则$\sum_{n=1}^{\infty}u_n$收敛;
+      3. 若$\rho=1,$则$\sum_{n=1}^{\infty}u_n$敛散性未定;
+   4. 定理4: (根植判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\sqrt[n]u_n=\rho$
+      1. 若$\rho>1,$则$\sum_{n=1}^{\infty}u_n$发散;
+      2. 若$0 \leq \rho <1,$则$\sum_{n=1}^{\infty}u_n$收敛;
+      3. 若$\rho=1,$则$\sum_{n=1}^{\infty}u_n$敛散性未定;
+   5. 积分判别法: 若连续函数f(x)在$[1,+\infty)$上非负且单调递减, 则级数$\sum_{n=1}^{\infty}f(n)$与反常积分$\int_1^{+\infty}f(x)dx$具有相同的敛散性。
 
 ### 绝对收敛和条件收敛
 
