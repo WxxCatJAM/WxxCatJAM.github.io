@@ -879,10 +879,10 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
    1. 令$y'=p, 有y''=\frac{dp}{dx}=\frac{dp}{dy}\cdot\frac{dy}{dx}=p \cdot \frac{dp}{dy}$, 则原方程变为一阶微分方程$p\frac{dp}{dy}=f(y,p)$, 再将p=y'代入即可得原方程的通解
 ### 高阶线性微分方程的结构
 - 已知二阶齐次线性微分方程
-  - $y''+P(x)y'+Q(x)y=0 .................................. I$
+  - $$y''+P(x)y'+Q(x)y=0\tag{I}$$
 - 二阶非齐次线性方程
-  - $y''+P(x)y'+Q(x)y=f(x).................................. II$
-  - $y''+P(x)y'+Q(x)y=g(x).................................. III$
+  - $$y''+P(x)y'+Q(x)y=f(x)\tag{II}$$
+  - $$y''+P(x)y'+Q(x)y=g(x)\tag{III}$$
   1. 若$y_1(x),y_2(x),\cdots, y_n(x)$是齐次方程I的解, 则$k_1y_1(x)+k_2y_2(x)+\cdots+k_ny_n(x)$ 依然是方程I的解
   2. $y_1(x),y_2(x)$是齐次方程(I)的两个线性无关的解(即$y_1(x),y_2(x)$的比不是常数), 则$k_1y_1(x)+k_2y_2(x)$为齐次方程(I)的通解
   3. 若$y_1(x),y_2(x),\cdots, y_n(x)$是非齐次方程(II)的解,则$k_1y_1(x)+k_2y_2(x)+\cdots+k_ny_n(x)$是方程(II)的解$\iff k_1+k_2+\cdots+k_n=1, k_1y_1(x)+k_2y_2(x)+\cdots+k_ny_n(x)$是方程(II)的解$\iff k_1+k_2+\cdots+k_n=0$
@@ -1135,7 +1135,7 @@ $$|f(x,y)-A|<\epsilon $$
 
 
 ## 无穷级数
-### 常数项级数的概念与性质
+### 1. 常数项级数的概念与性质
 1. 定义
    1. 数列${u_n} \rightarrow u_1+u_2+\cdots + u_n \iff \sum_{n=1}^{\infty}u_n$, $u_n$被称为此sum的通项
 2. 发散与收敛
@@ -1147,7 +1147,9 @@ $$|f(x,y)-A|<\epsilon $$
       2. 推: 这俩记住发散,则敛散性未知
    3. 有限项k不能改变敛散性
    4. 级数收敛的必要条件 ---> 若级数$\sum_{n=1}^{\infty}u_n$收敛,则$\lim_{n \to \infty}u_n=0$
-### 正项级数
+---
+
+### 2. 正项级数
 1. 定义
    1. 通向$u_n \ge 0, n=1,2,...$, 则级数U_n为正项级数
 2. 判断敛散性
@@ -1158,25 +1160,77 @@ $$|f(x,y)-A|<\epsilon $$
          1. 若$\lim\limits_{n\to\infty}\frac{u_n}{v_n}=l(0<l<+\infty),$则$\sum_{n=1}^{\infty}u_n$与$\sum_{n=1}^{\infty}v_n$为正项级数
          2. 若$\lim\$imits_{n\to\infty}\frac{u_n}{v_n}=\infty,$则$\sum_{n=1}^{\infty}v_n$发散,得到$\sum_{n=1}^{\infty}u_n$发散
          3. 若$\lim\$imits_{n\to\infty}\frac{u_n}{v_n}=0,$则$\sum_{n=1}^{\infty}v_n$收敛,得到$\sum_{n=1}^{\infty}u_n$收敛
-   3. 定理3:(比值判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\frac{u_{n+1}}{u_n}=\rho$
+   1. 定理3:(比值判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\frac{u_{n+1}}{u_n}=\rho$
       1. 若$\rho>1,$则$\sum_{n=1}^{\infty}u_n$发散;
       2. 若$0 \leq \rho <1,$则$\sum_{n=1}^{\infty}u_n$收敛;
       3. 若$\rho=1,$则$\sum_{n=1}^{\infty}u_n$敛散性未定;
-   4. 定理4: (根植判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\sqrt[n]u_n=\rho$
+   2. 定理4: (根植判别法): 设正项级数$\sum_{n=1}^{\infty}u_n$, 满足$\lim\limits_{n\to\infty}\sqrt[n]u_n=\rho$
       1. 若$\rho>1,$则$\sum_{n=1}^{\infty}u_n$发散;
       2. 若$0 \leq \rho <1,$则$\sum_{n=1}^{\infty}u_n$收敛;
       3. 若$\rho=1,$则$\sum_{n=1}^{\infty}u_n$敛散性未定;
-   5. 积分判别法: 若连续函数f(x)在$[1,+\infty)$上非负且单调递减, 则级数$\sum_{n=1}^{\infty}f(n)$与反常积分$\int_1^{+\infty}f(x)dx$具有相同的敛散性。
+   3. 积分判别法: 若连续函数f(x)在$[1,+\infty)$上非负且单调递减, 则级数$\sum_{n=1}^{\infty}f(n)$与反常积分$\int_1^{+\infty}f(x)dx$具有相同的敛散性。
+---
 
-### 绝对收敛和条件收敛
+### 3. 绝对收敛和条件收敛
+1. 定义
+   1. **绝对收敛**: 任意一个级数$\sum_{n=1}^{\infty}u_n(通项u_n不一定非负)$,对u_n取绝对值$\sum_{n=1}^{\infty}|u_n|$,若其收敛,则该级数**绝对收敛**。
+   2. **条件收敛**: 若$\sum_{n=1}^{\infty}|u_n|$,若其发散,则该级数**条件收敛**
+   - 注: 对级数通项加绝对值会提高级数的发散性
+2. 绝对收敛与条件收敛的运算:
+   1. 绝对收敛 * 收敛 = 绝对收敛
+   2. 绝对收敛 $\pm$ 绝对收敛 = 绝对收敛
+   3. 绝对收敛 $\pm$ 条件收敛 = 条件收敛
+   4. 条件收敛 $\pm$ 条件收敛 = 收敛(不能确定是绝对还是条件)
+---
 
-### 交错级数
+### 4. 交错级数
+1. 定义:
+   1. 若$\sum_{n=1}^{\infty}(-1)^n u_n=-u_1+u_2-u_3+\cdots+(-1)^n u_n$，则称其为则为**交错级数**
+2. 莱布尼茨判别法
+   1. 若交错级数满足两个条件"
+      1. $u_n \geq u_{n+1} (n=1,2,\cdots)$
+      2. $\lim\limits_{n\to\infty}u_n=0$
+   2. 则此交错级数为收敛
+3. 交错级数 $\lim\limits_{n\to\infty}(-1)^n u_n$判别敛散性的步骤
+   1. 通向$u_n$加绝对值,判断正项级数$\lim\limits_{n\to\infty}u_n$的敛散性
+      1. 若$\lim\limits_{n\to\infty}u_n$收敛,则绝对收敛
+      2. 若发散,则进一步判断级数$\lim\limits_{n\to\infty}(-1)^n u_n$敛散性
+      3. 若$\lim\limits_{n\to\infty}|\frac{ u_{n+1}}{ u_n}=\rho > 1 $, 此时通向极限$\lim\limits_{n\to\infty}u_n \neq 0$, 可直接得原级数为**发散**
+   2. 验证此交错级数,是否满足烂布尼茨判别法的条件:
+      1. 若不满足,可适当恒等变形,如拆项,再分别判定敛散性
+---
 
-### 幂级数
+### 5. 幂级数
+1. 定义
+$$ \sum_{n=0}^{\infty}a_n(x-x_0)^n=a0+a_1(x-x0)+a_2(x-x_0)+\cdots+a_n(x-x_0)... \tag{1}$$的级数称为幂级数, 特别的当$x_0=0$,幂级数变为:
+$$\sum_{n=0}^{\infty}a_nx^n=a_0+a_1x+a_2x^2+\cdots+a_nx^n... \tag{2}$$
+其中$a_0,a_1,\cdots$为幂级数的系数
+2. 阿贝尔定理及其推论
+   1. 定理:
+      1. 若级数$\sum_{n=0}^{\infty}a_nx_0^n, (x_0\neq0)$ 收敛, 则对$|\forall |x|<|x_0|$, 级数$\sum_{n=0}^{\infty}a_nx^n$绝对收敛;
+      2. 若级数$\sum_{n=0}^{\infty}a_nx_0^n$ 发散, 则对$|\forall |x|>|x_0|$, 级数$\sum_{n=0}^{\infty}a_nx^n$发散;
+   2. 推论:
+      - 对幂级数$\sum_{n=0}^{\infty}a_nx^n$,存在$R\geq 0$使:
+      1. 当$|x|<R$时, 此幂级数**绝对收敛**;
+      2. 当$|x|>R$时, 此幂级数**发散**;
+      3. 当$|x|=R$时, 此幂级数**敛散性不确定**;
+   **注**: 上述的R为幂级数的收敛半径; 开区间(-R,R)为幂级数的收敛区间, 若再确定幂级数再$x=\pm R$处的敛散性,可将收敛于为(-R,R),[-R,R),(-R,R]或[R,-R]的任意一个
+3. 幂级数的运算
+   1. 已知两个幂级数$\sum_{n=0}^{\infty}a_nx^n$和$\sum_{n=0}^{\infty}b_nx^n$, 收敛半径为$R_1$和$R_2$，设幂级数$\sum_{n=0}^{\infty}(a_n+b_n)x^n$的收敛半径为R. 
+      1. 若$R_1 \neq R_2$，则$R=min(R_1,R_2)$。
+      2. 若$R_1=R_2$，则$R \geq R_1$。
+4. 幂级数**和函数**的性质
+   1. 性质1: 和函数$S(x)$在收敛域上连续
+   2. 性质2: 和函数$S(x)$在收敛于$I$上可积,且有:
+$$ \int_0^x S(t)dt=\int_0^x(\sum_{n=0}^{\infty}a_nt^n)dt$$
+$$ = \sum_{n=0}^{\infty}\int_0^xa_nt^ndt = \sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}, x \in I$$
+   3. 性质3: 和函数$S(x)$在收敛区间(-R,R)可导,有:
+$$ S'(x)=(\sum_{n=1}^{\infty}a_nx^n)'=\sum_{n=1}^{\infty}(a_nx^n)'=\sum_{n=1}^{\infty}na_nx^{n-1}, (|x| < R)$$
+---
 
-### 泰勒级数
+### 6. 泰勒级数
 
-### 傅里叶级数
+### 7. 傅里叶级数
 
 ## 三重积分与曲线曲面积分
 
