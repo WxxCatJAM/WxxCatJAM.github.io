@@ -1074,13 +1074,15 @@ $$|f(x,y)-A|<\epsilon $$
       - 则: $\iint\limits_D f(x,y)dxdy=\int_c^d\int_{\psi_1(y)}^{\psi_2(y)}f(x,y)dx$
    3. 二重积分的就行与轮换对称性
       1. 积分区域D关于x轴对称,记x轴上方部分为$D_1$,则:
-      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{aligend} 0, f(x,y)=-f(x,-y), \\ 2\iint_{D_1}f(x,y)dxdy, f(x,y)=f(x,-y)\end{aligned}\right.$$
+      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{array}{l} 0, f(x,y)=-f(x,-y), \\ 2\iint_{D_1}f(x,y)dxdy, f(x,y)=f(x,-y)\end{array}\right.$$
       2. 积分区域D关于x轴对称,记x轴上方部分为$D_2$,则:
-      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{aligend} 0, f(x,y)=-f(-x,y), \\ 2\iint_{D_2}f(x,y)dxdy, f(x,y)=f(-x,y)\end{aligned}\right.$$
+      $$ \iint\limits_D f(x,y)dxdy=\left\{\begin{array}{l} 0, f(x,y)=-f(-x,y), \\ 2\iint_{D_2}f(x,y)dxdy, f(x,y)=f(-x,y)\end{array}\right.$$
       3. 关于直线y=x对称,有
       $$\iint\limits_D f(x,y)dxdy=\iint\limits_Df(y,x)dxdy=\frac{1}{2}\iint\limits_D[f(x,y)+f(y,x)]dxdy$$
-$$}
+
    4. 形心公式
+      1. 若$(\bar{x}, \bar{y})$为平面区域D的形心坐标,区域D的面积为$S_D$, 则:
+      $$ $\iint\limits_D f(x,y)dxdy=S_D\int_{-\infty}^{\infty}f(\bar{x},\bar{y}-t)dt$$
 2. 极坐标系下计算二重积分
    1. 极坐标的三种常见区域
       1. 极点(坐标原点)在积分区域外
