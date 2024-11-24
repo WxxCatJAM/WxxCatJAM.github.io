@@ -49,7 +49,7 @@ module.exports = {
             '/pages/General/General_Formula.md',
             '/pages/Advanced/Advanced_Mathematics01.md',
             '/pages/Advanced/Advanced_Mathematics02.md',
-            '/pages/Linear/Matrix.md',
+            '/pages/Linear/Linear_Mathematics.md',
             '/pages/PS/PS.md',
             '/pages/Reference/Reference.md'
         ],

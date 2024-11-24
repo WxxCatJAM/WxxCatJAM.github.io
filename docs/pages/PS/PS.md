@@ -1,23 +1,17 @@
 # 概率论与数理统计
 
-## 11
-$$
-\left\{
-\begin{array}{l}
-    a_1x + b_1y + c_1z = d_1 \\
-    a_2x + b_2y + c_2z = d_2 \\
-    a_3x + b_3y + c_3z = d_3
-\end{array}
-\right.
-$$
+## 概率论基本概念
 
+## 一维随机变量及其分布
 
-$$\begin{cases}a_1x + b_1y + c_1z = d_1\\a_2x + b_2y + c_2z = d_2\\a_3x + b_3y + c_3z = d_3\end{cases}$$
+## 多维随机变量及其分布
 
-$$
-\left\{
-\begin{array}{l}
-a_1x + b_1y + c_1z = d_1
-\end{array}
-\right.
-$$
+## 随机变量的数字特征
+
+## 大数定理与中心极限定理
+
+## 数理统计的基本概念
+
+## 参数估计
+
+## 假设检验

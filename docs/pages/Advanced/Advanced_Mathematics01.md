@@ -994,19 +994,91 @@ $$ \bar{x}=\frac{\int_a^bx\rho(x)ds}{\int_a^b\rho(x)ds},\bar{y}=\frac{\int_a^by\
    |$a,b$间夹角$\theta$|$\cos \theta =  \frac{a\cdot b}{\lvert a \rvert \lvert b \rvert}$ | $\cos \theta = \frac{a_1b_1+a_2b_2+a_3b_3}{\sqrt{a_1^2+a_2^2+a_3^2} \sqrt{b_1^2+b_2^2+b_3^2}} $|
    |$a,b$垂直|$a \cdot b =0$|$a_1b_1+a_2b_2+a_3b_3=0$|
    |$a,b$平行|$\a\times b=0$|$\frac{a_1}{b_1}=\frac{a_2}{b_2}=\frac{a_3}{b_3}$|
+--- 
 
 ### 2. 平面与直线方程
 1. 平面方程
+   1. 点法式方程:
+      1. 已知平面$\pi$过点$M(x_0,y_0,z_0)$，其法向量$n=(A,B,C), 则平面$\pi$的方程为:
+      $$ A(x-x_0)+B(y-y_0)+C(z-z_0)=0 $$
+   2. 一般式方程: $Ax+By+Cz+D=0$
+   3. 截距式方程: $\frac{x}{a}+ \frac{y}{b}+ \frac{z}{c}=1$
 2. 两平面位置关系
+   1. 已知两个平面$\pi_1: A_1x+B_1y+C_1z+D_1=0$和$\pi_2: A_2x+B_2y+C_2z+D_2=0$,法向量分别为$n_1=(A_1,B_1,C_1)$和$n_2=(A_2,B_2,C_2)$，则两平面的位置关系如下表所示:
+      1. 平面重合:$\frac{A_1}{A_2}= \frac{B_1}{B_2}= \frac{C_1}{C_2}=\frac{D_1}{D_2}$
+      2. 两平面平行但不重合: $\frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2} \neq \frac{D_1}{D_2}$
+      3. 两平面垂直: $n_1 \cdot n_2=A_1A_2+B_1B_2+C_1C_2=0$
+   2. 两平面夹角$\theta$满足:
+   $$ \cos \theta = \frac{|n_1 \cdot n_2|}{|n_1||n_2|}=\frac{|A_1A_2+B_1B_2+C_1C_2|}{\sqrt{A_1^2+B_1^2+C_1^2}\sqrt{A_2^2+B_2^2+C_2^2}} $$
+
 3. 点(平面)到平面的距离
+   1. 点$M(x_0,y_0,z_0)$到平面$pi:Ax+By+Cz+D=0$的距离为:
+   $$ d = \frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$$
+
+   2. 两平行平面$\pi_1: A_1x+B_1y+C_1z+D_1=0$和$\pi_2: A_2x+B_2y+C_2z+D_2=0 (D_1 \neq D_2)$间的距离:
+    $$ d = \frac{|D_1-D_2|}{\sqrt{A^2+B^2+C^2}}$$ 
+
 4. 空间直线
+   1. 一般式
+      1. 两平行平面$\pi_1: A_1x+B_1y+C_1z+D_1=0$和$\pi_2: A_2x+B_2y+C_2z+D_2=0,$相较于一条直线L, 则直线L可表示为:
+      $$ \left\{\begin{array}{l} A_1x+B_1y+C_1z+D_1=0, \\ A_2x+B_2y+C_2z+D_2=0 \end{array}\right. $$
+
+   2. 点向式
+      1. 直线上一点$M(x_0,y_0,z_0)$及直线的方向向量$s=(m,n,p)$到直线方程为:
+      $$ \frac{x-x_0}{m} = \frac{y-y_0}{n} = \frac{z-z_0}{p} $$
+   3. 参数式
+      1. 令$\frac{x-x_0}{m} = \frac{y-y_0}{n} = \frac{z-z_0}{p}=t$, 则直线的参数方程为:$\left\{\begin{array}{l} x=x_0+mt, \\ y=y_0+nt, \\ z=z_0+pt, \end{array}\right. $, x_0,y_0,z_0为已知点
+   4. 平面束方程
+      1. 过直线$L: \left\{\begin{array}{l} A_1x+B_1y+C_1z+D_1=0, \\ A_2x+B_2y+C_2z+D_2=0 \end{array}\right.$的平面结束方程:
+      $$ \lambda(A_1x+B_1y+C_1z+D_1)+\mu(A_2x+B_2y+C_2z+D_2)=0 $$
 5. 直线与直线(平面)的位置关系
-6. 点(直线)到直线的距离
+   1. 直线与直线的位置关系
+      1. 空间两条直线$L_1=\frac{x-x_1}{m_1} = \frac{y-y_1}{n_1} = \frac{z-z_1}{p_1}, L_2=\frac{x-x_2}{m_2} = \frac{y-y_2}{n_2} = \frac{z-z_2}{p_2}.$ 其方向向量分别为$s_1=(m_1,n_1,p_1)$和$s_2=(m_2,n_2,p_2)$，两条直线L_1,L_2的点$M_1(x_1,y_1,z_1)$及$M_2(x_2,y_2,z_2)$的位置关系如下表所示:
+         1. 两直线重合: $s_1 // s_2 // \vec{M_1M_2}$
+         2. 两直线平行但不重合: $s_1 // s_2$与$\vec{M_1M_2}$不平行
+         3. 两直线共面(异面): $[s_1  s_2  \vec{M_1M_2}]=0([s_1  s_2  \vec{M_1M_2}]\neq 0)$   
+            1. 若=0,且s1,s2不共线, 则两直线相交 
+         4. 两直线垂直(包括异面垂直,不一定相交): $s_1 \bot s_2 = m_1m_2+n_1n_2+p_1p_2=0$
+         5. 两直线夹角$\theta$满足:
+         $$ \cos \theta =\frac|{s_1 \cdot s_2|}{|s_1| \cdot |s_2|} =\frac{|m_1m_2+n_1n_2+p_1p_2|}{\sqrt{m_1^2+n_1^2+p_1^2} \cdot \sqrt{m_2^2+n_2^2+p_2^2}}, 0 \leq \theta \leq \frac{\pi}{2} $$
+
+   2. 直线与平面的位置关系
+      1. 已知直线$L: =\frac{x-x_1}{m} = \frac{y-y_1}{n} = \frac{z-z_1}{p}, 其过点M_1(x_1,y_1,z_1)$与方向向量$s=(m,n,p)$，平面$\pi: Ax+By+Cz+D=0$，法向量$$n=(A,B,C)$，则直线与平面的位置关系如下表所示:
+         1. 直线l在平面$\pi$上:$Am+Bn+Cz=0$, 且$Ax_1+By_1+Cz_1+D=0$
+         2. 直线l与平面$\pi$平行:$Am+Bn+Cz=0$, 但$Ax_1+By_1+Cz_1+D \neq 0$
+         3. 直线l与平面$\pi$相交:$Am+Bn+Cz \neq 0$, 但$Ax_1+By_1+Cz_1+D \neq 0$
+         4. 直线L与平面$\pi$的夹角满足:
+         $$ \sin \theta =\frac{|s \cdot n|}{|s| \cdot |n|}=\frac{|Am+Bn+Cz|}{\sqrt{m^2+n^2+p^2} \cdot \sqrt{A^2+B^2+C^2}} $$
+6. 点(直线)到直线的距离点
+   1. 点$M(x_0,y_0,z_0)$到直线$L: =\frac{x-x_0}{m} = \frac{y-y_0}{n} = \frac{z-z_0}{p}$的距离为: $d=\frac{|s \cdot \vec{M_1M}|}{|s|}$, 其中向量$\vec{M_1M}=(x_0-x_1,y_0-y_1,z_0-z_1), s=(m,n,p)$
+   2. 异面直线$L_1,L_2$的距离: $d=\frac{|s_1 s_2 \vec{M_1M_2}|}{|s_1| \times |s_2|}$
+---
+
 ### 3. 空间曲面$(F(x,y,z)=0)$
 1. 旋转曲面
-2. 柱面
+   1. 定义:
+      1. xOy面上的曲线$f(x,y)=0$,
+         1. 绕x轴旋转一周所得旋转曲面方程:f(x,\pm \sqrt{y^2+z^2})=0$
+         2. 绕y轴旋转一周所得旋转曲面方程:f(\pm \sqrt{x^2+z^2},y)=0$
+   2. 常见的二次曲面:
+      1. 椭球面:$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$ (球面:$x^2+y^2+z^2=R^2$)
+      2. 椭圆锥面: $\frac{x^2}{a^2}+\frac{y^2}{b^2}=z^2$
+      3. 单叶双曲面:$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$
+      4. 双叶双曲面:$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$
+      5. 椭圆抛物面:$\frac{x^2}{a^2}+\frac{y^2}{b^2}=z$
+      6. 双曲抛物面:$\frac{x^2}{a^2}-\frac{y^2}{b^2}=z$
 
+2. 柱面
+   1. 定义
+      1. 直线L沿曲线C平行移动成成的轨迹叫做柱面
+   2. 常见柱面
+      1. 椭圆柱面:$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$(圆柱面:$x^2+y^2=R^2$)
+      2. 抛物柱面:$z=ax^2$
+      3. 双曲柱面:$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$
 ### 4. 空间曲线
 1. 空间曲线方程
+   1. 一般方程:$\left\{\begin{array}{l} F(x,y,z)=0, \\ G(x,y,z)=0 \end{array}\right. $ 参数方程:$\left\{\begin{array}{l} x=x(t), \\ y=y(t), \\ z=z(t) \end{array}\right. $}
 2. 空间曲线在坐标上的投影
+   1. 空间曲线一般方程:$\left\{\begin{array}{l} F(x,y,z)=0, \\ G(x,y,z)=0 \end{array}\right. $, 消去变量z, 可得去现在xOy面上的投影柱面,进而得到在xOy面上的投影曲线方程:
+$$ \left\{\begin{array}{l} H(x,y)=0, \\ z=0 \end{array}\right. $$
 
