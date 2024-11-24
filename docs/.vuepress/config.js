@@ -47,7 +47,8 @@ module.exports = {
         sidebar: [
             '/',
             '/pages/General/General_Formula.md',
-            '/pages/Advanced/Advanced_Mathematics.md',
+            '/pages/Advanced/Advanced_Mathematics01.md',
+            '/pages/Advanced/Advanced_Mathematics02.md',
             '/pages/Linear/Matrix.md',
             '/pages/PS/PS.md',
             '/pages/Reference/Reference.md'
