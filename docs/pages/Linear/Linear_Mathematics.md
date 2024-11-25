@@ -132,14 +132,41 @@ $$ A=\begin{pmatrix} \lambda_1 & 0 & \cdots & 0 \\ 0 & \lambda_2 & \cdots & 0 \\
       2. $(A^k)^l=A^{kl}$
       3. $(AB)^k \neq A^kB^k$(一般情况下)
    3. 例:(几种特殊矩阵求$A^n$)
-      1. 记n维向量$\alpha=(a_1,a_2,\dots,a_n)^T, \beta=(b_1,b_2,\dots,b_n)^T$
-         1.$\alpha \beta^T$为$n \times n$矩阵,记作$A:$
-         $$A= \alpha \beta^T=\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}= \begin{pmatrix} a_1b_1 & a_1b_2 & \cdots & a_1b_n \\ a_2b_1 & a_2b_2 & \cdots & a_1b_n\\ \vdots & \vdots & \ddots & \vdots \\ a_nb_1 & a_nb_2 & \cdots & a_nb_n \end{pmatrix} $$
- 
- 
+        1. 记n维向量$\alpha=(a_1,a_2,\dots,a_n)^T, \beta=(b_1,b_2,\dots,b_n)^T$
+            1. $\alpha \beta^T$为$n \times n$矩阵,记作$A:$
+            $$A= \alpha \beta^T=\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}= \begin{pmatrix} a_1b_1 & a_1b_2 & \cdots & a_1b_n \\ a_2b_1 & a_2b_2 & \cdots & a_1b_n\\ \vdots & \vdots & \ddots & \vdots \\ a_nb_1 & a_nb_2 & \cdots & a_nb_n \end{pmatrix} $$
+            2. $ \alpha ^T \beta = \beta^T \alpha$为一个数:($(1\times n)(n\times 1) $) (nn这连个位置的数字必须一样才可以)
+            $$ \alpha^T \beta = \beta^T \alpha = (a_1,a_2,\dots,a_n)\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} = a_1b_1+a_2b_2+\cdots+a_nb_n = \sum_{i=1}^n a_ib_i $$
+            3. 矩阵$A=\alpha\beta^T$的迹(主对角元素之和)$tr(A)=\alpha^T \beta = \beta^T \alpha$
+            4. 记$A=\alpha \beta^T, l = \alpha^T \beta, A^n=l^{n-1}A$
+         2. A是m阶矩阵,B是n阶矩阵,则:
+         $$ \begin{pmatrix} A & O \\ O & B \end{pmatrix}^n = \begin{pmatrix} A^n & O \\ O & B^n \end{pmatrix} $$
+         3. n阶矩阵$A \sim \Lambda$, 则存在可逆矩阵P, 使得$A^n=P\Lambda^nP^{-1}$
+
+5. 方阵的转置
+- $(A^T)^T=A$
+- $(A^T)^m=(A^m)^T$
+- $(A+B)^T=A^T+B^T$
+- $(\lambda A)^T=\lambda A^T$
+- $(AB)^T=B^TA^T$
+- $(A^{-1})^T=(A^T)^{-1}$
+6. 方阵的多项式       
+- 设x的多项式$f(x)=a_0x^m+a_1x^{m-1}+\dots+a_{m-1}x+a_mx^0$, 则方阵多项式为:
+$$ f(A)=a_0A^m+a_1A^{m-1}+\dots+a_{m-1}A+a_mE$$
 ---
 
 ### 3. 伴随矩阵公式
+- 设$A,B 均为n(n \geq 2)$阶可逆矩阵, 则:
+  - $ AA^*=A^*A=|A|E $
+  - $ A^{-1}=\frac 1{|A|}A^*, A^*=|A|A^{-1} ,(A^*)^{-1}=(A^{-1})^*=\frac 1{|A|}A$
+  - $(A^*)^T=(A^T)^*, (A^*)^m=(A^m)^* $
+  - $ (AB)^*=B^*A^* $
+### 4. 逆矩阵
+### 5. 初等变换与初等矩阵
+### 6. 矩阵等价
+### 7. 矩阵的秩
+### 8. 分块矩阵
+
 ## 矩阵初等变换与矩阵的秩
 
 ## 向量
