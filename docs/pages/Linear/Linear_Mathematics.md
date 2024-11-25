@@ -160,14 +160,63 @@ $$ f(A)=a_0A^m+a_1A^{m-1}+\dots+a_{m-1}A+a_mE$$
   - $ AA^*=A^*A=|A|E $
   - $ A^{-1}=\frac 1{|A|}A^*, A^*=|A|A^{-1} ,(A^*)^{-1}=(A^{-1})^*=\frac 1{|A|}A$
   - $(A^*)^T=(A^T)^*, (A^*)^m=(A^m)^* $
-  - $ (AB)^*=B^*A^* $
+  - $ (AB)^*=B^*A^*$
+  - $(kA)^*=k^{n-1}A^*(k为非零常数)， (A^*)^*=|A|^{n-2}A(n \geq 2)$
+  - $ |A^*|=|A|^{-1} $
+  - $ \begin{pmatrix} A & O \\ O & B \end{pmatrix}^* = \begin{pmatrix} |B|A^* & O \\ O & |A|B^* \end{pmatrix} $
+  - $ \begin{pmatrix} O& B \\ A  & O \end{pmatrix}^* = \begin{pmatrix} O & |B|A^* \\ |A|B^* & O \end{pmatrix} $
+  - 注: 一般情况下:$(A+B)^* \neq A^*+B^*$
 ### 4. 逆矩阵
-### 5. 初等变换与初等矩阵
-### 6. 矩阵等价
-### 7. 矩阵的秩
-### 8. 分块矩阵
+1. 定义:
+   1. n阶矩阵A, 如存在一个n阶矩阵B, 使得$AB=BA=E$, 则称A为矩阵可逆, B为A的逆矩阵, 记作$A^{-1}=B$
+2. 逆矩阵重要结论:
+   1. $(A^{-1})^{-1}A=A,    (kA)^{-1}=\frac{1}{k}A^{-1}$
+   2. $(A^T)^{-1}=(A^{-1})^T, (A^m)^{-1}=(A^{-1})^m$
+   3. $(AB)^{-1}=B^{-1}A^{-1}$
+   4. $|A^{-1}|=\frac{1}{|A|}$
+   5. 若A可逆, 则$A=P_1,P_2,...P_i$,其中$P_i(i=1,2,...,l)$为初等矩阵
+   6. $(A+B)^{-1} \neq (A^{-1}+B^{-1})$
+3. n阶矩阵A可你的充要条件
+   1. $|A| \neq 0 \Leftrightarrow r(A)=n \Leftrightarrow A$的行(列)向量线性无关
+   2. $\Leftrightarrow Ax=0 $ 仅有0解
+   3. $\Leftrightarrow Ax=b ,(b \neq 0) $ 有唯一解
+   4. $\Leftrightarrow A $ 没有零特征值
 
+### 5. 分块矩阵
+1. 定义
+   1. 用一些横线,竖线将矩阵A分成若干个小矩阵, 每个小矩阵称为A的子块, 以子块为元素的矩阵叫做分块矩阵
+2. 加法
+   $$ \begin{pmatrix} A_1 & A_2 \\ A_3 & A_4\end{pmatrix} + \begin{pmatrix} C_1 & C_2 \\ C_3 & C_4 \end{pmatrix} = \begin{pmatrix} A_1+C_1 & A_2+C_2 \\ A_3+C_3 & A_4+C_4 \end{pmatrix} $$
+3. 数乘
+   $$ k\begin{pmatrix} A_1 & A_2 \\ A_3 & A_4\end{pmatrix} =\begin{pmatrix} kA_1 & kA_2 \\ kA_3 & kA_4\end{pmatrix} $$
+4. 乘法
+   $$ \begin{pmatrix} A_1 & A_2 \\ A_3 & A_4\end{pmatrix} + \begin{pmatrix} C_1 & C_2 \\ C_3 & C_4 \end{pmatrix} = \begin{pmatrix} A_1C_1+A_2C_3 & A_1C_2+A_2C_4 \\ A_3C_1+A_4C_3 & A_3C_2+A_4C_4 \end{pmatrix} $$
+5. 转置
+   $$ \begin{pmatrix} A_1 & A_2 \\ A_3 & A_4\end{pmatrix}^T = \begin{pmatrix} A_1^T & A_3^T \\ A_2^T & A_4^T \end{pmatrix} $$
+--- 
 ## 矩阵初等变换与矩阵的秩
+### 1. 初等变换与初等矩阵
+1. 初等变换
+   1. 对换:  对换两行(列)
+   2. 倍乘:  用数k乘以某一行(列)
+   3. 倍加:  把某一行(列)的所有元素k倍加到另一行(列)上. 就和解二元一次方程一样
+2. 初等矩阵
+   - 由单位矩阵一次初等变换变到
+     1. E 对换两行(列):$r_1 \leftrightarrow r_2(c_1 \leftrightarrow c_2)$得到初等矩阵$E_{ij}$
+     2. E的某行(列)乘非零常数k:$k r_i \times k(c_i \times k)$得到初等矩阵$E_i(k)$
+     3. E的某行(列)元素的k倍加到另外一行(列):$r_i+ kr_j(c_i + kc_i)$得到初等矩阵$E_{ij}(k)$
+3. 初等矩阵的**重要结论**
+   - $|E_{ij}|=-1,|E_i(k)|=k, |E_ij(k)|=1$
+   - $E_i^n(k)=E_i(k^n), E_{ij}^n(k)=E_{ij}(nk),  E_{ij}^{2n}=E, E_{ij}^{2n+1}=E_{ij}$
+   - $E_{ij}^{-1}=E_{ij}, E_i^{-1}(k)=E_i(1/k), E_{ij}^{-1}=E_{ij}(k)$
+   - $(E_{ij})^*=-E_{ij}, [E_{i}(k)]^*=kE_i(\frac{1}{k}), [E_{ij}(k)]^*=E_{ij}(-k)$
+### 2. 矩阵等价
+A与B等价,记为$A \cong B$
+### 3. 矩阵的秩
+1. 矩阵A的k阶子式
+2. 矩阵的秩
+3. 矩阵秩的重要结论
+   
 
 ## 向量
 
