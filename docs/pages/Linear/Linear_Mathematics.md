@@ -259,14 +259,65 @@ A与B等价,记为$A \cong B$
 
 ### 2. 向量组的相关无关性
 1. 线性相关: 给定向量组\alpha_1 + ... +\alpha_m, 如果存在一组不全为0的数$k_1,k_2,...,k_m$使得
-   $$k_1 \alpha_1 + ... + k_m \alpha_m = 0$$, 则称向量组\alpha_1 + ... +\alpha_m为线性相关
-2. 
+   $$k_1 \alpha_1 + ... + k_m \alpha_m = 0$$, 则称向量组$\alpha_1 + ... +\alpha_m$为线性相关
+2. 线性无关:给定向量组$\alpha_m$,当且仅当:$k_1 = k_2 = ... = k_m = 0$, 才有
+$$ k_1 \alpha_1 + ... + k_m \alpha_m = 0$$, 成立,则称向量组$\alpha_m$为线性无关
+3. n维列向量组线性相关的充分条件
+   1. 存在不全为0的数k,使$k_1\alpha_1 + ... + k_n \alpha_n = 0$
+   2. 至少存在一个向量能有其余向量线性表示
+   3. 向量组的秩$r(\alpha_1,...,\alpha_m) <m$
+   4. 齐次线性方程组$(\alpha_1,...,\alpha_m)\begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ bkn \end{pmatrix}=0$**有非零解**
+4. n维列向量组线性无关的充分条件
+   1. 存在不全为0的数k,使$k_1\alpha_1 + ... + k_n \alpha_n = 0$
+   2. 任一个向量不能由其余向量线性表示
+   3. 向量组的秩$r(\alpha_1,...,\alpha_m) =m$
+   4. 齐次线性方程组$(\alpha_1,...,\alpha_m)\begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_n \end{pmatrix}=0$**仅有零解**
+5. 线性相关与无关的判定
+   1. 还有0向量的向量组一定线性相关
+   2. 两个向量\alpha1,\alpha2线性相关(无关), 则这两个向量成比例(不成比例)
+   3. 给定n维向量组$\alpha_s$
+      1. s>n, 则向量组必然线性相关
+      2. s=n, 则向量组线性相关$\Leftrightarrow |\alpha_1,\alpha_2, ... \alpha_n| =0$
+      3. s<n, 则分情况
 ### 3. 线性表示的相关结论
-### 4. 向量组
-### 5. 向量组的秩
-### 6. 向量空间
-### 7. 内积与正交化
+1. 向量组$\alpha_s$线性无关,但向量组$\alpha_s,\beta$线性相关, 则向量$\beta$可由向量组$\alpha_s$线性表示
+2. 向量$\beta$可由向量组线性表示
+   1. $\Leftrightarrow \beta r(\alpha_1,\dots \alpha_s) = r(\alpha_1,\dots,\alpha_s,\beta)$
+   2. $\Leftrightarrow 非齐次线性方程组$(\alpha_1,...,\alpha_m)\begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_n \end{pmatrix}=\beta 有解$ (若无界,则表示不能由向量组线性表示)
 
+### 4. 向量组
+1. 向量组A和B
+   1. $r(A)=r(A,B) \geq r(B)$
+   2. 矩阵方程$AX=B$有解
+2. 向量组A和B等价$\Leftrightarrow r(A)=r(A,B) = r(B)$
+3. 若$r(A)=r(A,B) > r(B)$
+   1. 向量组B,可由向量组A线性表示
+   2. 向量组A不能有B线性表示
+### 5. 向量组的秩
+1. 设$\alpha_s$为n维列向量组, 记矩阵$A=(\alpha_1,\dots,\alpha_s)$, 则向量组的秩等于矩阵A行(列)向量的秩,也等于矩阵A的秩
+2. 若$ r(\alpha_1,...,\alpha_s)=s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性无关
+   1. 齐次线性方程组$(\alpha_1,...,\alpha_s)x=0$仅有灵界
+3. 若$ r(\alpha_1,...,\alpha_s)< s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性相关
+   1. 齐次线性方程组$(\alpha_1,...,\alpha_s)x=0$有非零解
+### 6. 向量空间
+1. 基于维数
+2. 坐标
+   1. $\gamma = x_1a_1 + ... + x_ra_r$
+   2. x表示系数为$\gamma$下基a_r的坐标
+3. 坐标公式和过度矩阵
+   1. 设$\alpha_n 和 \beta_n$都是n维向量空间V的两个基,且满足:
+   $$ \left\{\begin{array}{l} \beta = a_{11}\alpha_1+...+a_n1 \alpha, \\ \vdots \\ \beta = a_{1n}\alpha_1+...+a_nn\alpha  \end{array} \right.$$
+   -  则称$\alpha_n$到$\beta_n$的基变换公式,矩阵为:
+   $$ (\beta_1,...,\beta_n)=(\alpha_1,...,\alpha_n)\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix},$$
+   - 其中矩阵:
+   $$ P=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix}$$
+   - 称由$\alpha_n$到$\beta_n$的**过度矩阵**
+### 7. 内积与正交化
+1. 内积
+2. 内积的性质
+3. 施密特正交化
+   1. 正交化
+   2. 单位化
 ## 线性方程组
 ### 1. 方程组的表达方式
 ### 2. 方程组解的判定
