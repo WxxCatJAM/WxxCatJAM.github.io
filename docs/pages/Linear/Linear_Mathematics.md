@@ -429,7 +429,7 @@ $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{2
 | 矩阵      | A | A+kE | kA | $A^k$ | $f(A)$ | $A^{-1}$ | $A^*$ | $A^T$ | $P^{-1}AP$ |
 | 特征值     |  $\lambda$ |$\lambda+k$ | $ k\lambda$ | $\lambda^k$ | $f(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{|A|}{\lambda}$ | $\lambda$ | $\lambda$ | 
 | 对应的特征向量 | $\alpha$  | $\alpha$     |  $\alpha$  |   $\alpha$    | $\alpha$      |     $\alpha$     |   $\alpha$    |    不确定   |     $P^{-1}\alpha$  |
-}       |
+       |
 
 --- 
 
@@ -465,12 +465,56 @@ $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{2
      5. 实对称矩阵A,B相似 $\Leftrightarrow$ A,B的特征值相同
 ## 二次型
 ### 1. 二次型定义
+  - 含有n个变量$x_1,...x_n$的二次齐次函数为: $f(x)=a_{11}x_1^2+...+a_{nn}x_n^2+2b_{ij}x_ix_j$
+  - 称为二次型,记:
+  $$ a_{ij}=a_{ji}, A=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn}  \end{pmatrix} \begin{pmatrix}x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}=x^TAx$$
+  - 则二次型可写成矩阵形式:
+  $$ f(x_1,...x_n)= \sum_{i=1}^n\sum_{j=1}^n a_{ij}x_ix_j = (x_1,...x_n)\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn}  \end{pmatrix} \begin{pmatrix}x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}=x^TAx$$
+  - 其中矩阵A为二次型f的矩阵,A的秩为f的秩
+---
+
 ### 2. 标准型
+- 形如: $f=\lambda_1 y_1^2+...+\lambda_n y_n^2$, 只含平方项的二次型
+---
+
 ### 3. 规范型
+- 规范型的系数($\lambda$)只能为-1,1,0形如: $f=y_1^2+...+y_p^2-y_{p+1}^2-...-y_r^2 (r \leq n)$
+---
+
 ### 4. 化二次型为标准型
+1. 正交变换
+   1. 任何二次型$f=x^TAx$可通过正交变换$x=Qy$写成标准型$f=\sum_{i=1}^n\lambda_i y_i^2$
+      1. 步骤
+         1. 求出矩阵A的特征值$\lambda_1,...,\lambda_n$, 预期对应的线性无关特征向量$\alpha_1,...,\alpha_n$
+         2. 将向量正交化与单位化得$\beta_1,...,\beta_n$
+         3. 记正交矩阵$Q=(\beta_1,...,\beta_n)$,令x=Qy$,得到二次型的标准型:$f=\lambda_1 y_1^2+...+\lambda_n y_n^2$
+2. 配方法
+   1. 任意二次型$f=x^TAx$可经可逆线性变换$x=Cy$变为标准型: $f=k_1 y_1^2+...+k_n y_n^2$(此时k,不一定是A的特征值)
 ### 5. 惯性定理
+1. 二次型$f=x^TAx$与正经可逆线性变换$x=C_1y,x=C_2z$变为不同的标准型:
+    $$ f=k_1 y_1^2+...+k_n y_n^2 $$
+    $$ f=l_1 z_1^2+...+l_n z_n^2 $$
+2.  则两个标准形平方项正(负)系数个数相等,且都等于二次型矩阵A正(负)特征值个数
+    1. 标准平方项的政府系数个数=二次型的正负惯性指数
+    2. 设正惯性指数p,负惯性指数为q,二次型矩阵r=p+q
 ### 6. 合同
+1. n阶矩阵A,B如果存在可逆矩阵C, 使得$B=C^TAC$,则称矩阵A与B合同,记为$A \cong B$
+2. A与B合同 $\Leftrightarrow$ A,B的正负惯性指数(政府特征值个数)也相同
+   1. 相似关系
+      1. $A \sim B$,AB合同且等价
+      2. AB合同,则AB等价,不一定相似
+      3. AB等价,则AB不一定合同,也不一定相似
 ### 7. 正定
+1. $\forall x \neq 0, 均有f=x^TAx>0$, 则称二次型f为正定二次型, 正定二次型的矩阵A称为正定矩阵
 ### 8. A为正定矩阵的充要条件
+1. $forall x \neq 0, 均有f=x^TAx>0$
+2. 二次型f的正惯性指数为n
+3. 标准形平方项前的系数全为正
+4. 二次型矩阵A的特征都大于0
+5. 二次型矩阵A的各阶主子式都大于0,即:
+   $$ a_11 > 0, \begin{pmatrix} a_11 & a_{12} \\ a_{21} & a_{22} \end{pmatrix} > 0, ...,\begin{pmatrix} a_11 & a_{12} & ... & a_{1n} \\ a_{21} & a_{22} & ... & a_{2n} \\ ... & ... & ... & ... \\ a_{n1} & a_{n2} & ... & a_{nn} \end{pmatrix} > 0$$
+6. 存在可逆矩阵P,使得$P^TAP=E$或$A=P^TP$(矩阵A与E合同)
 ### 8. A为正定矩阵的必要条件
+1. $a_{ii}, i=1,2,...,n$
+2. $|A| > 0$
 
