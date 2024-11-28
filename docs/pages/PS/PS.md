@@ -484,7 +484,8 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 1. 写出似然数
    1. 离散型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^np(x_i;\theta_1,\dots \theta_m)\$
    2. 连续型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^nf(x_i;\theta_1,\dots \theta_m)\$
-2. 取对数得$\ln L$
+2. 取对数得$\ln L$  
+3. 求(偏)导
 ### 3. 估计量的评价标准
 ### 4. 区间估计
 
