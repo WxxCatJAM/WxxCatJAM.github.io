@@ -65,7 +65,7 @@
       1. 样本空间$\Omega$是一个可度量的有界区域
       2. 每个样本点可能发生, 即样本点落入样本空间的某一刻度子域可能性大小与A的集合度量成正比, 称其集合概型
       3. 设事件A: "样本点落入样本空间$\Omega$的某一可度量子域A内", 则
-      $$ P(A)=\frac{A的度量}{\Omega的度量}$
+      $$ P(A)=\frac{A的度量}{\Omega的度量}$$
 
 3. n重伯努利概型
    1. 将每次实验只有两个结果的伯努利试验独立重复n次, 称为n重伯努利试验
@@ -85,7 +85,7 @@
 3. 乘法公式
    1. 若$P(A)>0$,有$P(AB)=P(A)P(B|A)$
    2. 若$P(B)>0$,有$P(AB)=P(B)P(A|B)$
-   3. 若有$P(A_1A_2...A_{n-1}) > 0, 有$P(A_1A_2...A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1A_2...A_{n-1})$
+   3. 若有$P(A_1A_2...A_{n-1}) > 0$, 有$P(A_1A_2...A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1A_2...A_{n-1})$
 4. 全概率公式
    1. 若随机事件满足$A_1,A_2,...,A_n$,满足:
       1. $A_iA_j= \emptyset, i\neq j$
@@ -167,7 +167,7 @@
    $$ f(x)=\left\{\begin{array}{l} \frac{1}{b-a}, a<x<b, \\ 0, \text{ 其他} \end{array}\right. F(x)=\left\{\begin{array}{l} 0, x<a \\ \frac{x-a}{b-a}, a \leq x < b\\ 1, x \geq b \end{array}\right. $$
    2. 指数分布E($\lambda$)($\lambda>0$):
    $$ f(x)=\left\{\begin{array}{l} \lambda e^{-\lambda x}, x>0, \\ 0, x \leq 0 \end{array}\right. F(x)=\left\{\begin{array}{l} 0, x<0 \\ 1-e^{-\lambda x}, x \geq 0 \end{array}\right. $$
-   - 性质: (无记忆性)$P{X>s+t|X>s}=P{X>t}(s \geq 0, t \geq 0)
+   - 性质: (无记忆性)$P{X>s+t|X>s}=P{X>t}(s \geq 0, t \geq 0)$
    3. 正态分布N($\mu$,$\sigma^2$):
    $$ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}, F(x)=\int_{-\infty}^{x}f(t)dt=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x} e^{-\frac{(t-\mu)^2}{2\sigma^2}}dt$$
    - 性质:
@@ -181,7 +181,7 @@
 
 ### 5. 一维随机变量函数分布
 1. 离散型随机变量函数的分布
-   1. 已知随机变量X的分布律为$P{X=x_i}=p_i$, 则$Y=g(X)$是离散型随机变量,其分布律为$P{Y=g(x_i))}=p_i$, 若g(x_i)出现相等的函数值,将各概率之和作为$Y=g(X)取该值的概率。
+   1. 已知随机变量X的分布律为$P{X=x_i}=p_i$, 则$Y=g(X)$是离散型随机变量,其分布律为$P{Y=g(x_i))}=p_i$, 若g(x_i)出现相等的函数值,将各概率之和作为$Y=g(X)$取该值的概率。
 2. 连续性随机变量函数的分布
    -  已知随机变量X的概率密度为f(x)
     1. 分布函数法
@@ -234,7 +234,7 @@
    $$ F(x,y)=F_x(x)F_y(y) $$
    - 即: 二维离散型随机变量X和Y相互独立的充分必要条件是
    $$ P{X =x_i, Y =y_j}=P{X=x_i}P{Y=y_j} $$
-   - 即: $p_{ij}=p_{i\cdot}p_{\cdot j}
+   - 即: $p_{ij}=p_{i\cdot}p_{\cdot j}$
 ### 3. 二维连续型随机变量
 1. 定义
    1. 设二维随机变量(X,Y)的分布函数为F(x,y), 如果存在非负可积函数f(x,y), 有:
@@ -253,8 +253,8 @@
    $$ F_Y(y)=\lim\limits_{x=+\infty}F(x,y) =\int_{-\infty}^{y}f(v)dv$$
 
 5. 条件概率密度
-   - 对固定的y, 若$f_Y(y) > 0, 则称$f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}$为Y=y条件下X的条件概率密度
-   - 对固定的x, 若$f_x(x) > 0, 则称$f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}$为X=x条件下Y的条件概率密度
+   - 对固定的y, 若$f_Y(y) > 0$, 则称$f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}$为Y=y条件下X的条件概率密度
+   - 对固定的x, 若$f_x(x) > 0$, 则称$f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}$为X=x条件下Y的条件概率密度
    - 条件分布函数:
    $$ F_{X|Y}(x|y)=P{X \leq x|Y=y}=\int_{-\infty}^{x}f_{X|Y}(x|y)dx $$
    $$ F_{Y|X}(y|x)=P{Y \leq y|X=x}=\int_{-\infty}^{x}f_{Y|X}(y|x)dx $$
@@ -269,7 +269,7 @@
    1. X,Y的联合概率密度$f(x,y)=\left\{\begin {array}{l} \frac{1}{S_D}, (x,y) \in D \\ 0, 其他 \end {array} \right.$, 其中$S_D$为平面有界区域D的面积
 2. 二维正态分布
    1. (X,Y)的联合概率密度
-   $$ f(x,y)=\frac{1}{2\pi\sigma_1 \sigma_2 \sqrt{1-\rho^2} exp{\frac{-1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}, {x,y \in R}  $$
+   $$ f(x,y)=\frac{1}{2\pi\sigma_1 \sigma_2 \sqrt{1-\rho^2}} exp{\frac{-1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}, {x,y \in R}  $$
     1. 若$(X,Y) \sim N(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho)$
             1. $X \sim N (\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$
             2. X 与Y的非零线性组合服从正态分布, 特别的, 当X与Y相互独立式有:
@@ -289,7 +289,7 @@
    1. 分布函数法: 概率密度:f(x,y),随机变量Z=g(X,Y)
       1. $F_Z(z)=P{Z\leq z}= \iint_{g(x_i,y_j) \leq z} f(x,y)dxdy$, 
       2. 概率密度为: $f_z(z)=F'_z(z)$
-   2. 卷积分布: 概率密度: $f_X(x)=f_Y(y), 随机变量$Z=aX+bY$
+   2. 卷积分布: 概率密度: $f_X(x)=f_Y(y), 随机变量Z=aX+bY$
       1. $f_Z(z)=\frac{1}{|b|}\int_{-\infty}^{+\infty}f_X(x)f_Y\frac{(z-ax)}{b}dx = \frac{1}{|a|}\int_{-\infty}^{+\infty}f_X(\frac{(z-by)}{a})f_Y(y)dy$
 3. 最值分布: 
    - 设$X_1,X_2,...X_n$相互独立,其分布函数分别为$F_{X_1}(x_1),F_{X_2}(x_2),...,F_{X_n}(x_n)$,记:
@@ -309,25 +309,182 @@
 
 ## 随机变量的数字特征
 ### 1. 数学期望
+1. 定义
+   1. 离散型随机变量分布律$P{X=x_i}=p_k$, 则数学期望$EX=\sum_{k=1}^{\infty}x_kp_k$
+   2. 设连续型随机变量X的概率密度f(x), 则数学期望为$EX=\inf_{-\infty}^{+\infty}xf(x)dx$(要求反常积分绝对收敛)
+   3. 随即变量函数的期望
+      1. 一维随机变量函数Y=g(X)
+         1. 当X为离散型, 有$EY=\sum_{k=1}^{\infty}g(x_k)p_k$
+         2. X为连续型,有$EY=\int_{-\infty}^{+\infty}g(x)f(x)dx$
+      2. 二维随机变量函数Z=g(X,Y)
+         1. 若(X,Y)为二维离散型随机变量,则$EZ=\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}g(x_i,y_j)p_{ij}$
+         2. X,Y为二维连续型随机变量,则$EZ=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}g(x,y)f(x,y)dxdy$
+         3. 特别的: $EX=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf(x,y)dxdy$, $EY = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} yf(x,y)dxdy$
+
+2. 性质
+   1. $EC=C$(C为常数)
+   2. $E(aX+b)=aEX+b$
+   3. $E(X \pm Y)=E(X) \pm E(Y)$
+   4. 若X与Y不相关, 则$E(XY)=EXEY$
+---
+
 ### 2. 方差
+1. 定义
+   $$ DX=E[(X-EX)^2]=E[X^2]-(EX)^2 $$
+2. 性质
+   1. DC=0(C为常数)
+   2. $D(aX+b)=a^2DX$
+   3. $D(aX \pm bY)=a^2DX+b^2DY+2abCov(X,Y)$
+   4. 若X与Y不相关, 则$D(aX \pm bY)=a^2DX+b^2DY$
+3. 常见随机变量的数学期望和方差(表)
+
+|               分布               | 分布律或概率密度                                                                                               | 数学期望            | 方差                  |
+| :------------------------------: | -------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------- |
+|             0-1分布              | $P{X=k}=p^k(1-p)^{1-k},k=0,1; 0<p<1$                                                                           | $p $                | $p(1-p)$              |
+|     二项分布$X \sim B(n,p)$      | $P{X=k}=C_n^k p^k(1-p)^{1-k},k=0,1,...,n; 0<p<1$                                                               | $np$                | $np(1-p)$             |
+|      几何分布$X \sim G(p)$       | $P{X=k}=(1-p)^{1-k}p,k=0,1,...; 0<p<1$                                                                         | $\frac{1}{p}$       | $\frac{1-p}{p^2}$     |
+|   泊松分布$X \sim P(\lambda)$    | $P{X=k}=\frac{\lambda^k}{k!}e^{-\lambda},k=0,1,...,n; \lambda >0$                                              | $\lambda$           | $\lambda$             |
+|     均匀分布$X \sim U(a,b)$      | $f(x)=\left\{\begin{array}{l} \frac{1}{b-a} & a < x < b \\ 0 & 其他 \end{array} \right.$                       | $\frac{a+b}{2}$     | $\frac{(b-a)^2}{12}$   |
+|   指数分布$X \sim E(\lambda)$    | $f(x)=\left\{\begin{array}{l} \lambda e^{-\lambda x} & x >0 \\ 0 & x \leq 0 \end{array} \right. (\lambda >0)$ | $\frac{1}{\lambda}$ | $\frac{1}{\lambda^2}$ |
+| 正态分布$X \sim N(\mu,\sigma^2)$ | $ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}, (-\infty,+\infty)$                         | $\mu$               | $\sigma^2$            |
+|                                  |                                                                                                                |                     |                       |
+--- 
+
 ### 3. 协方差
+1. 定义
+   $$ Cov(X,Y)= E[(X-EX)(Y-EY)]=E(XY)-EXEY $$
+2. 性质
+   1. $Cov(X,X)=DX$
+   2. $Cov(aX,bY)=abCov(X,Y); Cov(X,C)=0$
+   3. $Cov(X_1 \pm X_2,Y)=Cov(X_1,Y) \pm Cov(X_2,Y)$
+   4. 若随机变量$X,Y$不相关,则$Cov(X,Y)=0$
+---
+
 ### 4. 相关系数
+1. 定义
+   $$ \rho XY=\frac{Cov(X,Y)}{\sqrt{DXDY}}=\frac{E(XY)-EXEY}{\sqrt{DXDY}}$$
+2. 性质
+   1. $|\rho XY| \leq 1$
+   2. X,Y不相关,$\rho XY=0$
+   3. $|\rho XY| = 1 \Leftrightarrow \exist a,b 且a \neq 0, 使得P\{Y=aX+b\}=1,且\rho XY= \left\{\begin {array}{l} 1, &a >0 \\ -1, & a<0 \end {array} \right.$
+--- 
+
 ### 5, 矩
+1. k阶原点矩
+    $$ E(X^k)(k=1,2,...),\text{(期望EX为一阶原点矩)}$$
+2. k阶中心矩
+   $$ E[(X-EX)^k](k=2,3,...), \text{(方差DX为二阶中心矩)}$$
+3. k+l阶混合矩
+   $$ E(X^kY^l)(k,l=1,2,...)$$
+4. k+l阶混合中心矩
+    $$ E[(X-EX)^k(Y-EY)^l](k,l=1,2,...), \text{(协方差Cov(X,Y)为二阶混合中心矩)}$$
+--- 
+
 
 ## 大数定理与中心极限定理
 ### 1. 基本理论
-### 2. 大数定理
+1. 切比雪夫不等式:
+   1. 设随机变量:$X$,数学期望:$EX$,方差:$DX$,则对$\forall_\epsilon >0$,有:
+   $$ P\{|X-EX|\geq \epsilon\} \leq \frac{DX}{\epsilon^2}, 或者 $$
+   $$ P\{|X-EX|< \epsilon\} \geq \frac{DX}{\epsilon^2}$$
+ 
+2. 依概率收敛
+   1. 设$Y_n$为随机变量序列, 有$\lim\limits_{n \to \infty}\{|Y_n-a|< \epsilon\}$, a为常数,则称$Y_n$序列收敛与a,记为$Y_n \overset{P}\rightarrow a$
+   2. 性质: 设$X_n \overset{P}\rightarrow a, Y_n \overset{P}\rightarrow b$ , 且函数g(x,y)连续, 则$g(X_n,Y_n)\overset{P}\rightarrow g(a,b)$
+--- 
+
+### 2. 大数定律
+1. 切比雪夫大数定律
+   1. 设随机变量序列$X_n$相互独立,期望:$EX$存在, 方差:$DX_i(i \geq 1)$存在且有上界, 则$\forall_\epsilon>0$,有:
+    $$ \lim\limits_{n \to \infty}P\{|\frac{1}{n}\sum\limits_{i=1}^nX_i-\frac{1}{n}\sum\limits_{i=1}^nEX|<\epsilon\}=1$$
+2. 辛钦大数定理
+   1. 设随机变量序列$X_n$相互独立,期望:$EX_i=\mu(i=1,2,\dots)$
+   $$ \lim\limits_{n \to \infty}P\{|\frac{1}{n}\sum\limits_{i=1}^nX_i- \mu|<\epsilon\}=1 , $$
+ 即,   $$ \frac{1}{n}\sum\limits_{i=1}^nX_i \overset{p}\to \mu = EX_i $$
+3. 伯努利大数定律
+   1. 设$f_A$是n次独立重复实验中事件A发生的次数, $p(0<p<1)$是A发生的概率,则:
+   $$ \lim\limits_{n \to \infty}P\{|\frac{f_A}{n}- p|<\epsilon\}=1 , $$
+---
+
 ### 3. 中心极限定理
+1. 列维-林德伯格定理
+   1. 设随机变量$X_n$, 期望$EX_i=\mu$, 方差$DX_i=\sigma^2 >0$, 则有:
+$$ \lim\limits_{n \to \infty}P\{ \frac{\sum_{i=0}^nX_i-n\mu}{\sqrt{n}\sigma} \leq x\}=\frac{1}{\sqrt{2\pi}} \int_{-\infty}^xe^{-\frac{t^2}{2}}dt=\Phi$$ 
+2. de 莫弗-拉普拉斯定理
+   1. 设随机变量$X_n \sim B(n,p)(0<p<1, n \geq 1)$, 则有:
+   $$\lim\limits_{n \to \infty}P\{ \frac{X_n-np}{\sqrt{np(1-p)}} \leq x\}=\frac{1}{\sqrt{2\pi}} \int_{-\infty}^xe^{-\frac{t^2}{2}}dt=\Phi$$ 
+---
+
 
 ## 数理统计的基本概念
 ### 1. 常用统计量及数字特征
+1. 样本均值
+$$ \bar{X} = \frac{1}{n}\sum_{i=1}^nX_i$$
+$$ E\bar{X} = EX, D\bar{X}=\frac{1}{n}DX$$
+2. 样本方差
+$$ S^2 = \frac{1}{n-1}\sum_{i=0}^n(X_i-\bar{X})^2,$$
+$$ E(S^2) = DX$$
+3. 样本标准差
+$$ S=\sqrt{\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2}$$
+4. 样本k阶(原点)矩
+$$ A_k=\frac{1}{n}\sum_{i=1}^nX_i^k, k=1,2,...$$
+5. 样本k阶中心矩
+$$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
+---
+
 ### 2. 三大抽样分布
+1. $\chi^2$分布
+   1. 定义
+      1. 设$X_1,X_2,...X$相互独立且服从N(0,1), 则称$X=X_1^2+X_2^2+...+X_n^2$服从自由度维n的$\chi^2$分布,记为: $X \sim \chi^2$
+   2. 性质
+      1. 可加性, 设$X_1 \sim \chi^2(n_1), X_2 \sim \chi^2(n_2)$, X_1X_2相互独立,有:$X_1+X_2 \sim \chi^2(n_1+n_2)
+      2. 期望与方差,若$X \sim \chi^2, 则EX=n, DX=2n$
+      3. 若满足$P\{\chi^2>\chi_a^2(n)\}=a$的点$\chi_a^2(n)$为$\chi^2(n)$分布的上a分为点
+2. t分布
+   1. 定义
+      1. XY互相独立,且$X \sim N(0,1),Y \sim \chi^2(n)$, 则随机变量$t=\sqrt{X}{\sqrt{\frac{Y}{n}}}$,服从自由度为n的t分布,记为$t \sim t(n)$
+   2. 性质
+      1. t分布的概率密度为**偶函数**,当n充分大时,t分布近似于N(0,1)分布
+      2. 上$a$分位点.$P\{t > t_a(n)\}=\int_{t_a(n)^{+\infty}}f(t)dt=a(0<a<1), t_{1-a}(n)=-t_a(n), P\{|t|>t_{\frac{a}{2}\}=a$
+3. F分布
+   1. 定义
+      1. XY互相独立,且$X \sim \chi^2(n_1), Y \sim \chi^2(n_2), 则F=\frac{X/n_1}{Y/n_2} \sim F(n_1,n_2)$
+   2. 性质
+      1. 若$F \sim F(n_1,n_2), 则\frac{1}{F} \sim F(n_2,n_1)$
+      2. 上a分位点.$P\{F>F_a(n_1,n_2)\}=\int_{F_a(n_1,n_2)^{+\infty}f(t)dt=a, F_a(n_1,n_2)^{+\infty}=\frac{1}{F_a(n_2,n_1)}$
+      3. 若t~t(n),则$t \sim F(1,n), \frac{1}{t^2} \sim F(n,1)$
+--- 
+
 ### 3. 单个正态总体
+- 设$X_n$是来自正态总体$X \sim N(\mu,\sigma^2)$的一个样本, 有样本均值: $\bar{X}$, 样本方差$S^2$,则
+  1. $\bar{X} \sim N(\mu,\frac{\sigma^2}{n}), \frac{\bar{X}-\mu}{\sigma\sqrt{n}} \sim N(0,1) $
+  2. $\frac{1}{\sigma^2}\sum_{i=1}^n(X_i-\mu)^2, (\frac{\bar{X}-\mu}{\sigma\sqrt{n}} )^2 \sim \chi^2(1) $
+  3. $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$
+  4. $\bar{X}和S^2相互独立, \frac{\bar{X}-\mu}{S\sqrt{n}} \sim t(n-1)$
+--- 
+
 ### 4. 两个正态总体
+- 设$X_n$,$Y_n$是来自正态总体$X \sim N(\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$的样本,记样本均值: $\bar{X},\bar{Y}$, 方差:$S_1^2,S_2^2$,
+  1. $\bar{X}-\bar{Y} \sim N(\mu_1-\mu_2,\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{n}), U=\frac{\bar{X}-\bar{Y}-(\mu_1-\mu_2)}{\sigma\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{n}}} \sim N(0,1) $
+  2. $V=\frac{(n_1-1)S_1^2}{\sigma_1^2} + \frac{(n_2-1)S_2^2}{\sigma_2^2}\sim \chi^2(n_1+n_2-2)
+  3. $\frac{U}{\sqrt{V/(n_1+n_2-2)}} \sim t(n_1+n_2-2)$
+  4. ...
+--- 
+
 
 ## 参数估计
 ### 1. 矩估计求解
+1. 求出总体$X$的k(k=1,2,...)阶原点矩
+2. 令样本矩=总体矩
+3. 求解上述方程组得到矩估计量(值)
+4. 注: 
+   1. 总体$X,的期望EX的矩估量:\widehat{EX}=\bar{X}$
+   2. 方差$DX,的矩估量: \widehat{DX}=\frac{1}{n}\sum_{i=0}^n(X_i-\bar{X})^2$
 ### 2. 最大似然估计求解
+1. 写出似然数
+   1. 离散型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^np(x_i;\theta_1,\dots \theta_m)\$
+   2. 连续型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^nf(x_i;\theta_1,\dots \theta_m)\$
+2. 取对数得$\ln L$
 ### 3. 估计量的评价标准
 ### 4. 区间估计
 
