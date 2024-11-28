@@ -150,14 +150,162 @@
 --- 
 
 ### 4. 常见的随机变量分布
+1. 离散型随机变量
+   1. 0-1分布: 
+   $$ P{X=1}=p, P{X=0}=1-p, 0<p<1 $$
+   2. 二项分布B(n,p):
+   $$ P{X=k}=C_n^kp^k(1-p)^{n-k}, 0<p<1, k=0,1,2...n $$ 
+   3. 几何分布G(p):
+   $$ P{X=k}=p(1-p)^{k-1}, 0<p<1, k=1,2,3... $$
+   4. 超几何分布:
+   $$ P{X=k}=\frac{C_M^kC_{N-M}^{n-k}}, \max(0,n-N+1)\leq k\leq \min(M,n), (M,N,N \in \mathbb{N_+},为正整数且M \leq N, n \leq N) $$
+   5. 泊松分布($\lambda$):
+   $$ P{X=k}=\frac{\lambda^k}{k!}e^{-\lambda}, k=0,1,2... $$
+
+2. 连续型随机变量
+   1. 均匀分布U(a,b):
+   $$ f(x)=\left\{\begin{array}{l} \frac{1}{b-a}, a<x<b, \\ 0, \text{ 其他} \end{array}\right. F(x)=\left\{\begin{array}{l} 0, x<a \\ \frac{x-a}{b-a}, a \leq x < b\\ 1, x \geq b \end{array}\right. $$
+   2. 指数分布E($\lambda$)($\lambda>0$):
+   $$ f(x)=\left\{\begin{array}{l} \lambda e^{-\lambda x}, x>0, \\ 0, x \leq 0 \end{array}\right. F(x)=\left\{\begin{array}{l} 0, x<0 \\ 1-e^{-\lambda x}, x \geq 0 \end{array}\right. $$
+   - 性质: (无记忆性)$P{X>s+t|X>s}=P{X>t}(s \geq 0, t \geq 0)
+   3. 正态分布N($\mu$,$\sigma^2$):
+   $$ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}, F(x)=\int_{-\infty}^{x}f(t)dt=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x} e^{-\frac{(t-\mu)^2}{2\sigma^2}}dt$$
+   - 性质:
+       1. 当$\mu=0,\\sigma^2=1$时, $X \sim N(\mu,\sigma^2),(\sigma > 0), 则Y=\frac{X-\mu}{\sigma} \sim N(0,1), 有F(x)=\Phi(\frac{x-\mu}{\sigma})$
+       2. 对称性:
+          1. $\varphi(x)= \varphi(-x), \Phi(x)+\Phi(-x)=1$
+          2. $\Phi(0)=\frac{1}{2},P{|X| \leq a}=2\Phi(a)-1$
+          3. $P(X \leq \mu-a)=P{X \geq \mu+a}$
+       3. 若$X \sim N(\mu,\sigma^2)$则$Y=aX+b \sim N(a\mu+b,a^2\sigma^2), a \neq 0$
+--- 
+
 ### 5. 一维随机变量函数分布
+1. 离散型随机变量函数的分布
+   1. 已知随机变量X的分布律为$P{X=x_i}=p_i$, 则$Y=g(X)$是离散型随机变量,其分布律为$P{Y=g(x_i))}=p_i$, 若g(x_i)出现相等的函数值,将各概率之和作为$Y=g(X)取该值的概率。
+2. 连续性随机变量函数的分布
+   -  已知随机变量X的概率密度为f(x)
+    1. 分布函数法
+        1. 若$Y=g(X)$为连续型随机变量或既非连续型也非离散型的随机变量,可由分布函数法求解:
+        $$ F_Y(y)=P{Y=g(x) \leq y}=\int_{g(x) \leq y}f(x)dx. $$ 若$Y=g(X)$为连续型随机变量,则概率密度$f_Y(y)=F'_y(y)$
+    2. 公式法
+       1. 若y=g(x) 可导且严格单调,则存在反函数x=g^{-1}(y),故概率密度为:
+       $$ f_Y(y)=\left\{\begin{array}{l} f[g^{-1}(y)]|[g^{-1}(y)]'|, y \in (\alpha, \beta), \\ 0, 其他 \end{array}\right. $$
+       - 其中$\alpha = \min{g(-\infty),g(+\infty)},\beta = \max{g(-\infty),g(+\infty)}$
+--- 
+
 
 ## 多维随机变量及其分布
 ### 1. 二维随机变量的分布函数
+1. 定义
+   1. 已知二维随机变量$(X,Y)$, 对任意$x,y \in \mathbb{R}$, 有F(x,y)=P{X \leq x, Y \leq y}, 则称:
+      1. $F(x,y)$为二维随机变量$(X,Y)$的(联合)分布函数, 
+      2. $F_X(x)=P{X \leq x, Y < +\infty}=\lim\limits_{y \to +\infty}F(x,y)$为随机变量$X$的边缘分布函数,
+      3. $F_Y(y)=P{X < + \infty, Y \leq y} = \lim\limits_{x \to +\infty}F(x,y)$为随机变量$Y$的边缘分布函数
+2. 性质
+   1. F(x,y)分别关于x和y单调不减
+   2. $$ 0 \leq F(x,y) \leq 1 $$
+   $$ F(-\infty,y) = \lim\limits_(x \to -\infty)=0, F(x,-\infty)=\lim\limits_(y \to -\infty)=0 $$
+   $$ F(-\infty,-\infty) = \lim\limits_(x,y \to -\infty)=0, F(+\infty,+\infty)=\lim\limits_(y \to -\infty)=0 $$
+   3. F(x,y)关于x和y右连续: 
+   $$ \lim\limits_{x \to x_0^+}F(x,y)=F(x_0,y), \lim\limits_{y \to y_0^+}F(x,y)=F(x,y_0) $$
+   4. 对任意$(x_1,y_1),(x_2,y_2), x_1<x_2,y_1<y_2$
+   $$ F(x_2,y_2)-F(x_2,y_1)+F(x_1,y_1)-F(x_1,y_2) \geq 0 $$
+--- 
+
 ### 2. 二维离散型随机变量
+1. 定义
+   1. 若二维随机变量(X,Y)全部可能取值为有限对或无限多对,则称(X,Y)是离散型随机变量,记$P{X=x_i, Y=y_j}=p_{ij}$,则:
+   $$ p_{ij} \geq 0, \sum\limits_{i=1}^{\infty} \sum\limits_{j=1}^{\infty} p_{ij}=1 $$
+
+2. 边缘分布律
+   $$ P{X=x_i}=\sum\limits_{j=1}^{\infty}P{X=x_i, Y=y_j} =\sum\limits_{j=1}^{\infty}p_{ij} = \sum\limits_{j=1}^{\infty} p_{i\cdot} $$
+   $$ P{Y=y_i}=\sum\limits_{i=1}^{\infty}P{X=x_i, Y=y_j} =\sum\limits_{j=1}^{\infty}p_{ij} = \sum\limits_{i=1}^{\infty} p_{\cdot j} $$
+3. 边缘分布函数
+   $$ F_x(x)=\lim\limits_{y \to +\infty} F(x,y) = P{X \leq x}=\sum\limits_{x_i \leq x} P{X = x_i}=\sum\limits_{x_i \leq x} \sum\limits_{j=1}^{\infty}p_{ij}$$
+   $$ F_y(y)=\lim\limits_{y \to +\infty} F(x,y) = P{Y \leq y}=\sum\limits_{y_i \leq y} P{Y = y_i}=\sum\limits_{y_j \leq y} \sum\limits_{i=1}^{\infty}p_{ij}$$
+4. 条件分布
+   1. 对固定的$y_j$, 
+      1. 若$P{Y=y_j}>0$，则$P{X=x_i|Y=y_j}=\frac{P{X=x_i,Y=y_j}}{P{Y=y_j}} = \frac{p_{ij}}{p_{\cdot j}}$表示在事件${Y=y_j}$发生的条件下事件${X=x_i}$发生的概率, 也成为在$Y=y_j$发生的条件下随机变量**X的条件分布律**.
+   2. 对固定的$x_i$,
+      1. 若$P{X=x_i}>0$，则$P{Y=y_j|X=x_i}=\frac{P{X=x_i,Y=y_j}}{P{X=x_i}} = \frac{p_{ij}}{p_{i\cdot}}$表示在事件${X=x_i}$发生的条件下事件${Y=y_j}$发生的概率, 也成为在$X=x_i$发生的条件下随机变量**Y的条件分布律**.
+5. 独立性
+   1. 设$F(x,y), F_x(x), F_y(y)$分别为二维随机变量(X,Y)的联合分布函数和边缘分布函数,则随机变量X和Y是互独立的充分必要条件是对$\forall x,y\in R$,有
+   $$ P{X \leq x, Y \leq y}= P{X \leq x}P{Y \leq y} $$
+   $$ F(x,y)=F_x(x)F_y(y) $$
+   - 即: 二维离散型随机变量X和Y相互独立的充分必要条件是
+   $$ P{X =x_i, Y =y_j}=P{X=x_i}P{Y=y_j} $$
+   - 即: $p_{ij}=p_{i\cdot}p_{\cdot j}
 ### 3. 二维连续型随机变量
+1. 定义
+   1. 设二维随机变量(X,Y)的分布函数为F(x,y), 如果存在非负可积函数f(x,y), 有:
+   $$ F(x,y)= \int_{-\infty}^{x} \int_{-\infty}^{y} f(u,v)dudv $$
+   - 则称f(x,y)为(X,Y)的联合概率密度
+2. 性质
+   1. $f(x,y) \geq 0, \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) dxdy=1 $
+   2. 若f(x,y)连续, 则有: $f(x,y)=\frac{\partial^2 F(x,y)}{\partial x \partial y}$ 
+   3. 设D是 $xOy$ 平面上的区域, 则点(X,Y)落在区域D内的概率为: 
+   $$ P{(X,Y) \in D} =\iint_{D} f(x,y)dxdy $$
+3. 边缘概率密度
+   1. 设连续型随机变量(X,Y)的联合概率密度为f(x,y), 则X,Y的边缘概率密度分别为:
+   $$ f_x(x)=\int_{-\infty}^{\infty}f(x,y)dy, f_y(y)=\int_{-\infty}^{\infty}f(x,y)dx $$ 
+4. 边缘分布函数
+   $$ F_X(x)=\lim\limits_{y=+\infty}F(x,y) =\int_{-\infty}^{x}f(u)du$$
+   $$ F_Y(y)=\lim\limits_{x=+\infty}F(x,y) =\int_{-\infty}^{y}f(v)dv$$
+
+5. 条件概率密度
+   - 对固定的y, 若$f_Y(y) > 0, 则称$f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}$为Y=y条件下X的条件概率密度
+   - 对固定的x, 若$f_x(x) > 0, 则称$f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}$为X=x条件下Y的条件概率密度
+   - 条件分布函数:
+   $$ F_{X|Y}(x|y)=P{X \leq x|Y=y}=\int_{-\infty}^{x}f_{X|Y}(x|y)dx $$
+   $$ F_{Y|X}(y|x)=P{Y \leq y|X=x}=\int_{-\infty}^{x}f_{Y|X}(y|x)dx $$
+
+6. 独立性
+   1. 二维连续随机变量俩变量相互独立的充要条件:
+      1. f(x,y)=f_X(x)f_Y(y), 其中f(x,y)为联合概率密度函数, f_X(x)和f_Y(y)为边缘概率密度函数
+--- 
+
 ### 4. 常见二维随机变量分布
+1. 二维均匀分布
+   1. X,Y的联合概率密度$f(x,y)=\left\{\begin {array}{l} \frac{1}{S_D}, (x,y) \in D \\ 0, 其他 \end {array} \right.$, 其中$S_D$为平面有界区域D的面积
+2. 二维正态分布
+   1. (X,Y)的联合概率密度
+   $$ f(x,y)=\frac{1}{2\pi\sigma_1 \sigma_2 \sqrt{1-\rho^2} exp{\frac{-1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}, {x,y \in R}  $$
+    1. 若$(X,Y) \sim N(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho)$
+            1. $X \sim N (\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$
+            2. X 与Y的非零线性组合服从正态分布, 特别的, 当X与Y相互独立式有:
+            $$ aX+bY \sim N(a\mu_1+b\mu_2,a^2\sigma_1^2+b^2\sigma_2^2+2ab\rho\sigma_1\sigma_2)$$
+            3. 记$X_1=k_1X+k_2Y,Y_1=l_1X+l_2Y$, 则$(X_1,Y_1)$也服从二维正态分布
+            4. X,Y相互独立的充要条件为$\rho = 0$
+    2. 若$X \sim N(\mu,\sigma_1^2), Y \sim N(\mu,\sigma_2^2)$,则:
+       1. $aX+b \sim N(a\mu_1 + b,a^2\sigma^2\sigma_1^2)$, $cY+d \sim N(c\mu_2+d,c^2\sigma^2\sigma_2^2)$, 但kX+lY不一定服从正态分布
+       2. 若X和Y相互独立,则(X,Y)服从二维正态分布,此时$kX+lY$服从正态分布
+       3. 若X和Y相互独立,则(X,Y)不一定服从二维正态分布,此时$kX+lY$不一定服从正态分布
+--- 
 ### 5. 二维随机变量函数分布
+1. 离散型
+   1. 随机变量g(X,Y)的分布律为:
+   $$ P{Z=z_k}=P{g(X,Y)=z_k}=\sum_{g(x_i,y_j)=z_k}P{X=x_i,Y=y_j}$$
+2. 连续型
+   1. 分布函数法: 概率密度:f(x,y),随机变量Z=g(X,Y)
+      1. $F_Z(z)=P{Z\leq z}= \iint_{g(x_i,y_j) \leq z} f(x,y)dxdy$, 
+      2. 概率密度为: $f_z(z)=F'_z(z)$
+   2. 卷积分布: 概率密度: $f_X(x)=f_Y(y), 随机变量$Z=aX+bY$
+      1. $f_Z(z)=\frac{1}{|b|}\int_{-\infty}^{+\infty}f_X(x)f_Y\frac{(z-ax)}{b}dx = \frac{1}{|a|}\int_{-\infty}^{+\infty}f_X(\frac{(z-by)}{a})f_Y(y)dy$
+3. 最值分布: 
+   - 设$X_1,X_2,...X_n$相互独立,其分布函数分别为$F_{X_1}(x_1),F_{X_2}(x_2),...,F_{X_n}(x_n)$,记:
+     - $ U=\max_{l \leq r \leq n}(X_i), V=\min_{l \leq r \leq n}(X_i)$
+     - 则: $F_U(u)=P{\max{X_1,\dots,X_n}\leq u}=P{X_1 \leq u,X_2 \leq u,...,X_n \leq u}=P{X_1 \leq u}\cdots P{X_n \leq u}=F_{X_1}(u),\dots,F_{X_n}(u)$
+     - $F_V(v)=P{\min{X_1,\dots,X_n}\leq v}=1- P{X_1 \geq v,X_2 \geq v,...,X_n \geq v}=1-P{X_1 \geq v}\cdots P{X_n \geq v}=1-[1-F_{X_1}(v)],\dots,[1-F_{X_n}(v)]$
+   - 当$X_1,X_2,...,X_n$独立分布, 即$X_i \sim F(x)$时:
+     - $F_U(u)=F^n(u), F_V(v)=[1-F(v)]^n$
+4. 分布的可加性
+   - 设X,Y相互独立
+     1. 若$X \sim B(n,p), Y \sim B(m,p)$, 则$X+Y \sim B(m+n,p)$
+     2. 若$X \sim P(\lambda_1), Y \sim P(\lambda_2)$, 则$X+Y \sim P(\lambda_1+\lambda_2)$
+     3. 若$X \sim E(\lambda_1), Y \sim E(\lambda_2)$, 则$\min {X+Y} \sim E(\lambda_1+\lambda_2)$
+     4. 若$X \sim N(\mu_1,\sigma_2^2), Y \sim N(\mu_2,\sigma_2^2)$, 则$X\pm Y \sim N(\mu_1 \pm \mu_2, \sigma_1^2 \pm \sigma_2^2)$
+--- 
+
 
 ## 随机变量的数字特征
 ### 1. 数学期望
