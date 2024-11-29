@@ -338,18 +338,217 @@ $$ \left\{\begin{array}{l} a_n=\frac{1}{l}\int_{-l}^{l}f(x)\cos \frac{n\pi x}{l}
 $$ \left\{\begin{array}{l} a_n=0, n=0,1,2,... ,\\ b_n=\frac{2}{l}\int_{0}^{l}f(x)\sin \frac{n\pi x}{l}dx, n=1,2,... \end{array}\right.$$
    3. 若f(x)是$[-l,l]$上的偶函数,则有:
 $$ \left\{\begin{array}{l} a_n=\frac{2}{l}\int_{0}^{l}f(x)\cos \frac{n\pi x}{l}dx, n=0,1,2,... ,\\ b_n=0, n=1,2,... \end{array}\right.$$
+---
+
+
 ## 三重积分与曲线曲面积分
+### 1. 三重积分
+1. 定义
+$$ \iiint\limits_{\Omega} f(x,y,z)dv=\lim\limits_{k \to 0}\sum_{i=1}^n f(\xi,\eta,\zeta)\Delta v_i$$
+2. 性质与二重积分类似
+3. 计算
+   1. 奇偶+轮换对称性化简:
+      1. 若积分区域$\Omega$关于$xOy$面对称, $\Omega_1$是$\Omega$位于$xOy$面上方的区域:
+      $$ \iiint\limits_{\Omega_1}f(x,y,z)dv=\left\{\begin{array}{l}
+       0, & f(x,y,z)=-f(x,y,-z) (对z轴对称时为奇函数), \\ 
+       2\iiint\limits_{\Omega}f(x,y,z)dv, & f(x,y,z)=f(x,-y,z)( 关于y轴的偶函数), 
+      \end{array}\right.$$
+      2. 若积分区域$\Omega$关于$xOy$面或$yOz$面对称, 也有类似**偶倍偶奇零**的关系
+      3. 若积分区域$\Omega$具有轮换对称性:交换x,y,z的位置,表达式不变,则:
+      $$ \iiint\limits_{\Omega}g(x)dxdydz = \iiint\limits_{\Omega}g(y)dxdydz=\iiint\limits_{\Omega}g(z)dxdydz$$
+   2. 直角坐标
+      1. 先1后2
+         - 设空间区域$\Omega=\{(x,y,z)|(x,y) \in D, z_1(x,y) \leq z \leq z_2(x,y)\}$
+         $$ \iiint\limits_{\Omega}f(x,y,z)dv=\iint\limits_D dxdy\int_{z_1(x,y)}^{z_2(x,y)}f(x,y,z)dz$$
+      2. 截面法(先2后1)
+         - 设空间区域$\Omega=\{(x,y,z)| a \leq z \leq b, (x,y) \in D_z\}$
+         $$ \iiint\limits_{\Omega}f(x,y,z)dv=\int_a^b dz\iint\limits_{D_z}f(x,y,z)dxdy$$
+   3. 柱坐标
+      1. 与直角坐标类似,二者区别在于$xOy$面对二重积分用*直角坐标*还是*极坐标*
+      $$ \iiint\limits_{\Omega}f(x,y,z)dv=\iiint\limits_{\Omega} f(r\cos\theta,r\sin\theta,z)rdr d\theta dz$$,
+      $$其中\left\{\begin{array}{l}
+      x = r\cos\theta, 
+      \\y= r\sin\theta, 
+      \\z=z   
+      \end{array}\right.$$
+   4. 球坐标
+   $$直角坐标与球坐标的关系为\left\{\begin{array}{l}
+      x= r\sin \varphi \cos \theta, \\
+      y= r\sin \varphi \sin \theta, \\
+      z=r\cos \varphi  ,
+      \end{array}\right.$$
+      ![球坐标](../../images/Advanced/Integral12.png)
 
-### 三重积分
+   $r$: 空间区域$\Omega$上任意一点$M(x,y,z)$到坐标原点的距离,$r=\sqrt{x^2+y^2+z^2}$
+   $\varphi$: 向量$\overleftarrow{OM}$与z轴正向夹角, $0 \leq \varphi \leq \pi$
+   $\theta$: z轴正向看x逆时针方向转到向量$\overleftarrow{OP}$的角,  
+   点P:为点M在$xOy$面上的投影
+4. 注:计算时选择合适的坐标系
+   1. 当被积函数为z的**一元函数**,或者**二重积分**$\iint\limits_{D_z}f(x,y,z)dxdy$容易求解,*考虑先2后1*
+   2. 空间区域$\Omega$投影到xOy面得到区域D,若区域为圆域,或者本机函数为$f(\sqrt{x^2+y^2})$或$f(\frac{y}{x})$的形式, 考虑**柱坐标**
+   3. 空间区域为**球或圆锥**, 倍积函数为$f(\sqrt{x^2+y^2+z^2})$, 考虑**球坐标**
+--- 
 
-### 三重积分的应用
+### 2. 三重积分的应用
+| 几何/物理量 | 表达式 |
+| :---------- | :----- |
+| 体积        |$\iiint\limits_{\Omega}1dv$        |
+| 质量            |$m=\iiint\limits_{\Omega}\rho(x,y,z)dv$|
+|质心$(\bar{x},\bar{y},\bar{z})$|$\bar{x}=\frac{\iiint\limits_{\Omega}x\rho(x,y,z)dv}{\iiint\limits_{\Omega}\rho(x,y,z)dv}, \bar{y}=\frac{\iiint\limits_{\Omega}y\rho(x,y,z)dv}{\iiint\limits_{\Omega}\rho(x,y,z)dv}, \bar{z}=\frac{\iiint\limits_{\Omega}z\rho(x,y,z)dv}{\iiint\limits_{\Omega}\rho(x,y,z)dv}$|
+|转动质量|$$ I_x=\iiint\limits_{\Omega}(y^2+z^2)\rho(x,y,z)fv (对x轴)$$ $$ I_y=\iiint\limits_{\Omega}(x^2+z^2)\rho(x,y,z)fv (对y轴)$$ $$ I_z=\iiint\limits_{\Omega}(x^2+y^2)\rho(x,y,z)fv (对z轴)$$ $$ I_O=\iiint\limits_{\Omega}(x^2+y^2+z^2)\rho(x,y,z)fv (对坐标原点O)$$|
 
-### 第一类曲线积分
+### 3. 第一类曲线积分
+1. 定义
+$$ \int_L f(x,y)ds=\lim\limits_{h \to 0}\sum\limits_{i=1}^nf(\xi_i,\eta_i)\Delta s_i$$
+$$ \int_{\Gamma} f(x,y,z)ds=\lim\limits_{h \to 0}\sum\limits_{i=1}^nf(\xi_i,\eta_i,\zeta)\Delta s_i$$
+   - 几何意义: 当被积函数$f(x,y)=1$, 积分$\int_L f(x,y)ds$就等于曲线$L$的长度
+     - 当$f(x,y) \geq 0$时, 积分$\int_L f(x,y)ds$等于以曲线$L$为准线, 母线平行于z轴, 高度为$z=f(x,y)$的柱面面积, 对于空间曲线积分$\int_{gamma}f(x,y,z)ds$亦是如此
+2. 性质
+   1. **性质1**: 设$k_1,k_2$为常数, 有$\int_L[k_1f(x,y)+k_2g(x,y)]ds=k_1\int_Lf(x,y)ds+k_2\int_Lg(x,y)ds$
+   2. **性质2**: 设$L=L_1+L_2, L_1 \cap L_2 =\emptyset, \text{有}\int_Lf(x,y)ds=\int_{L_1}f(x,y)ds+\int_{L_2}f(x,y)ds$
+   3. **性质3**: 设曲线L,有$f(x,y) \leq g(x,y), 则\int_Lf(x,y)ds \leq \int_Lg(x,y)ds$
+   4. 特别的: $|\int_Lf(x,y)ds| \leq \int_L|f(x,y)|ds|$
+3. 计算步骤,方法
+   1. 化简表达式
+      1. 曲线方程代入被积函数
+         1. 将曲线方程代入被积函数f(x,y)化简$\int_Lf(x,y)ds$
+      2. 对称性(奇偶对称+轮换对称)
+         1. 对于曲线积分$\int_Lf(x,y)ds$
+            1. 若曲线L关于y轴对称,$L_1$ 为曲线L在y轴的*右半部分*,有
+            $$ \int_Lf(x,y)ds = \left\{\begin{aligned}
+               2\int_{L_1}f(x,y)ds, & f(x,y)=f(-x,y),\\
+               0, & f(x,y)=  -f(-x,y).
+               \end{aligned}\right.$$
+            2. 若曲线L关于y轴对称,$L_1$ 为曲线L在y轴的*上半部分*,有
+             $$ \int_Lf(x,y)ds = \left\{\begin{aligned}
+               2\int_{L_1}f(x,y)ds, & f(x,y)=f(x,-y),\\
+               0, & f(x,y)=  -f(x,-y).
+               \end{aligned}\right.$$
+            3. 若L关于y=x对称,则:
+            $$ \int_Lf(x,y)ds = \int_Lf(y,x)ds.$$
+            特别的有:
+            $$ \int_Lg(x)ds = \int_Lg(y)ds=\frac{1}{2}\int_[g(x)+g(y)]ds$$
+         2. 对于空间曲线的积分$\int_{\Gamma}f(x,y,z)ds$
+            1. 若曲线$\Gamma$的方程任意交换x,y,z三个变量的位置,曲线方程不变,则曲线$\Gamma$ 关于x,y,z有轮换对称性, 有:
+            $$ \int_{\Gamma}f(x,y,z)ds = \int_{\Gamma}f(y,x,z)ds = \int_{\Gamma}f(z,y,x)ds= \int_{\Gamma}f(x,z,y)ds$$
+            特别的,有:
+            $$ \int_{\Gamma}g(x)ds = \int_{\Gamma}g(y)ds=\int_{\Gamma}g(z)ds=\frac{1}{3}\int_{\Gamma}[g(x)+g(y)+g(z)]ds$$
+         
+   2. 计算(化为定积分)
+      1. 曲线方程代入被积函数
+         1. 已知曲线L的直角坐标方程$y=y(x)(a \leq x \leq b), 弧微分ds=\sqrt{1+y'(x)^2}dx$, 则:
+         $$ \int_Lf(x,y)ds=\int_a^bf(x,y(x))\sqrt{1+y'(x)^2}dx$$
+         2. 已知曲线L的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t) \end{aligned}\right. (\alpha \leq t \leq \beta), 弧微分ds=\sqrt{[x'(t)^2]+[y'(t)^2]}dt$，则:
+         $$ \int_Lf(x,y)ds=\int_\alpha^\beta f(x(t),y(t))\sqrt{[x'(t)^2]+[y'(t)^2]}dt$$
+         3. 已知曲线L的直角坐标方程$r= r(\theta)(\alpha \leq \theta \leq \beta), 弧微分ds=\sqrt{[r(\theta)]^2+[r'(\theta)]^2}dx$, 则:
+         $$ \int_Lf(x,y)ds=\int_{\alpha}^{\beta} f(r(\theta)\cos(\theta),r(\theta)\sin(\theta))\sqrt{[r(\theta)]^2+[r'(\theta)]^2}d\theta$$
+--- 
 
-### 第二类曲线积分
+### 4. 第二类曲线积分
+1. 定义
+$$ \int_L P(x,y)dx+Q(x,y)dy=\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i)\Delta x_i+ Q(\xi_i,\eta_i)\Delta y_i],$$
+$$ \int_{\Gamma}P(x,y,z)dx + Q(x,y,z)dy + R(x,y,z)dz$$
+$$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i+ Q(\xi_i,\eta_i,\zeta_i)\Delta y_i] + R(\xi_i,\eta_i,\zeta_i)\Delta z_i]$$
+2. 性质
+   1. 性质1: $k_1,k_2$为常数, 有$\int_L k_1Pdx+k_2Qdy=k_1\int_L Pdx+k_2\int_L Qdy$
+   2. 性质2: 设$L=L_1+L_2$, $L_1 \cap L_2=\emptyset$, 则有:
+   $$\int_L Pdx+Qdy=\int_{L_1}Pdx+Qdy\int_{L_2}Pdx+Qdy$$
+   3. 性质3: 若$L^-$是L的反向曲线弧,有
+   $$ \int_L Pdx+Qdy=\int_{L^-}Pdx+Qdy$$
+3. 计算
+   1. 化简(曲线方程代入被积函数表达式)
+   2. 计算(化为定积分)
+      1. 已知曲线L的直角坐标方程$y=y(x)(x: a \to b)$,则:
+      $$ \int_L P(x,y)dx+Q(x,y)dy=\int_a^b(P(x,y(x))+Q(x,y(x))y'(x))dx$$
+      2. 已知曲线L的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t) \end{aligned}\right. (t: \alpha \to \beta)$
+      $$ \int_L P(x,y)dx+Q(x,y)dy=\int_{\alpha}^{\beta}(P(x(t),y(t))x'(t)+Q(x(t),y(t))x'(t))dt$$)$$
+      3. 已知空间曲线$\Gamma$的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t),\\ z=z(t) \end{aligned}\right. (t: \alpha \to \beta)$, 则:
+      $$ \int_{\Gamma} P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz$$
+      $$ =\int_{\alpha}^{\beta}(P(x(t),y(t),z(t))x'(t)+Q(x(t),y(t),z(t))y'(t)+R(x(t),y(t),z(t))z'(t))dt$$
+4. 两类曲线积分的联系
+   1. 设有向弧线L在点(x,y)处的单位切向量: $\tau =\cos \alpha i + \cos \beta j$,
+      1. 其中$\alpha,\beta$为L在x,y点处切向量的方向角, 则:
+      $$ \cos \alpha ds = dx, \cos \beta ds = dy$$
+      有,
+      $$ \int_L P(x,y)dx+Q(x,y)dy=\int_L(P( x, y)\cos \alpha+ Q( x, y)\cos \beta)ds$$
+   2. 同理,空间弧$\Gamma$在x,y,z点处的切向量为: $\tau= \cos \alpha i + \cos \beta j + \cos \gamma k$, 则:
+   $$ \cos \alpha dx + \cos \beta dy + \cos \gamma dz$$
+   有,
+   $$ \int_{\Gamma} P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz$$
+   $$=\int_{\Gamma}(P(x,y,z)\cos \alpha+Q(x,y,z)\cos \beta+R(x,y,z)\cos \gamma)ds$$
+5. 格林公式
+   1. 设闭区间D由光滑曲线L围城, 若函数$P(x,y)与Q(x,y)$在区域D上有一阶连续偏导数,则:
+   $$ \iint\limits_D(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y})dxdy= \oint_L Pdx+Qdy$$
+   - 其中L是区域D的正向边界曲线
+6. 曲线积分与路径无关
+   1. 若D为单连通区域,$P,Q$在此有一阶连续偏导,则以下四个命题等价
+      1. 曲线积分$\int_L Pdx+Qdy$与路径无关, 只与L的起点终点有关(L为D的任意一条分段光滑曲线)
+      2. 对区域D内任意铸锻光滑封闭曲线C,有:
+      $$ \oint_C Pdx+Qdy=0$$
+      3. 区域D内恒有: $\frac{\partial Q}{\partial x}=-\frac{\partial P}{\partial y}$
+      4. 存在二元函数u(x,y),使得
+      $$ du(x,y)=P(x,y)dx+Q(x,y)dy$$
+   2. **注:** 上述等价命题中,最常用**3**
+--- 
 
-### 第一类曲面积分
+### 5. 第一类曲面积分
+1. 定义
+$$ \iint\limits_{\Sigma} f(x,y,z)dS= \lim\limits_{k \to 0} \sum\limits_{i=1}^n f(\xi_i,\eta_i,\zeta_i)\Delta S_i$$
+2. 性质
+   1. 性质1: 若曲面$\Sigma=\Sigma_1+\Sigma_2, \Sigma_1 \cap \Sigma_2=\emptyset$, 则有:
+   $$ \iint\limits_{\Sigma} f(x,y,z)dS=\iint\limits_{\Sigma_1} f(x,y,z)dS+\iint\limits_{\Sigma_2} f(x,y,z)dS$$
+   2. 性质2: 若曲面f(x,y,z)=k, 则:
+   $$ \iint\limits_{\Sigma} kdS=k ,(\text{S为曲面} \Sigma的面积)$$
+3. 计算
+   1. 化简表达式
+      1. 曲面方程代入被积函数
+      2. 对称性(奇偶对称+轮换对称)
+         1. 若曲面$\Sigma$关于$xOy$面对称, 则
+         $$ \iint\limits_{\Sigma} f(x,y,z)dS= \left\{\begin{array}{l}  2\iint\limits_{\Sigma_1} f(x,y,z)dS,& f(x,y,z)=f(x,y,z) \\ 0, &  f(x,y,z)=-f(x,y,-z) \end{array} \right.$$
+         - 注: 其中$\Sigma_1$为关于$xOy$面上方的部分
+         2. 若曲面关于$xOz,yOz$面对称, 也有上述的类似结论
+         3. 若曲面$\Sigma$关于x,y,z 具有对称性(即任意交换两个变量的位置,曲面方程不变),有
+         $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{\Sigma} f(y,x,z)dS=  \iint\limits_{\Sigma} f(x,z,y)dS =\iint\limits_{\Sigma} f(z,y,x)dS$$
+         - 特别地,有:
+         $$ \iint\limits_{\Sigma} g(x)dS = \iint\limits_{\Sigma} g(y)dS=\iint\limits_{\Sigma} g(z)dS=\frac{1}{3}\iint\limits_{\Sigma}[g(x)+g(y)+g(z)]dS$$
+   2. 计算(1投2代3计算)
+      1. 对于区面积分$\iint\limits_{\Sigma} f(x,y,z)dS$, 以曲面方程z=z(x,y)投影到$xOy$面为例进行说明
+        1. 由曲面方程$z=z(x,y)$确定投影区域$D_{xy}$,有$dS=\sqrt{1+(z'_x)^2+(z'_y)^2)}$
+        2. 由曲面方程$z=z(x,y)$ 代入被积函数
+        3. 计算二重积分$\iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xy}} f(x,y,z(x,y))\sqrt{1+(z'_x)^2+(z'_y)^2)dxdy$
+      2. 若曲面方程为y=y(x,z)或x=x(y,z), 可将投影投到$xOz,yOz$面,则:
+      $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xz}} f(x,y(x,z),z)\sqrt{1+(y'_x)^2+(y'_z)^2)dxdy$$
+      $$ = \iint\limits_{D_{yz}} f(x(y,z),y,z)\sqrt{1+(x'_y)^2+(x'_z)^2)dxdy$$
+ 
+---
 
-### 第二类曲面积分
+### 6. 第二类曲面积分
+1. 定义
+$$ \iint\limits_{\Sigma} P(x,y,z)dydz+ Q(x,y,z)dxdz + R(x,y,z)dzdx $$
+$$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{yz}+ Q(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{zx} + R(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{xy}]$$
+2. 性质
+   1. 若曲面$\Sigma=\Sigma_1+\Sigma_2, \Sigma_1 \cap \Sigma_2=\emptyset$, 则有:
+   $$ \iint\limits_{\Sigma_1+\Sigma_2} Pdydz+Qdzdx+Rdxdy=\iint\limits_{\Sigma_1} Pdydz+Qdzdx+Rdxdy\iint\limits_{\Sigma_2} Pdydz+Qdzdx+Rdxdy$$
+   2. 若$\Sigma$为有向曲面,$\Sigma^-$为$\Sigma$的反向曲面,则有:
+   $$ \iint\limits_{\Sigma} Pdydz+Qdzdx+Rdxdy=-\iint\limits_{\Sigma^-} Pdydz+Qdzdx+Rdxdy$$ 
+3. 计算
+   1. 化简表达式(曲面方程代入被积函数)
+   2. 计算(化为二重积分)
+   - 对于曲面积分$\iint\limits_{\Sigma} R(x,y,z)dxdy$, 以曲面方程z=z(x,y)投影到$xOy$面为例进行说明:
+     1. 有曲面方程z=z(x,y),确定xOy的投影区域$D_{xy}$
+     2. 有曲面方程,代入被积函数
+     3. 计算$\iint\limits_{\Sigma} R(x,y,z)dxdy=\pm \iint\limits_{D_{xy}} R(x,y,z(x,y))dxdy$, 曲面$\Sigma$取上侧(下侧)时,二重积分取正好(负号).
+     4. 若曲面方程为$x=x(y,z) 或 y=y(x,z)$则有:
+      $$ \iint\limits_{\Sigma} P(x,y,z)dydz = \pm \iint\limits_{D_{yz}} P(x(y,z),y,z)dydz, \text{前正后负}$$
+      $$ \iint\limits_{\Sigma} Q(x,y,z)dzdx = \pm \iint\limits_{D_{zx}} Q(x,y(x,z),z)dxdz, \text{右正左负}$$ 
+   3. 转化到同一投影面(三合一公式)
+      1. 已知曲面方程 $z=z(x,y)$, 法向量向上, 可得曲面法向量$n=(-z'_x,-z'_y,1)$,有:
+      $$ \cos \alpha =- \frac{z'_x}{\sqrt{z'_x^2+z'_y^2+1}$$
+      $$ \cos \beta = -\frac{z'_t}{\sqrt{z'_x^2+z'_y^2+1}$$
+      $$ \cos \gamma = \frac{1}{\sqrt{z'_x^2+z'_y^2+1}$$
 
-### 曲线曲面积分的几何应用(曲线的弧长,曲面的面积与柱面的表面积)
+4. 高斯公式
+5. 斯托克斯公式
+6. 散度与旋度
+### 7. 曲线曲面积分的几何应用(曲线的弧长,曲面的面积与柱面的表面积)
+
