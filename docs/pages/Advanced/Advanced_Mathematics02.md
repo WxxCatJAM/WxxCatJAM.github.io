@@ -515,17 +515,17 @@ $$ \iint\limits_{\Sigma} f(x,y,z)dS= \lim\limits_{k \to 0} \sum\limits_{i=1}^n f
       1. 对于区面积分$\iint\limits_{\Sigma} f(x,y,z)dS$, 以曲面方程z=z(x,y)投影到$xOy$面为例进行说明
         1. 由曲面方程$z=z(x,y)$确定投影区域$D_{xy}$,有$dS=\sqrt{1+(z'_x)^2+(z'_y)^2)}$
         2. 由曲面方程$z=z(x,y)$ 代入被积函数
-        3. 计算二重积分$\iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xy}} f(x,y,z(x,y))\sqrt{1+(z'_x)^2+(z'_y)^2)dxdy$
+        3. 计算二重积分$\iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xy}} f(x,y,z(x,y))\sqrt{1+(z'_x)^2+(z'_y)^2)}dxdy$
       2. 若曲面方程为y=y(x,z)或x=x(y,z), 可将投影投到$xOz,yOz$面,则:
-      $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xz}} f(x,y(x,z),z)\sqrt{1+(y'_x)^2+(y'_z)^2)dxdy$$
-      $$ = \iint\limits_{D_{yz}} f(x(y,z),y,z)\sqrt{1+(x'_y)^2+(x'_z)^2)dxdy$$
+      $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xz}} f(x,y(x,z),z)\sqrt{1+(y'_x)^2+(y'_z)^2)}dxdy$$
+      $$ = \iint\limits_{D_{yz}} f(x(y,z),y,z)\sqrt{1+(x'_y)^2+(x'_z)^2)}dxdy$$
  
 ---
 
 ### 6. 第二类曲面积分
 1. 定义
-$$ \iint\limits_{\Sigma} P(x,y,z)dydz+ Q(x,y,z)dxdz + R(x,y,z)dzdx $$
-$$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{yz}+ Q(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{zx} + R(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{xy}]$$
+   $$ \iint\limits_{\Sigma} P(x,y,z)dydz+ Q(x,y,z)dxdz + R(x,y,z)dzdx $$
+   $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{yz}+ Q(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{zx} + R(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{xy}]$$
 2. 性质
    1. 若曲面$\Sigma=\Sigma_1+\Sigma_2, \Sigma_1 \cap \Sigma_2=\emptyset$, 则有:
    $$ \iint\limits_{\Sigma_1+\Sigma_2} Pdydz+Qdzdx+Rdxdy=\iint\limits_{\Sigma_1} Pdydz+Qdzdx+Rdxdy\iint\limits_{\Sigma_2} Pdydz+Qdzdx+Rdxdy$$
@@ -543,12 +543,38 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_
       $$ \iint\limits_{\Sigma} Q(x,y,z)dzdx = \pm \iint\limits_{D_{zx}} Q(x,y(x,z),z)dxdz, \text{右正左负}$$ 
    3. 转化到同一投影面(三合一公式)
       1. 已知曲面方程 $z=z(x,y)$, 法向量向上, 可得曲面法向量$n=(-z'_x,-z'_y,1)$,有:
-      $$ \cos \alpha =- \frac{z'_x}{\sqrt{z'_x^2+z'_y^2+1}$$
-      $$ \cos \beta = -\frac{z'_t}{\sqrt{z'_x^2+z'_y^2+1}$$
-      $$ \cos \gamma = \frac{1}{\sqrt{z'_x^2+z'_y^2+1}$$
+      $$ \cos \alpha =- \frac{z'_x} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
+      $$ \cos \beta = -\frac{z'_y} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
+      $$ \cos \gamma = \frac{1} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
 
 4. 高斯公式
-5. 斯托克斯公式
-6. 散度与旋度
-### 7. 曲线曲面积分的几何应用(曲线的弧长,曲面的面积与柱面的表面积)
+   1. 设空间闭区域$\Omega$由分块光滑闭曲面$\Sigma$围成, 若函数$P,Q,R$再$\Omega$上有一阶段连续导数,则
+   $$ \oiint\limits_{\Sigma} Pdydz+Qdzdx+Rdzdy= \iiint\limits_{\Omega} (\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dv $$
+或
+   $$ \oiint\limits_{\Sigma} (P \cos \alpha + Q \cos \beta + R \cos \gamma)dS = \iiint\limits_{\Omega}(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dv $$
+- $\Sigma$是区域$\Omega$整个边界曲面外侧
+- $\cos \alpha, \cos \beta, \cos \gamma$是曲面$\Sigma$再点(x,y,z)处法向量的方向余弦
 
+5.  斯托克斯公式
+   1. 已知有向闭曲线$\Gamma$, $Sigma$是Γ为边界的分片光滑有向曲面, Γ的正项与Σ的侧符合右手法则, 若函数在此曲面上有一阶连续偏导数,则:
+   $$ \oint_{\Gamma} = Pdx + Qdy+Rdz=\iint\limits_{\Sigma}\begin{vmatrix} dydz & dzdx & dxdy \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} =  \iint\limits_{\Sigma}\begin{vmatrix} \cos \alpha & \cos \beta & \cos \gamma \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix}dS$$
+-  $\cos \alpha, \cos \beta, \cos \gamma$是曲面$\Sigma$再点(x,y,z)处法向量的方向余弦
+  
+
+1. 散度与旋度
+   1. 设向量场A(x,y,z)=(P(x,y,z),Q(x,y,z),R(x,y,z)),且有连续一阶偏导数,则
+   $$ 散度div A = \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z} $$
+   $$ 旋度rot A = \iint\limits_{\Sigma}\begin{vmatrix} i & j & k \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} $$
+
+---
+
+### 7. 曲线曲面积分的几何应用(曲线的弧长,曲面的面积与柱面的表面积)
+1. 曲线L的弧长$l=\int_Lds$
+2. 若平面区域D由封闭曲线L(取正向)围成, 由格林公式,区域D的面积
+   $$ S_D= -\oint_L ydx = \oint xdy = \frac{1}{2}\oint_L (-y)dx+xdy$$
+   1. 注: 由积分求平面区域面积,可用**定积分,二重积分与曲线积分**三种方法
+3. 若曲面$\Sigma$方程为z=z(x,y), 曲面$\Sigma$在xOy面的投影区域为D, 则曲面$\Sigma$面积
+   $$ S=\iint\limits_{\Sigma}dS=\iint\limits_{D} \sqrt{(z'_x)^2+(z'_y)^2+1}  $$
+4. 若曲面$\Sigma$, 以xOy面的曲线L为准线,母线平行于z轴,柱面方程为:
+   $$ \left\{\begin{aligned} f(x,y)=0,\\ \varphi_1(x,y) \leq z \leq \varphi_2(x,y),\end{aligned}\right.$$
+则柱面的表面积$S=\int_L[\varphi_2(x,y)-\varphi_1(x,y)]ds $(该公式类似定积分求面积的公式,即底乘高的形式)
