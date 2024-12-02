@@ -9,7 +9,7 @@
 a,b 为常数， a,b > 0 且 a,b $\neq$ 1时，有: 
 1. $a^0 = 1$;
  2. $(\frac{a}{b})^k = (\frac{a^k}{b^k})$
- 3. $\quad \sqrt[n]{a^k}$
+ 3. $\quad \sqrt[n]{a^k} = (\sqrt[n]{a})^k= a^{\frac{k}{n}}$
  4. $a^ka^l=a^{k+l}$
  5. $(ab)^k=a^k \cdot b^k$
  6. $(a^k)^l=a^{kl}$

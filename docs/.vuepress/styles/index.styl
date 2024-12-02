@@ -28,3 +28,22 @@
   color: #d9534f; // 设置行内公式的颜色为红色
   font-size: 1.5em;
 }
+
+.sidebar {
+  overflow-y: auto;
+  max-height: 90vh; // 限制高度，支持滚动
+  position: -webkit-sticky; /* 对 Safari 支持 */
+  position: sticky;
+  top: 20px; /* 当滚动到距离页面顶部 20px 时，侧边栏开始固定 */
+}
+
+.sidebar .active {
+  font-weight: bold;
+  color: #42b983;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}

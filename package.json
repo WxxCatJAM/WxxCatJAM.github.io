@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "katex": "^0.16.11",
-    "markdown-it-katex": "^2.0.3"
+    "markdown-it-katex": "^2.0.3",
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
   },
   "resolutions": {
     "katex": "^0.16.11"

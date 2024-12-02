@@ -1,6 +1,6 @@
 # 高等数学第二部分
 
-## 多元函数微分学
+## 8. 多元函数微分学
 ### 1. 多元函数的基本概念
 1. 多元函数的极限
 $$\lim\limits_{(x,y)\to(x_0,y_0)}f(x,y)=A \iff \forall \epsilon>0, \exists \delta>0, 当0<\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta $$,有
@@ -106,7 +106,7 @@ $$|f(x,y)-A|<\epsilon $$
 ---
 
 
-## 二重积分
+## 9. 二重积分
 ### 1. 二重积分的概念和性质
 1. 定义
    $$ \iint\limits_D f(x,y) d\sigma = \lim\limits_{\lambda \to 0}\sum_{i=1}^n f(\xi_i, \eta_i)$$
@@ -193,7 +193,7 @@ $$|f(x,y)-A|<\epsilon $$
  ----
 
 
-## 无穷级数
+## 10.无穷级数
 ### 1. 常数项级数的概念与性质
 1. 定义
    1. 数列${u_n} \rightarrow u_1+u_2+\cdots + u_n \iff \sum_{n=1}^{\infty}u_n$, $u_n$被称为此sum的通项
@@ -341,7 +341,7 @@ $$ \left\{\begin{array}{l} a_n=\frac{2}{l}\int_{0}^{l}f(x)\cos \frac{n\pi x}{l}d
 ---
 
 
-## 三重积分与曲线曲面积分
+## 11. 三重积分与曲线曲面积分
 ### 1. 三重积分
 1. 定义
 $$ \iiint\limits_{\Omega} f(x,y,z)dv=\lim\limits_{k \to 0}\sum_{i=1}^n f(\xi,\eta,\zeta)\Delta v_i$$

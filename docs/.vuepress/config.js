@@ -2,7 +2,7 @@ module.exports = {
 
     title: 'wx的数学公式总结',
     description: '主要为数学1的公式',
-    // host: "127.0.0.1",
+    host: "0.0.0.0",
     port: "4001",
     repo: "https://github.com/wxxxxxxxxxxxxxxx/VuePress-MathFunction.git",
     head: [
@@ -38,14 +38,52 @@ module.exports = {
             }, 
         ],
         sidebar: [
-            '/',
-            '/pages/General/General_Formula.md',
-            '/pages/Advanced/Advanced_Mathematics01.md',
-            '/pages/Advanced/Advanced_Mathematics02.md',
-            '/pages/Linear/Linear_Mathematics.md',
-            '/pages/PS/PS.md',
-            '/pages/Reference/Reference.md'
+            {
+                title: '主页',
+                collapsable: true,
+                children: [
+                  '/',
+                ],
+            },
+            {
+                title: '基础公式',
+                collapsable: true,
+                children: [
+                    '/pages/General/General_Formula.md',
+                ],
+            },
+            {
+                title: '高数',
+                collapsable: true,
+                children: [
+                    '/pages/Advanced/Advanced_Mathematics01.md',
+                    '/pages/Advanced/Advanced_Mathematics02.md',
+                ],
+            },
+            {
+                title: '线代',
+                collapsable: true,
+                children: [
+                  '/pages/Linear/Linear_Mathematics.md',
+                ],
+            },
+            {
+                title: '概数',
+                collapsable: true,
+                children: [
+                  '/pages/PS/PS.md',
+                ],
+            },
+            {
+                title: '参考',
+                collapsable: true,
+                children: [
+                  '/pages/Reference/Reference.md'
+                ],
+            },
+    
         ],
         sidebarDepth:2, //使H3也能在侧边栏显示出来
     },
+    plugins:['smooth-scroll'],
 };
