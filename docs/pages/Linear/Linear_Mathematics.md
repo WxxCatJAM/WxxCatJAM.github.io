@@ -1,4 +1,4 @@
-# 矩阵
+# 线性代数
 
 ## 1. 行列式
 1. 逆序数(大数在前,小数在后,就构成一个逆序)
@@ -66,7 +66,7 @@ $$ \begin{vmatrix} a_{11}+a'_{11} & a_{12} & a_{13} \\ a_{21}+a'_{21} & a_{22} &
       6. $|A^*|=|A|^{n-1}$
       7. $|A+B| \neq |A|+|B|$
       8. 若$\lambda_i(i=1,2,...,n)$为A的特征值, 则$|A|=\lambda_1\lambda_2\dots\lambda_n$
-      9. 若矩阵A和B相似,即$ A \sim B$, 则$|A|=|B|$
+      9. 若矩阵A和B相似,即$A \sim B$, 则$|A|=|B|$
       10. 若矩阵不可逆,则$|A|=0$
 2.  拉普拉斯公式
     1. 若矩阵A是m阶矩阵, B是n阶矩阵,则:
@@ -78,10 +78,10 @@ $$ \begin{vmatrix} a_{11}+a'_{11} & a_{12} & a_{13} \\ a_{21}+a'_{21} & a_{22} &
 ## 2. 矩阵
 ### 1.矩阵定义及特殊矩阵
 1. 定义
-   - 有$m \times n$个数$a_{ij}(i=1,2,\cdots,m,j=1,2,\cdots,n),排成的m行n列的数表:
+   - 有$m \times n$个数$a_{ij}(i=1,2,\cdots,m,j=1,2,\cdots,n)$,排成的m行n列的数表:
    $$ \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn}  \end{pmatrix} $$
 
-   - 称为$m \times n$阶矩阵, 记作$A_{m \times n}, (a_{ij})_{m \times n} 或 (a_{ij})$, $ a_{ij}$为矩阵A的(i,j)元
+   - 称为$m \times n$阶矩阵, 记作$A_{m \times n}, (a_{ij})_{m \times n} 或 (a_{ij})$, $a_{ij}$为矩阵A的(i,j)元
 2. 同型矩阵
     1. 若AB的行数与列数相等----> 称为同型矩阵
 3. 相等矩阵
@@ -89,7 +89,7 @@ $$ \begin{vmatrix} a_{11}+a'_{11} & a_{12} & a_{13} \\ a_{21}+a'_{21} & a_{22} &
 4. 零矩阵
     1. 所有元素=0, 记为$O$
 5. 方阵
-    1. 形如: $ \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix} $----> 称为n阶矩阵/n阶方阵,记作$A$或$A_{n}$
+    1. 形如: $\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix}$----> 称为n阶矩阵/n阶方阵,记作$A$或$A_{n}$
 6. 单位矩阵
 $$ E=\begin{pmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{pmatrix}$$
 7. 数量矩阵
@@ -97,7 +97,7 @@ $$ \begin{pmatrix} k & 0 & \cdots & 0 \\ 0 & k & \cdots & 0 \\ \vdots & \vdots &
 8. 对角矩阵
 $$ A=\begin{pmatrix} \lambda_1 & 0 & \cdots & 0 \\ 0 & \lambda_2 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & \lambda_n \end{pmatrix}$$
 9. 对称矩阵,反对称矩阵
-- 设 $ A=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix} $ 是n阶矩阵,如果$a_{ij}=a_{ji}$, 则成为**对称矩阵**, 如果$$a_{ij}=-a_{ji}$, 则称A为**反对称矩阵**
+- 设 $A=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{n1} & a_{n2} & \cdots & a_{nn}  \end{pmatrix} $ 是n阶矩阵,如果$a_{ij}=a_{ji}$, 则成为**对称矩阵**, 如果$$a_{ij}=-a_{ji}$, 则称A为**反对称矩阵**
 10. 正交矩阵
 满足$A^TA=AA^T=E(即A^{-1}=A^T)$的矩阵为正交矩阵
 ### 2. 矩阵的运算
@@ -135,7 +135,7 @@ $$ A=\begin{pmatrix} \lambda_1 & 0 & \cdots & 0 \\ 0 & \lambda_2 & \cdots & 0 \\
         1. 记n维向量$\alpha=(a_1,a_2,\dots,a_n)^T, \beta=(b_1,b_2,\dots,b_n)^T$
             1. $\alpha \beta^T$为$n \times n$矩阵,记作$A:$
             $$A= \alpha \beta^T=\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}= \begin{pmatrix} a_1b_1 & a_1b_2 & \cdots & a_1b_n \\ a_2b_1 & a_2b_2 & \cdots & a_1b_n\\ \vdots & \vdots & \ddots & \vdots \\ a_nb_1 & a_nb_2 & \cdots & a_nb_n \end{pmatrix} $$
-            2. $ \alpha ^T \beta = \beta^T \alpha$为一个数:($(1\times n)(n\times 1) $) (nn这连个位置的数字必须一样才可以)
+            2. $\alpha ^T \beta = \beta^T \alpha$为一个数:($(1\times n)(n\times 1) $) (nn这连个位置的数字必须一样才可以)
             $$ \alpha^T \beta = \beta^T \alpha = (a_1,a_2,\dots,a_n)\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} = a_1b_1+a_2b_2+\cdots+a_nb_n = \sum_{i=1}^n a_ib_i $$
             3. 矩阵$A=\alpha\beta^T$的迹(主对角元素之和)$tr(A)=\alpha^T \beta = \beta^T \alpha$
             4. 记$A=\alpha \beta^T, l = \alpha^T \beta, A^n=l^{n-1}A$
@@ -157,14 +157,14 @@ $$ f(A)=a_0A^m+a_1A^{m-1}+\dots+a_{m-1}A+a_mE$$
 
 ### 3. 伴随矩阵公式
 - 设$A,B 均为n(n \geq 2)$阶可逆矩阵, 则:
-  - $ AA^*=A^*A=|A|E $
-  - $ A^{-1}=\frac 1{|A|}A^*, A^*=|A|A^{-1} ,(A^*)^{-1}=(A^{-1})^*=\frac 1{|A|}A$
-  - $(A^*)^T=(A^T)^*, (A^*)^m=(A^m)^* $
-  - $ (AB)^*=B^*A^*$
+  - $AA^*=A^*A=|A|E$
+  - $A^{-1}=\frac 1{|A|}A^*, A^*=|A|A^{-1} ,(A^*)^{-1}=(A^{-1})^*=\frac 1{|A|}A$
+  - $(A^*)^T=(A^T)^*, (A^*)^m=(A^m)^*$
+  - $(AB)^*=B^*A^*$
   - $(kA)^*=k^{n-1}A^*(k为非零常数)， (A^*)^*=|A|^{n-2}A(n \geq 2)$
-  - $ |A^*|=|A|^{-1} $
-  - $ \begin{pmatrix} A & O \\ O & B \end{pmatrix}^* = \begin{pmatrix} |B|A^* & O \\ O & |A|B^* \end{pmatrix} $
-  - $ \begin{pmatrix} O& B \\ A  & O \end{pmatrix}^* = \begin{pmatrix} O & |B|A^* \\ |A|B^* & O \end{pmatrix} $
+  - $|A^*|=|A|^{-1}$
+  - $\begin{pmatrix} A & O \\ O & B \end{pmatrix}^* = \begin{pmatrix} |B|A^* & O \\ O & |A|B^* \end{pmatrix}$
+  - $\begin{pmatrix} O& B \\ A  & O \end{pmatrix}^* = \begin{pmatrix} O & |B|A^* \\ |A|B^* & O \end{pmatrix}$
   - 注: 一般情况下:$(A+B)^* \neq A^*+B^*$
 ### 4. 逆矩阵
 1. 定义:
@@ -178,9 +178,9 @@ $$ f(A)=a_0A^m+a_1A^{m-1}+\dots+a_{m-1}A+a_mE$$
    6. $(A+B)^{-1} \neq (A^{-1}+B^{-1})$
 3. n阶矩阵A可你的充要条件
    1. $|A| \neq 0 \Leftrightarrow r(A)=n \Leftrightarrow A$的行(列)向量线性无关
-   2. $\Leftrightarrow Ax=0 $ 仅有0解
-   3. $\Leftrightarrow Ax=b ,(b \neq 0) $ 有唯一解
-   4. $\Leftrightarrow A $ 没有零特征值
+   2. $\Leftrightarrow Ax=0$ 仅有0解
+   3. $\Leftrightarrow Ax=b ,(b \neq 0)$ 有唯一解
+   4. $\Leftrightarrow A$ 没有零特征值
 
 ### 5. 分块矩阵
 1. 定义
@@ -258,15 +258,21 @@ A与B等价,记为$A \cong B$
 --- 
 
 ### 2. 向量组的相关无关性
-1. 线性相关: 给定向量组\alpha_1 + ... +\alpha_m, 如果存在一组不全为0的数$k_1,k_2,...,k_m$使得
-   $$k_1 \alpha_1 + ... + k_m \alpha_m = 0$$, 则称向量组$\alpha_1 + ... +\alpha_m$为线性相关
-2. 线性无关:给定向量组$\alpha_m$,当且仅当:$k_1 = k_2 = ... = k_m = 0$, 才有
-   $$k_1 \alpha_1 + ... + k_m \alpha_m = 0$$, 成立,则称向量组$\alpha_m$为线性无关
+1. 线性相关: 给定向量组\alpha_1 + ... +\alpha_m, 如果存在一组不全为0的数$k_1,k_2,...,k_m$使得  
+   $$
+   k_1 \alpha_1 + ... + k_m \alpha_m = 0,
+   $$ 
+   则称向量组$\alpha_1 + ... +\alpha_m$为线性相关
+2. 线性无关:给定向量组$\alpha_m$,当且仅当:$k_1 = k_2 = ... = k_m = 0$, 才有 
+   $$
+   k_1 \alpha_1 + ... + k_m \alpha_m = 0, 
+   $$
+   成立,则称向量组$\alpha_m$为线性无关
 3. n维列向量组线性相关的充分条件
    1. 存在不全为0的数k,使$k_1\alpha_1 + \cdots + k_n \alpha_n = 0$
    2. 至少存在一个向量能有其余向量线性表示
    3. 向量组的秩$r(\alpha_1,\cdots,\alpha_m) <m$
-   4. 齐次线性方程组$(\alpha_1,\cdots,\alpha_m) \begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_m \end{pmatrix}=0$ 有非零解
+   4. 齐次线性方程组 $(\alpha_1,\cdots,\alpha_m) \begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_m \end{pmatrix}=0$ 有非零解
 4. n维列向量组线性无关的充分条件
    1. 存在不全为0的数k,使$k_1\alpha_1 + \cdots + k_n \alpha_n = 0$
    2. 任一个向量不能由其余向量线性表示
@@ -274,7 +280,7 @@ A与B等价,记为$A \cong B$
    4. 齐次线性方程组$(\alpha_1,\cdots,\alpha_m) \begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_m \end{pmatrix} = 0$ 仅有零解
 5. 线性相关与无关的判定
    1. 还有0向量的向量组一定线性相关
-   2. 两个向量\alpha1,\alpha2线性相关(无关), 则这两个向量成比例(不成比例)
+   2. 两个向量$\alpha1,\alpha2$线性相关(无关), 则这两个向量成比例(不成比例)
    3. 给定n维向量组$\alpha_s$
       1. s>n, 则向量组必然线性相关
       2. s=n, 则向量组线性相关$\Leftrightarrow |\alpha_1,\alpha_2, ... \alpha_n| =0$
@@ -283,7 +289,7 @@ A与B等价,记为$A \cong B$
 1. 向量组$\alpha_s$线性无关,但向量组$\alpha_s,\beta$线性相关, 则向量$\beta$可由向量组$\alpha_s$线性表示
 2. 向量$\beta$可由向量组线性表示
    1. $\Leftrightarrow \beta r(\alpha_1,\dots \alpha_s) = r(\alpha_1,\dots,\alpha_s,\beta)$
-   2. $\Leftrightarrow 非齐次线性方程组$(\alpha_1,...,\alpha_m)\begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_n \end{pmatrix}=\beta 有解$ (若无界,则表示不能由向量组线性表示)
+   2. $\Leftrightarrow 非齐次线性方程组(\alpha_1,...,\alpha_m)\begin{pmatrix} k_1 \\ k_2 \\ \vdots \\ k_n \end{pmatrix}=\beta 有解$ (若无界,则表示不能由向量组线性表示)
 
 ### 4. 向量组
 1. 向量组A和B
@@ -295,9 +301,9 @@ A与B等价,记为$A \cong B$
    2. 向量组A不能有B线性表示
 ### 5. 向量组的秩
 1. 设$\alpha_s$为n维列向量组, 记矩阵$A=(\alpha_1,\dots,\alpha_s)$, 则向量组的秩等于矩阵A行(列)向量的秩,也等于矩阵A的秩
-2. 若$ r(\alpha_1,...,\alpha_s)=s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性无关
+2. 若$r(\alpha_1,...,\alpha_s)=s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性无关
    1. 齐次线性方程组$(\alpha_1,...,\alpha_s)x=0$仅有灵界
-3. 若$ r(\alpha_1,...,\alpha_s)< s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性相关
+3. 若$r(\alpha_1,...,\alpha_s)< s \Leftrightarrow 向量组 \alpha_1,...,\alpha_s$线性相关
    1. 齐次线性方程组$(\alpha_1,...,\alpha_s)x=0$有非零解
 ### 6. 向量空间
 1. 基于维数
@@ -343,7 +349,7 @@ A与B等价,记为$A \cong B$
 $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=0 \\ \vdots \\ a_{m1}x_1+a_{m2}x_2+...+a_{mn}x_n=0   \end{array} \right. \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=b_1 \\ a_{21}x_1+a_{22}x_2+...+a_{2n}x_n=b_2 \\ \vdots \\ a_{m1}x_1+a_{m2}x_2+...+a_{mn}x_n=b_m   \end{array} \right. $$
 2. 矩阵形式
    - $Ax=0, Ax=b$
-   - 其中$A=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn}  \end{pmatrix}$为系数矩阵, $x= \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$ 为解向量, $b=\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix} $为常数项
+   - 其中$A=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n}\\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn}  \end{pmatrix}$为系数矩阵, $x= \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$ 为解向量, $b=\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}$为常数项
    - $(A,b)=\begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n} & \vdots & b_1\\ a_{21} & a_{22} & \cdots & a_{2n} & \vdots & b_2 \\ \vdots & \vdots & \ddots & \vdots& \vdots& \vdots\\ a_{m1} & a_{m2} & \cdots & a_{mn} & \vdots & b_m  \end{pmatrix}$为增广矩阵
 
 3. 向量形式
@@ -427,7 +433,7 @@ $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{2
 |         |   |      |    |       |        |          |       |       |            |
 |---------|---|------|----|-------|--------|----------|-------|-------|:------------|
 | 矩阵      | A | A+kE | kA | $A^k$ | $f(A)$ | $A^{-1}$ | $A^*$ | $A^T$ | $P^{-1}AP$ |
-| 特征值     |  $\lambda$ |$\lambda+k$ | $ k\lambda$ | $\lambda^k$ | $f(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{|A|}{\lambda}$ | $\lambda$ | $\lambda$ | 
+| 特征值     |  $\lambda$ |$\lambda+k$ | $ k \lambda$ | $\lambda^k$ | $f(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{\|A\|}{\lambda}$ | $\lambda$ | $\lambda$ | 
 | 对应的特征向量 | $\alpha$  | $\alpha$     |  $\alpha$  |   $\alpha$    | $\alpha$      |     $\alpha$     |   $\alpha$    |    不确定   |     $P^{-1}\alpha$  |
        |
 
@@ -442,7 +448,7 @@ $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{2
       1. 可推出r(A)=r(B)
       2. $A^T \sim B^T, A^{-1} \sim B^{-1}, A^k \sim B^k$
    2. 反身性:$A \sim A$
-   3. 对称性:$ A \sim B \Rightarrow B \sim A$
+   3. 对称性:$A \sim B \Rightarrow B \sim A$
    4. 传递性: $A \sim B, B\sim C \Rightarrow A \sim C$
 3. n阶矩阵A可相似对角化的充要条件
    1. 有n个象形无关的特征向量
@@ -487,7 +493,7 @@ $$ \left\{\begin{array}{c} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n=0 \\ a_{21}x_1+a_{2
       1. 步骤
          1. 求出矩阵A的特征值$\lambda_1,...,\lambda_n$, 预期对应的线性无关特征向量$\alpha_1,...,\alpha_n$
          2. 将向量正交化与单位化得$\beta_1,...,\beta_n$
-         3. 记正交矩阵$Q=(\beta_1,...,\beta_n)$,令x=Qy$,得到二次型的标准型:$f=\lambda_1 y_1^2+...+\lambda_n y_n^2$
+         3. 记正交矩阵$Q=(\beta_1,...,\beta_n)$,令x=Qy$,得到二次型的标准型: $f=\lambda_1 y_1^2+...+\lambda_n y_n^2$
 2. 配方法
    1. 任意二次型$f=x^TAx$可经可逆线性变换$x=Cy$变为标准型: $f=k_1 y_1^2+...+k_n y_n^2$(此时k,不一定是A的特征值)
 ### 5. 惯性定理

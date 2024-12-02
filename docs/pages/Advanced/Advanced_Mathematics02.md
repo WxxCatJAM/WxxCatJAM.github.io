@@ -20,7 +20,7 @@
    1. 设函数$z=f(x,y),在点(x_0,y_0)$上的某领域有定义,若极限:
       $$ \lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}$$
    存在, 则称此极限为z=f(x,y)在点(x_0,y_0)处对x的偏导数,记作:
-   $$ f_x'(x_0,y_0)=\lim\limits_{\Delta x \to 0}\frac{f(x*0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}$$
+   $$ f_x'(x_0,y_0)=\lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}$$
    类似有$f_x'(x_0,y_0)=\lim\limits_{\Delta y \to 0}\frac{f(x_0,y_0+\Delta y)-f(x_0,y_0)}{\Delta y}$
 5. 多元函数连续、一阶偏导数存在、可微与一阶偏导数连续的关系
 
@@ -287,7 +287,7 @@
 ### 3. 绝对收敛和条件收敛
 
 1. 定义
-   1. **绝对收敛**: 任意一个级数$\sum_{n=1}^{\infty}u_n(通项u_n不一定非负)$,对 u*n 取绝对值$\sum_{n=1}^{\infty}|u_n|$,若其收敛,则该级数**绝对收敛**。
+   1. **绝对收敛**: 任意一个级数$\sum_{n=1}^{\infty}u_n(通项u_n不一定非负)$,对 u_n 取绝对值$\sum_{n=1}^{\infty}|u_n|$,若其收敛,则该级数**绝对收敛**。
    2. **条件收敛**: 若$\sum_{n=1}^{\infty}|u_n|$,若其发散,则该级数**条件收敛**
    - 注: 对级数通项加绝对值会提高级数的发散性
 2. 绝对收敛与条件收敛的运算:
@@ -569,8 +569,8 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
    2. 计算(化为定积分)
       1. 已知曲线 L 的直角坐标方程$y=y(x)(x: a \to b)$,则:
          $$ \int_L P(x,y)dx+Q(x,y)dy=\int_a^b(P(x,y(x))+Q(x,y(x))y'(x))dx$$
-      2. 已知曲线 L 的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t) \end{aligned}\right.$  $(t: \alpha \to \beta)$
-         $$ \int_L P(x,y)dx+Q(x,y)dy=\int_{\alpha}^{\beta}(P(x(t),y(t))x'(t)+Q(x(t),y(t))x'(t))dt$$)$$
+      2. 已知曲线 L 的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t) \end{aligned}\right.$  $(t: \alpha \to \beta)$  
+         $$\int_L P(x,y)dx+Q(x,y)dy=\int_{\alpha}^{\beta}(P(x(t),y(t))x'(t)+Q(x(t),y(t))x'(t))dt$$
       3. 已知空间曲线$\Gamma$的参数方程$\left\{\begin{aligned} x=x(t),\\ y=y(t),\\ z=z(t) \end{aligned}\right. (t: \alpha \to \beta)$, 则:
          $$ \int_{\Gamma} P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz$$
       $$ =\int_{\alpha}^{\beta}(P(x(t),y(t),z(t))x'(t)+Q(x(t),y(t),z(t))y'(t)+R(x(t),y(t),z(t))z'(t))dt$$
@@ -604,12 +604,12 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
 ### 5. 第一类曲面积分
 
 1. 定义
-   $$ \iint\limits_{\Sigma} f(x,y,z)dS= \lim\limits_{k \to 0} \sum\limits\_{i=1}^n f(\xi_i,\eta_i,\zeta_i)\Delta S_i$$
+   $$ \iint\limits_{\Sigma} f(x,y,z)dS= \lim\limits_{k \to 0} \sum\limits_{i=1}^n f(\xi_i,\eta_i,\zeta_i)\Delta S_i$$
 2. 性质
    1. 性质 1: 若曲面$\Sigma=\Sigma_1+\Sigma_2, \Sigma_1 \cap \Sigma_2=\emptyset$, 则有:
-      $$ \iint\limits_{\Sigma} f(x,y,z)dS=\iint\limits_{\Sigma*1} f(x,y,z)dS+\iint\limits_{\Sigma_2} f(x,y,z)dS$$
+      $$ \iint\limits_{\Sigma} f(x,y,z)dS=\iint\limits_{\Sigma_1} f(x,y,z)dS+\iint\limits_{\Sigma_2} f(x,y,z)dS$$
    2. 性质 2: 若曲面 f(x,y,z)=k, 则:
-      $$ \iint\limits\_{\Sigma} kdS=k ,(\text{S 为曲面} \Sigma 的面积)$$
+      $$ \iint\limits_{\Sigma} kdS=k ,(\text{S 为曲面} \Sigma 的面积)$$
 3. 计算
    1. 化简表达式
       1. 曲面方程代入被积函数
@@ -628,8 +628,8 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
       1. 由曲面方程$z=z(x,y)$ 代入被积函数
       1. 计算二重积分$\iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xy}} f(x,y,z(x,y))\sqrt{1+(z'_x)^2+(z'_y)^2)}dxdy$
       1. 若曲面方程为 y=y(x,z)或 x=x(y,z), 可将投影投到$xOz,yOz$面,则:
-         $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D*{xz}} f(x,y(x,z),z)\sqrt{1+(y'\_x)^2+(y'\_z)^2)}dxdy$$
-      $$ = \iint\limits_{D\_{yz}} f(x(y,z),y,z)\sqrt{1+(x'\_y)^2+(x'\_z)^2)}dxdy$$
+         $$ \iint\limits_{\Sigma} f(x,y,z)dS = \iint\limits_{D_{xz}} f(x,y(x,z),z)\sqrt{1+(y'\_x)^2+(y'\_z)^2)}dxdy$$
+      $$ = \iint\limits_{D_{yz}} f(x(y,z),y,z)\sqrt{1+(x'_y)^2+(x'_z)^2)}dxdy$$
 
 ---
 
@@ -637,10 +637,10 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
 
 1. 定义
    $$ \iint\limits_{\Sigma} P(x,y,z)dydz+ Q(x,y,z)dxdz + R(x,y,z)dzdx $$
-   $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_i)*{yz}+ Q(\xi*i,\eta_i,\zeta_i)(\Delta S_i)*{zx} + R(\xi*i,\eta_i,\zeta_i)(\Delta S_i)*{xy}]$$
+   $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{yz}+ Q(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{zx} + R(\xi_i,\eta_i,\zeta_i)(\Delta S_i)_{xy}]$$
 2. 性质
    1. 若曲面$\Sigma=\Sigma_1+\Sigma_2, \Sigma_1 \cap \Sigma_2=\emptyset$, 则有:
-      $$ \iint\limits_{\Sigma_1+\Sigma_2} Pdydz+Qdzdx+Rdxdy=\iint\limits_{\Sigma*1} Pdydz+Qdzdx+Rdxdy\iint\limits_{\Sigma_2} Pdydz+Qdzdx+Rdxdy$$
+      $$ \iint\limits_{\Sigma_1+\Sigma_2} Pdydz+Qdzdx+Rdxdy=\iint\limits_{\Sigma_1} Pdydz+Qdzdx+Rdxdy\iint\limits_{\Sigma_2} Pdydz+Qdzdx+Rdxdy$$
    2. 若$\Sigma$为有向曲面,$\Sigma^-$为$\Sigma$的反向曲面,则有:
       $$ \iint\limits_{\Sigma} Pdydz+Qdzdx+Rdxdy=-\iint\limits_{\Sigma^-} Pdydz+Qdzdx+Rdxdy$$
 3. 计算
@@ -653,14 +653,14 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
      2. 有曲面方程,代入被积函数
      3. 计算$\iint\limits_{\Sigma} R(x,y,z)dxdy=\pm \iint\limits_{D_{xy}} R(x,y,z(x,y))dxdy$, 曲面$\Sigma$取上侧(下侧)时,二重积分取正好(负号).
      4. 若曲面方程为$x=x(y,z) 或 y=y(x,z)$则有:
-        $$ \iint\limits_{\Sigma} P(x,y,z)dydz = \pm \iint\limits_{D*{yz}} P(x(y,z),y,z)dydz, \text{前正后负}$$
-      $$ \iint\limits_{\Sigma} Q(x,y,z)dzdx = \pm \iint\limits_{D*{zx}} Q(x,y(x,z),z)dxdz, \text{右正左负}$$
+        $$ \iint\limits_{\Sigma} P(x,y,z)dydz = \pm \iint\limits_{D_{yz}} P(x(y,z),y,z)dydz, \text{前正后负}$$
+      $$ \iint\limits_{\Sigma} Q(x,y,z)dzdx = \pm \iint\limits_{D_{zx}} Q(x,y(x,z),z)dxdz, \text{右正左负}$$
 
-   3. 转化到同一投影面(三合一公式)
+   1. 转化到同一投影面(三合一公式)
       1. 已知曲面方程 $z=z(x,y)$, 法向量向上, 可得曲面法向量$n=(-z'_x,-z'_y,1)$,有:
-         $$ \cos \alpha =- \frac{z'\_x} {\sqrt{(z'\_x)^2+(z'\_y)^2+1}} $$
-      $$ \cos \beta = -\frac{z'\_y} {\sqrt{(z'\_x)^2+(z'\_y)^2+1}} $$
-      $$ \cos \gamma = \frac{1} {\sqrt{(z'\_x)^2+(z'\_y)^2+1}} $$
+         $$ \cos \alpha =- \frac{z'_x} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
+      $$ \cos \beta = -\frac{z'_y} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
+      $$ \cos \gamma = \frac{1} {\sqrt{(z'_x)^2+(z'_y)^2+1}} $$
 
 4. 高斯公式
    1. 设空间闭区域$\Omega$由分块光滑闭曲面$\Sigma$围成, 若函数$P,Q,R$再$\Omega$上有一阶段连续导数,则
@@ -673,14 +673,14 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
 
 5.  斯托克斯公式
 1.  已知有向闭曲线$\Gamma$, $Sigma$是 Γ 为边界的分片光滑有向曲面, Γ 的正项与 Σ 的侧符合右手法则, 若函数在此曲面上有一阶连续偏导数,则:
-    $$ \oint_{\Gamma} = Pdx + Qdy+Rdz=\iint\limits_{\Sigma}\begin{vmatrix} dydz & dzdx & dxdy \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} = \iint\limits\_{\Sigma}\begin{vmatrix} \cos \alpha & \cos \beta & \cos \gamma \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix}dS$$
+    $$ \oint_{\Gamma} = Pdx + Qdy+Rdz=\iint\limits_{\Sigma}\begin{vmatrix} dydz & dzdx & dxdy \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} = \iint\limits_{\Sigma}\begin{vmatrix} \cos \alpha & \cos \beta & \cos \gamma \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix}dS$$
 
 - $\cos \alpha, \cos \beta, \cos \gamma$是曲面$\Sigma$再点(x,y,z)处法向量的方向余弦
 
 1. 散度与旋度
    1. 设向量场 A(x,y,z)=(P(x,y,z),Q(x,y,z),R(x,y,z)),且有连续一阶偏导数,则
       $$ 散度 div A = \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z} $$
-   $$ 旋度 rot A = \iint\limits\_{\Sigma}\begin{vmatrix} i & j & k \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} $$
+   $$ 旋度 rot A = \iint\limits_{\Sigma}\begin{vmatrix} i & j & k \\ \frac{\partial }{\partial x} &\frac{\partial }{\partial y}& \frac{\partial }{\partial z} \\ P & Q & R\end{vmatrix} $$
 
 ---
 
@@ -691,7 +691,7 @@ $$ =\lim\limits_{k \to 0} \sum\limits_{i=1}^n [P(\xi_i,\eta_i,\zeta_i)\Delta x_i
    $$ S_D= -\oint_L ydx = \oint xdy = \frac{1}{2}\oint_L (-y)dx+xdy$$
    1. 注: 由积分求平面区域面积,可用**定积分,二重积分与曲线积分**三种方法
 3. 若曲面$\Sigma$方程为 z=z(x,y), 曲面$\Sigma$在 xOy 面的投影区域为 D, 则曲面$\Sigma$面积
-   $$ S=\iint\limits_{\Sigma}dS=\iint\limits_{D} \sqrt{(z'\_x)^2+(z'\_y)^2+1} $$
+   $$ S=\iint\limits_{\Sigma}dS=\iint\limits_{D} \sqrt{(z'_x)^2+(z'_y)^2+1} $$
 4. 若曲面$\Sigma$, 以 xOy 面的曲线 L 为准线,母线平行于 z 轴,柱面方程为:
    $$ \left\{\begin{aligned} f(x,y)=0,\\ \varphi_1(x,y) \leq z \leq \varphi_2(x,y),\end{aligned}\right.$$
-则柱面的表面积$S=\int_L[\varphi_2(x,y)-\varphi_1(x,y)]ds $(该公式类似定积分求面积的公式,即底乘高的形式)
+则柱面的表面积$S=\int_L[\varphi_2(x,y)-\varphi_1(x,y)]ds$(该公式类似定积分求面积的公式,即底乘高的形式)

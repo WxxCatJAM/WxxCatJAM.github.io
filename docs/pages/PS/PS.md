@@ -14,7 +14,7 @@
    1. 交换律: $A \cap B = B \cap A, AB=BA$
    2. 结合律:$A \cap (B \cap C) = (A \cap B) \cap C, (AB)C=A$
    3. 分配律:$A+BC=(A+B)(A+C), (AB)C=A(BC)$
-   4. 德·摩根律(对偶律):$\overline{A \cup B}=\overline{A} \cap \overline{B} \Leftrightarrow \overline{A+B}=\overline{A} * \overline{B}$, $\overline{A B}=\overline{A} + \overline{B} $(交与并的转换)
+   4. 德·摩根律(对偶律):$\overline{A \cup B}=\overline{A} \cap \overline{B} \Leftrightarrow \overline{A+B}=\overline{A} * \overline{B}$, $\overline{A B}=\overline{A} + \overline{B}$(交与并的转换)
    5. $A \supset B \Leftrightarrow A+B=B, AB=A$
    6. $A=AB+A\overline{B}$
    7. $A+\Omega=\Omega, A\omega=A,A+\empty=A, A\empty=\empty$
@@ -69,14 +69,14 @@
 
 3. n重伯努利概型
    1. 将每次实验只有两个结果的伯努利试验独立重复n次, 称为n重伯努利试验
-   2. 设每次实验中事件A发生的概率为p(0<p<1), 则n重伯努利实验中事件A发生k次的概率为P(A_k)=C_n^kp^k(1-p)^{n-k}
+   2. 设每次实验中事件A发生的概率为$p(0<p<1)$, 则$n$重伯努利实验中事件$A$发生$k$次的概率为$P(A_k)=C_n^kp^k(1-p)^{n-k}$
 --- 
 
 ### 4. 条件概率
 1. 条件概率: $P(B|A)= \frac{P(AB)}{P(A)}$, 为A发生的条件下B发生的条件概率(给定事件A下,事件B的条件概率)
 2. 性质与公式
-   1. $ 0 \leq P(B|A) \leq 1 $
-   2. $ P(\Omega|A)=1, P(\emptyset|A)=0 $
+   1. $0 \leq P(B|A) \leq 1$
+   2. $P(\Omega|A)=1, P(\emptyset|A)=0$
    3. $P(A_1 \cup A_2 |B)=\frac{P((A_1 \cup A_2)B)}{P(B)}=\frac{P(A_1B \cup A_2B)}{P(B)}$
       1. $=P(A_1|B)+P(A_2|B)-P(A_1 \cap A_2|B)$
    4. $P(\overline{A}|B)=1-P(A|B)$
@@ -101,8 +101,8 @@
 1. 定义: 两个随机事件A,B满足P(AB)=P(A)P(B), 则称AB相互独立,简称事件A,B独立
 2. 两个事件的独立性
    1. 事件$A,B独立 \Leftrightarrow P(AB)=P(A)P(B)$
-            $ \Leftrightarrow P(B)=P(B|A)=P(B|\overline {A}), (0 < P(A) < 1)$
-            $ \Leftrightarrow P(A)=P(A|B)=P(A|\overline {B}), (0 < P(B) < 1)$
+            $\Leftrightarrow P(B)=P(B|A)=P(B|\overline {A}), (0 < P(A) < 1)$
+            $\Leftrightarrow P(A)=P(A|B)=P(A|\overline {B}), (0 < P(B) < 1)$
 3. 三个事件的独立性
    1. 设A,B,C是三个事件,有
     $$ \left. \begin{array}{l} P(AB)=P(A)P(B) \\ P(AC)=P(A)P(C)\\ P(BC)=P(B)P(C) \end{array} \right \} \Rightarrow A,B,C两两独立$$
@@ -120,18 +120,18 @@
    3. 单调不减性: 对任意$x_1<x_2$, 有$F(x_1) \leq F(x_2)$
    4. 右连续性: $F(x_0)=\lim\limits_{x \to x_0^+} F(x)$
 3. 利用分布函数求随机事件的概率
-   1. $ P{X<a}=F(a-0)=\lim\limits_{x \to a^-} F(x)$
-   2. $ P{X=a}=P{X \leq a}-P{X<a}=F(a)-F(a-0)$
-   3. $ P{a < X \leq b}=P{X \leq b}-P{X \leq a}=F(b)-F(a)$
-   4. $ P{a \leq X < b}=P{X < b}-P{X \leq a}=F(b-0)-F(a)$
-   5. $ P{a \leq X \leq b}=P{X \leq b}-P{X < a}=F(b)-F(a-0)$
+   1. $P{X<a}=F(a-0)=\lim\limits_{x \to a^-} F(x)$
+   2. $P{X=a}=P{X \leq a}-P{X<a}=F(a)-F(a-0)$
+   3. $P{a < X \leq b}=P{X \leq b}-P{X \leq a}=F(b)-F(a)$
+   4. $P{a \leq X < b}=P{X < b}-P{X \leq a}=F(b-0)-F(a)$
+   5. $P{a \leq X \leq b}=P{X \leq b}-P{X < a}=F(b)-F(a-0)$
 ---
 
 ### 2. 离散型随机变量
 1. 定义
    1. 随机变量$X$,可能取值为有限个或无限多个,则称$X$为离散型随机变量。
 2. 分布律
-   1. $ P{X=x_k}=p_k, k=1,2,...,n$
+   1. $P{X=x_k}=p_k, k=1,2,...,n$
 3. 分布律性质
    1. $p_k \geq 0, 且\sum_{k=1}^n p_k=1$
 4. 分布函数(离散性的分布函数图像为条约阶梯形的)
@@ -241,7 +241,7 @@
    $$ F(x,y)= \int_{-\infty}^{x} \int_{-\infty}^{y} f(u,v)dudv $$
    - 则称f(x,y)为(X,Y)的联合概率密度
 2. 性质
-   1. $f(x,y) \geq 0, \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) dxdy=1 $
+   1. $f(x,y) \geq 0, \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) dxdy=1$
    2. 若f(x,y)连续, 则有: $f(x,y)=\frac{\partial^2 F(x,y)}{\partial x \partial y}$ 
    3. 设D是 $xOy$ 平面上的区域, 则点(X,Y)落在区域D内的概率为: 
    $$ P{(X,Y) \in D} =\iint_{D} f(x,y)dxdy $$
@@ -268,14 +268,18 @@
 1. 二维均匀分布
    1. X,Y的联合概率密度$f(x,y)=\left\{\begin {array}{l} \frac{1}{S_D}, (x,y) \in D \\ 0, 其他 \end {array} \right.$, 其中$S_D$为平面有界区域D的面积
 2. 二维正态分布
-   1. (X,Y)的联合概率密度
-   $$ f(x,y)=\frac{1}{2\pi\sigma_1 \sigma_2 \sqrt{1-\rho^2}} exp{\frac{-1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}, {x,y \in R}  $$
+   1. (X,Y)的联合概率密度  
+   $$ 
+   f(x,y)=\frac{1}{2\pi\sigma_1 \sigma_2 \sqrt{1-\rho^2}} exp{\frac{-1}{2(1-\rho^2)}[\frac{(x-\mu_1)^2}{\sigma_1^2}-2\rho\frac{(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2}+\frac{(y-\mu_2)^2}{\sigma_2^2}]}, {x,y \in R}
+   $$
     1. 若$(X,Y) \sim N(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho)$
-            1. $X \sim N (\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$
-            2. X 与Y的非零线性组合服从正态分布, 特别的, 当X与Y相互独立式有:
-            $$ aX+bY \sim N(a\mu_1+b\mu_2,a^2\sigma_1^2+b^2\sigma_2^2+2ab\rho\sigma_1\sigma_2)$$
-            3. 记$X_1=k_1X+k_2Y,Y_1=l_1X+l_2Y$, 则$(X_1,Y_1)$也服从二维正态分布
-            4. X,Y相互独立的充要条件为$\rho = 0$
+         1. $X \sim N (\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$
+         2. X 与Y的非零线性组合服从正态分布, 特别的, 当X与Y相互独立式有: 
+            $$ 
+            aX+bY \sim N(a\mu_1+b\mu_2,a^2\sigma_1^2+b^2\sigma_2^2+2ab\rho\sigma_1\sigma_2)
+            $$
+         3. 记$X_1=k_1X+k_2Y,Y_1=l_1X+l_2Y$, 则$(X_1,Y_1)$也服从二维正态分布
+         4. X,Y相互独立的充要条件为$\rho = 0$
     2. 若$X \sim N(\mu,\sigma_1^2), Y \sim N(\mu,\sigma_2^2)$,则:
        1. $aX+b \sim N(a\mu_1 + b,a^2\sigma^2\sigma_1^2)$, $cY+d \sim N(c\mu_2+d,c^2\sigma^2\sigma_2^2)$, 但kX+lY不一定服从正态分布
        2. 若X和Y相互独立,则(X,Y)服从二维正态分布,此时$kX+lY$服从正态分布
@@ -293,7 +297,7 @@
       1. $f_Z(z)=\frac{1}{|b|}\int_{-\infty}^{+\infty}f_X(x)f_Y\frac{(z-ax)}{b}dx = \frac{1}{|a|}\int_{-\infty}^{+\infty}f_X(\frac{(z-by)}{a})f_Y(y)dy$
 3. 最值分布: 
    - 设$X_1,X_2,...X_n$相互独立,其分布函数分别为$F_{X_1}(x_1),F_{X_2}(x_2),...,F_{X_n}(x_n)$,记:
-     - $ U=\max_{l \leq r \leq n}(X_i), V=\min_{l \leq r \leq n}(X_i)$
+     - $U=\max_{l \leq r \leq n}(X_i), V=\min_{l \leq r \leq n}(X_i)$
      - 则: $F_U(u)=P{\max{X_1,\dots,X_n}\leq u}=P{X_1 \leq u,X_2 \leq u,...,X_n \leq u}=P{X_1 \leq u}\cdots P{X_n \leq u}=F_{X_1}(u),\dots,F_{X_n}(u)$
      - $F_V(v)=P{\min{X_1,\dots,X_n}\leq v}=1- P{X_1 \geq v,X_2 \geq v,...,X_n \geq v}=1-P{X_1 \geq v}\cdots P{X_n \geq v}=1-[1-F_{X_1}(v)],\dots,[1-F_{X_n}(v)]$
    - 当$X_1,X_2,...,X_n$独立分布, 即$X_i \sim F(x)$时:
@@ -340,13 +344,13 @@
 
 |               分布               | 分布律或概率密度                                                                                               | 数学期望            | 方差                  |
 | :------------------------------: | -------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------- |
-|             0-1分布              | $P{X=k}=p^k(1-p)^{1-k},k=0,1; 0<p<1$                                                                           | $p $                | $p(1-p)$              |
+|             0-1分布              | $P{X=k}=p^k(1-p)^{1-k},k=0,1; 0<p<1$                                                                           | $p$                | $p(1-p)$              |
 |     二项分布$X \sim B(n,p)$      | $P{X=k}=C_n^k p^k(1-p)^{1-k},k=0,1,...,n; 0<p<1$                                                               | $np$                | $np(1-p)$             |
 |      几何分布$X \sim G(p)$       | $P{X=k}=(1-p)^{1-k}p,k=0,1,...; 0<p<1$                                                                         | $\frac{1}{p}$       | $\frac{1-p}{p^2}$     |
 |   泊松分布$X \sim P(\lambda)$    | $P{X=k}=\frac{\lambda^k}{k!}e^{-\lambda},k=0,1,...,n; \lambda >0$                                              | $\lambda$           | $\lambda$             |
 |     均匀分布$X \sim U(a,b)$      | $f(x)=\left\{\begin{array}{l} \frac{1}{b-a} & a < x < b \\ 0 & 其他 \end{array} \right.$                       | $\frac{a+b}{2}$     | $\frac{(b-a)^2}{12}$   |
 |   指数分布$X \sim E(\lambda)$    | $f(x)=\left\{\begin{array}{l} \lambda e^{-\lambda x} & x >0 \\ 0 & x \leq 0 \end{array} \right. (\lambda >0)$ | $\frac{1}{\lambda}$ | $\frac{1}{\lambda^2}$ |
-| 正态分布$X \sim N(\mu,\sigma^2)$ | $ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}, (-\infty,+\infty)$                         | $\mu$               | $\sigma^2$            |
+| 正态分布$X \sim N(\mu,\sigma^2)$ | $f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}, (-\infty,+\infty)$                         | $\mu$               | $\sigma^2$            |
 |                                  |                                                                                                                |                     |                       |
 --- 
 
@@ -400,7 +404,8 @@
 2. 辛钦大数定理
    1. 设随机变量序列$X_n$相互独立,期望:$EX_i=\mu(i=1,2,\dots)$
    $$ \lim\limits_{n \to \infty}P\{|\frac{1}{n}\sum\limits_{i=1}^nX_i- \mu|<\epsilon\}=1 , $$
- 即,   $$ \frac{1}{n}\sum\limits_{i=1}^nX_i \overset{p}\to \mu = EX_i $$
+ 即,   
+   $$ \frac{1}{n}\sum\limits_{i=1}^nX_i \overset{p}\to \mu = EX_i $$
 3. 伯努利大数定律
    1. 设$f_A$是n次独立重复实验中事件A发生的次数, $p(0<p<1)$是A发生的概率,则:
    $$ \lim\limits_{n \to \infty}P\{|\frac{f_A}{n}- p|<\epsilon\}=1 , $$
@@ -457,18 +462,18 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 
 ### 3. 单个正态总体
 - 设$X_n$是来自正态总体$X \sim N(\mu,\sigma^2)$的一个样本, 有样本均值: $\bar{X}$, 样本方差$S^2$,则
-  1. $\bar{X} \sim N(\mu,\frac{\sigma^2}{n}), \frac{\bar{X}-\mu}{\sigma\sqrt{n}} \sim N(0,1) $
-  2. $\frac{1}{\sigma^2}\sum_{i=1}^n(X_i-\mu)^2, (\frac{\bar{X}-\mu}{\sigma\sqrt{n}} )^2 \sim \chi^2(1) $
+  1. $\bar{X} \sim N(\mu,\frac{\sigma^2}{n}), \frac{\bar{X}-\mu}{\sigma\sqrt{n}} \sim N(0,1)$
+  2. $\frac{1}{\sigma^2}\sum_{i=1}^n(X_i-\mu)^2, (\frac{\bar{X}-\mu}{\sigma\sqrt{n}} )^2 \sim \chi^2(1)$
   3. $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$
   4. $\bar{X}和S^2相互独立, \frac{\bar{X}-\mu}{S\sqrt{n}} \sim t(n-1)$
 --- 
 
 ### 4. 两个正态总体
 - 设$X_n$,$Y_n$是来自正态总体$X \sim N(\mu_1,\sigma_1^2), Y \sim N(\mu_2,\sigma_2^2)$的样本,记样本均值: $\bar{X},\bar{Y}$, 方差:$S_1^2,S_2^2$,
-  1. $\bar{X}-\bar{Y} \sim N(\mu_1-\mu_2,\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{n}), U=\frac{\bar{X}-\bar{Y}-(\mu_1-\mu_2)}{\sigma\sqrt{\frac{\sigma_1^{2}}{n}+\frac{\sigma_2^2}{n}}} \sim N(0,1) $
+  1. $\bar{X}-\bar{Y} \sim N(\mu_1-\mu_2,\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{n}), U=\frac{\bar{X}-\bar{Y}-(\mu_1-\mu_2)}{\sigma\sqrt{\frac{\sigma_1^{2}}{n}+\frac{\sigma_2^2}{n}}} \sim N(0,1)$
   2. $V=\frac{(n_1-1)S_1^2}{\sigma_1^2} + \frac{(n_2-1)S_2^2}{\sigma_2^2}\sim \chi^2(n_1+n_2-2)$
   3. $\frac{U}{\sqrt{V/(n_1+n_2-2)}} \sim t(n_1+n_2-2)$
-  4. ...
+  4. $\cdots$
 --- 
 
 
@@ -484,8 +489,8 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 
 ### 2. 最大似然估计求解
 1. 写出似然数
-   1. 离散型: $ L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^np(x_i;\theta_1,\dots \theta_m)$
-   2. 连续型: $ L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^nf(x_i;\theta_1,\dots \theta_m)$
+   1. 离散型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^np(x_i;\theta_1,\dots \theta_m)$
+   2. 连续型: $L(x_1,x_2,...,x_n; \theta_1,...\theta_m)= \prod_{i=1}^nf(x_i;\theta_1,\dots \theta_m)$
 2. 取对数得$\ln L$  
 3. 求(偏)导
    1. 函数$\ln L$对自变量$\theta_i(i=1,2,...,m)$, 求(偏)导, 并令(偏)导数等于0
@@ -518,7 +523,7 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 | $\mu$ | $\sigma^2$已知 | $(\bar{X}-u_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{X}+u_{\alpha/2}\frac{\sigma}{\sqrt{n}})$ | 
 |       | $\sigma^2$未知 |$(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1),\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1))$| 
 |$\sigma^2$|$\mu$已知   |$(\frac{\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{\frac{\alpha}{2}}(n)},\frac{\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)})$|
-| |\mu$未知   |$(\frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)})$|
+| |$\mu$未知   |$(\frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)})$|
 
 2. 单个正态总体未知数置信水平为$1-\alpha$的**单侧**置信区间如下表:
  
@@ -527,7 +532,7 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 | $\mu$ | $\sigma^2$已知 | $(-\infty,\bar{X}+u_{\alpha}\frac{\sigma}{\sqrt{n}}), (\bar{X}-u_{\alpha}\frac{\sigma}{\sqrt{n}},+\infty)$ | 
 |       | $\sigma^2$未知 |$(-\infty,\bar{X}+\frac{S}{\sqrt{n}}t_{\alpha}(n-1)),(\bar{X}-\frac{S}{\sqrt{n}}t_{\alpha}(n-1),+\infty)$| 
 |$\sigma^2$|$\mu$已知   |$(0,\frac{\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{1-\alpha}(n)}),(\frac{\sum_{i=1}^n(X_i-\mu)^2}{\chi^2_{\alpha}(n)},+\infty)$|
-| |\mu$未知   |$(0,\frac{(n-1)S^2}{\chi^2_{1-\alpha}(n-1)}), (\frac{(n-1)S^2}{\chi^2_{\alpha}(n-1)},\infty)$| 
+| |$\mu$未知   |$(0,\frac{(n-1)S^2}{\chi^2_{1-\alpha}(n-1)}), (\frac{(n-1)S^2}{\chi^2_{\alpha}(n-1)},\infty)$| 
 
 ---
 
@@ -555,7 +560,7 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
 |假设| |条件|检验统计量及分布|拒绝域|
 |:----|:----|:----|:----|:----|
 |原假设$H_0$|备择假设$H_1$| | | |
-|$$\mu=\mu_0$$ $$\mu \leq \mu_0 $$ $$ \mu \geq \mu_0 $$|$$\mu \neq \mu_0$$ $$\mu>\mu_0 $$ $$ \mu<\mu_0 $$| $\sigma^2$已知|$U=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$ | $$\lvert u \rvert \geq u_{\frac{\alpha}{2}}$$  $$ u \geq u_{\alpha} $$ $$u \leq \ -u_{\alpha} $$ |
+| $\mu=\mu_0$  $\mu \leq \mu_0$ $\mu \geq \mu_0$|$$\mu \neq \mu_0$$ $$\mu>\mu_0 $$ $$ \mu<\mu_0 $$| $\sigma^2$已知|$U=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$ | $$\lvert u \rvert \geq u_{\frac{\alpha}{2}}$$  $$ u \geq u_{\alpha} $$ $$u \leq \ -u_{\alpha} $$ |
 |$$\mu=\mu_0$$ $$\mu \leq \mu_0 $$ $$ \mu \geq \mu_0 $$ |$$\mu \neq \mu_0$$ $$\mu>\mu_0 $$ $$ \mu<\mu_0 $$ |$\sigma^2$未知 | $t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}\sim t(n-1)$|$$ \lvert t \rvert \geq t_{\frac{\alpha}{2}}(n-1)$$ $$t \geq t_{\alpha} $$ $$ t \leq -t_{\alpha}(n-1) $$|
 |$$\sigma^2 = \sigma_0^2$$ $$\sigma^2 \leq \sigma_0^2$$ $$\sigma^2 \geq \sigma_0^2$$|$$\sigma^2 \neq \sigma_0^2$$ $$\sigma^2 > \sigma_0^2$$ $$\sigma^2 < \sigma_0^2$$ | $\mu$已知| $\chi^2=\frac{\sum_{i=1}^n(\bar{X}-\mu)^2}{\sigma_0^2} \sim \chi^2(n)$ |$$ \chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n)$$或 $$ \chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n)$$ $$ \chi^2\geq \chi_{\alpha}^2(n)$$ $$ \chi^2\leq \chi_{1-\alpha}^2(n)$$|
 | $$\sigma^2 = \sigma_0^2$$ $$\sigma^2 \leq \sigma_0^2$$ $$\sigma^2 \geq \sigma_0^2$$|$$\sigma^2 \neq \sigma_0^2$$ $$\sigma^2 > \sigma_0^2$$ $$\sigma^2 < \sigma_0^2$$ |$\mu$未知| $\chi^2=\frac{(n-1)S^2}{\sigma_0^2} \sim \chi^2(n-1)$  |$$ \chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n-1)$$或 $$ \chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n-1)$$ $$ \chi^2\geq \chi_{\alpha}^2(n-1)$$ $$ \chi^2\leq \chi_{1-\alpha}^2(n-1)$$ |
