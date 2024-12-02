@@ -5,13 +5,6 @@ module.exports = {
     // host: "127.0.0.1",
     port: "4001",
     repo: "https://github.com/wxxxxxxxxxxxxxxx/VuePress-MathFunction.git",
-    // themeConfig: {
-    //     // 添加导航栏
-    //     nav: [
-    //         { text: 'vue', link: '/' },
-    //         { text: 'wx', link: '/wx/' }
-    //     ]
-    // }
     head: [
         ['link', { rel: 'stylesheet', href: '/style/style.css' }]
     ],
