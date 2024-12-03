@@ -555,12 +555,12 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
    4. 由$P\{拒绝 H_0|H_0为真\}=\alpha$, 求出拒绝域W
    5. 根据样本观测值t作出判断: 当$t \in W$时,拒绝原假设$H_0$;否则接受原假设$H_0$
 ### 5. 假设检验对照表
-- 显著性水平$\alpha$,单个正态总体$N(\mu,\sigma^2)**未知参数的假设校验:**
+- 显著性水平$\alpha$,单个正态总体$N(\mu,\sigma^2)$ **未知参数的假设校验:**
 
 |假设| |条件|检验统计量及分布|拒绝域|
 |:----|:----|:----|:----|:----|
 |原假设$H_0$|备择假设$H_1$| | | |
-| $\mu=\mu_0$  $\mu \leq \mu_0$ $\mu \geq \mu_0$|$$\mu \neq \mu_0$$ $$\mu>\mu_0 $$ $$ \mu<\mu_0 $$| $\sigma^2$已知|$U=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$ | $$\lvert u \rvert \geq u_{\frac{\alpha}{2}}$$  $$ u \geq u_{\alpha} $$ $$u \leq \ -u_{\alpha} $$ |
-|$$\mu=\mu_0$$ $$\mu \leq \mu_0 $$ $$ \mu \geq \mu_0 $$ |$$\mu \neq \mu_0$$ $$\mu>\mu_0 $$ $$ \mu<\mu_0 $$ |$\sigma^2$未知 | $t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}\sim t(n-1)$|$$ \lvert t \rvert \geq t_{\frac{\alpha}{2}}(n-1)$$ $$t \geq t_{\alpha} $$ $$ t \leq -t_{\alpha}(n-1) $$|
-|$$\sigma^2 = \sigma_0^2$$ $$\sigma^2 \leq \sigma_0^2$$ $$\sigma^2 \geq \sigma_0^2$$|$$\sigma^2 \neq \sigma_0^2$$ $$\sigma^2 > \sigma_0^2$$ $$\sigma^2 < \sigma_0^2$$ | $\mu$已知| $\chi^2=\frac{\sum_{i=1}^n(\bar{X}-\mu)^2}{\sigma_0^2} \sim \chi^2(n)$ |$$ \chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n)$$或 $$ \chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n)$$ $$ \chi^2\geq \chi_{\alpha}^2(n)$$ $$ \chi^2\leq \chi_{1-\alpha}^2(n)$$|
-| $$\sigma^2 = \sigma_0^2$$ $$\sigma^2 \leq \sigma_0^2$$ $$\sigma^2 \geq \sigma_0^2$$|$$\sigma^2 \neq \sigma_0^2$$ $$\sigma^2 > \sigma_0^2$$ $$\sigma^2 < \sigma_0^2$$ |$\mu$未知| $\chi^2=\frac{(n-1)S^2}{\sigma_0^2} \sim \chi^2(n-1)$  |$$ \chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n-1)$$或 $$ \chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n-1)$$ $$ \chi^2\geq \chi_{\alpha}^2(n-1)$$ $$ \chi^2\leq \chi_{1-\alpha}^2(n-1)$$ |
+| $\mu=\mu_0$ <br> $\mu \leq \mu_0$ <br> $\mu \geq \mu_0$|$\mu \ne \mu_0$ <br>  $\mu>\mu_0$ <br>  $\mu<\mu_0$| $\sigma^2$已知|$U=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$ | $\lvert u \rvert \geq u_{\frac{\alpha}{2}}$ <br>  $u \geq u_{\alpha}$ <br>  $u \leq \ -u_{\alpha}$ |
+|$\mu=\mu_0$ <br> $\mu \leq \mu_0$  <br> $\mu \geq \mu_0$ |$\mu \neq \mu_0$ <br> $\mu>\mu_0$ <br> $\mu<\mu_0$ |$\sigma^2$未知 | $t=\frac{\bar{X}-\mu_0}{\frac{S}{\sqrt{n}}}\sim t(n-1)$|$\lvert t \rvert \geq t_{\frac{\alpha}{2}}(n-1)$ <br> $t \geq t_{\alpha}$ <br> $t \leq -t_{\alpha}(n-1)$|
+|$\sigma^2 = \sigma_0^2$ <br> $\sigma^2 \leq \sigma_0^2$ <br> $\sigma^2 \geq \sigma_0^2$|$\sigma^2 \neq \sigma_0^2$ <br> $\sigma^2 > \sigma_0^2$ <br> $\sigma^2 < \sigma_0^2$| $\mu$已知| $\chi^2=\frac{\sum_{i=1}^n(\bar{X}-\mu)^2}{\sigma_0^2} \sim \chi^2(n)$ |$\chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n)$或 <br> $\chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n)$ <br> $\chi^2\geq \chi_{\alpha}^2(n)$ <br>$\chi^2\leq \chi_{1-\alpha}^2(n)$|
+| $\sigma^2 = \sigma_0^2$ <br> $\sigma^2 \leq \sigma_0^2$ <br> $\sigma^2 \geq \sigma_0^2$|$\sigma^2 \neq \sigma_0^2$ <br> $\sigma^2 > \sigma_0^2$ <br> $\sigma^2 < \sigma_0^2$ |$\mu$未知| $\chi^2=\frac{(n-1)S^2}{\sigma_0^2} \sim \chi^2(n-1)$  |$\chi^2\leq \chi_{1-\frac{\alpha}{2}}^2(n-1)$或 <br> $\chi^2 \geq \chi_{\frac{\alpha}{2}}^2(n-1)$ <br> $\chi^2\geq \chi_{\alpha}^2(n-1)$ <br> $\chi^2\leq \chi_{1-\alpha}^2(n-1)$ |

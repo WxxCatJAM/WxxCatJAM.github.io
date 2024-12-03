@@ -6,13 +6,16 @@ module.exports = {
     port: "4001",
     repo: "https://github.com/wxxxxxxxxxxxxxxx/VuePress-MathFunction.git",
     head: [
-        ['link', { rel: 'stylesheet', href: '/style/style.css' }]
+        ['link', { rel: 'stylesheet', href: '/katex/katex.min.css' }],
+        ['link', { rel: 'stylesheet', href: '/style/style.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css' }],
     ],
     markdown: {
+        cache: true,
         extendMarkdown: md => {
             //md.set({ breaks: true }); // 支持换行
             md.use(require('markdown-it-katex'),{
-                strict: false // 关闭严格模式，避免警告
+                strict: false, // 关闭严格模式，避免警告
             }); // 或 '@swedish-li/markdown-it-katex'，根据实际需要选择
         },
     },
