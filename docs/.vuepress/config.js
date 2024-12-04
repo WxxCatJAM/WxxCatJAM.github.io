@@ -89,6 +89,7 @@ module.exports = {
         sidebarDepth:2, //使H3也能在侧边栏显示出来
     },
     plugins:[
-    'smooth-scroll',
-    ],
+        ['smooth-scroll'],
+        // ['vuepress-plugin-sidebar',{collapsable:true}]
+    ]
 };
