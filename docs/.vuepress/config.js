@@ -1,6 +1,6 @@
 module.exports = {
 
-    title: 'wx的数学公式总结',
+    //title: 'wx的数学公式总结',
     description: '主要为数学1的公式',
     host: "0.0.0.0",
     port: "4001",
@@ -91,5 +91,8 @@ module.exports = {
     plugins:[
         ['smooth-scroll'],
         // ['vuepress-plugin-sidebar',{collapsable:true}]
+        ['@vuepress/search',{ //搜索插件
+            searchMaxSuggestions: 10
+        }],
     ]
 };
