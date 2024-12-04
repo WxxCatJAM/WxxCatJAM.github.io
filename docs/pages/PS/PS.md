@@ -503,7 +503,7 @@ $$ A_k=\frac{1}{n}\sum_{i=1}^n(X_i-\bar{X})^k, k=2,3,...$$
    1. 若$E\hat{\theta}=\theta$, 则$\hat{\theta}是\theta$的无偏估计量
    2. 样本均值$\bar{X}$是总体均值$\mu$的无偏估计,样本方差$S^2$是总体方差$\sigma^2$的无偏估计
 2. 有效性
-   1. 若$E(\hat{\theta_1})=E(\hat{\theta_2})=\theta, D(\hat{theta_1})<D(\hat{theta_2}), 则\hat{theta_1}比\hat{theta_2}更有效$
+   1. 若$E(\hat{\theta_1})=E(\hat{\theta_2})=\theta, D(\hat{\theta_1})<D(\hat{\theta_2}), 则\hat{\theta_1}比\hat{\theta_2}更有效$
 3. 一致性
    1. 对$\forall_{\epsilon} > 0,$有$\lim\limits_{n \to \infty}P\{|\hat{\theta}-\theta|<\epsilon\}=1, 则称\hat{\theta}是\theta的一致估计量$
 ---
