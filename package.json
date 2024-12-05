@@ -4,13 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "@types/node": "^22.10.1",
+    "@vuepress/client": "^2.0.0-rc.18",
+    "typescript": "^5.7.2",
+    "vuepress": "1.8.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "@vuepress/plugin-search": "^1.9.10",
     "katex": "^0.16.11",
     "markdown-it-katex": "^2.0.3",
     "vuepress-plugin-sidebar": "^0.2.1",

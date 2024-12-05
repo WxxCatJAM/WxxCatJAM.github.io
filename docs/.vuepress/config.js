@@ -84,6 +84,13 @@ module.exports = {
                   '/pages/Reference/Reference.md'
                 ],
             },
+            {
+                title: '参考2',
+                collapsable: true,
+                children: [
+                  '/pages/Reference/Online_source.md'
+                ],
+            },
     
         ],
         sidebarDepth:2, //使H3也能在侧边栏显示出来
@@ -92,7 +99,12 @@ module.exports = {
         ['smooth-scroll'],
         // ['vuepress-plugin-sidebar',{collapsable:true}]
         ['@vuepress/search',{ //搜索插件
-            searchMaxSuggestions: 10
+            searchMaxSuggestions: 10,
+            searchPlaceholder: 'Search...', // 搜索框的占位符
+            // 设置精确匹配
+            searchFilter: (page, query) => {
+                return page.title.includes(query) || page.content.includes(query);
+            }
         }],
     ]
 };
