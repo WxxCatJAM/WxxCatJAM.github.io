@@ -6,12 +6,14 @@
   "devDependencies": {
     "@types/node": "^22.10.1",
     "@vuepress/client": "^2.0.0-rc.18",
+    "gh-pages": "^6.2.0",
     "typescript": "^5.7.2",
     "vuepress": "1.8.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "vuepress build docs && gh-pages -d docs/.vuepress/dist"
   },
   "dependencies": {
     "@vuepress/plugin-search": "^1.9.10",
